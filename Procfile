@@ -1,1 +1,1 @@
-web: gunicorn timber_company.wsgi
+web: gunicorn timbercompany.wsgi
