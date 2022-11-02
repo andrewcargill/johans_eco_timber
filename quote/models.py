@@ -13,7 +13,7 @@ class Quote(models.Model):
         ordering = ['submitted_date']
 
     def __str__(self):
-        return f"Quote Id: {self.id} | User Id: {self.user_id} | Status: {self.status}"
+        return f"Quote Id: {self.id}"
 
 SPECIES = (('Pine', 'Pine'), ('Birch', 'Birch'), ('Spruce', 'Spruce'))
 
