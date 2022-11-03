@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+
+
+<div class="row container red lighten-4 center-align">
+    <div class="container purple lighten-4" >
+    <h2>User Home</h2>
+</div>
+</div>
+
+<div class="row container center-align">
+    <div id="user-top-display" class="container brown lighten-4 valign-wrapper center-align">
+        <h4 class="container  z-depth-5">Welcome 'x' here you can prepare and submit a quote request.</h4>
+    </div>
+
+    <div id="user-bottom-display" class="row container grey center-align">
+        <div class="progress">
+            <div class="determinate" style="width: 20%"></div>
+        </div>
+        <div class=" container yellow lighten-4 ">
+            <p>Here is the text for the information on the screen</p>
+        </div>
+        <div>
+            <div class="row container grey lighten-4 z-depth-5 ">
+                project title
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6 valign-wrapper">
+                            <input placeholder="e.g 'Pine Table' " id="first_name" type="text" class="validate">
+                            <label for="first_name">Quote Name</label>
+                        </div>
+                        <div class="input-field col s6 valign-wrapper">
+                            <a class="waves-effect waves-light btn">Submit</a>
+                        </div>
+                        
+                        
+                        <!-- <div class="input-field col s6">
+                            <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                            <label for="first_name">First Name</label>
+                        </div> -->
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="row container green">Space for future submit buttons</div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
