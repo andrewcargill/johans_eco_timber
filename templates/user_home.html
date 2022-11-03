@@ -6,13 +6,15 @@
 
 <div class="row container red lighten-4 center-align">
     <div class="container purple lighten-4" >
-    <h2>User Home</h2>
+    <div class="row" ><p>You are logged in as: {{ user.username }}</p></div>
+    <div class="row" ><h2>User Home</h2></div>
+    
 </div>
 </div>
 
 <div class="row container center-align">
     <div id="user-top-display" class="container brown lighten-4 valign-wrapper center-align">
-        <h4 class="container  z-depth-5">Welcome 'x' here you can prepare and submit a quote request.</h4>
+        <h4 class="container  z-depth-5">Welcome {{ user.username }}! here you can prepare and submit a quote request.</h4>
     </div>
 
     <div id="user-bottom-display" class="row container grey center-align">
