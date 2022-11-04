@@ -30,11 +30,10 @@ class Item(models.Model):
     width = models.IntegerField()
     thickness = models.IntegerField()
     quantity = models.IntegerField()
-    deadline = models.DateTimeField()
+    deadline = models.DateField()
     quarter_sawn = models.BooleanField(default=False)
     grade = models.IntegerField(choices=GRADE, default=0)
-
-    Comments = models.TextField(max_length=200)
+    comments = models.TextField(max_length=200)
 
 
 

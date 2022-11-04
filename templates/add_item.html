@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+
+
+<div class="row container red lighten-4 center-align">
+    <div class="container purple lighten-4">
+        <div class="row">
+            <p>You are logged in as: {{ user.username }}</p>
+        </div>
+        <div class="row">
+            <h2>User Home</h2>
+        </div>
+
+    </div>
+</div>
+
+<div class="row container center-align">
+    <div id="user-top-display" class="container brown lighten-4 valign-wrapper center-align">
+        <h4 class="container  z-depth-5">Welcome {{ user.username }}! here you can prepare and submit a quote request.
+        </h4>
+    </div>
+
+    <div class="row container grey center-align">
+        <div class="progress">
+            <div class="determinate" style="width: 50%"></div>
+        </div>
+        <div class=" container yellow lighten-4 ">
+            <p>Here is the text for the information on the screen</p>
+        </div>
+        <div>
+            <div class="row container grey lighten-4 z-depth-5 ">
+                project title
+
+                <div class="row">
+                    <div class="container">
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <p>
+                                <label>
+                                  <input type="checkbox" />
+                                  <span>Quarter-Sawn</span>
+                                </label>
+                              </p>
+                              <label>Date picker
+                              <input type="text" class="datepicker">
+                            </label>
+
+                            <div class="input-field col s12">
+                                <select>
+                                  <option value="" disabled selected>Choose your option</option>
+                                  <option value="1">Option 1</option>
+                                  <option value="2">Option 2</option>
+                                  <option value="3">Option 3</option>
+                                </select>
+                                <label>Materialize Select</label>
+                              </div>
+
+                          
+
+                            <button class="waves-effect waves-light btn" type="submit">Submit</button>
+
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row container green">The message was: {{ text }}
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{% static '/js/index.js' %}"></script>
+
+
+
+{% endblock content %}
