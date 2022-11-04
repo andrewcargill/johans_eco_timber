@@ -25,11 +25,13 @@ def get_name(request):
         form = NameForm(request.POST)
         # check whether it's valid:
         if form.is_valid():
-            # process the data in form.cleaned_data as required
-            # ...
-            # redirect to a new URL:
+            quote = form.save(commit=False)
+            quote.user_id = request.user  # The logged-in user
+            quote.save()
             print("-------form is valid")
-            return HttpResponseRedirect('/home/')
+            
+            # form.save()
+            # return HttpResponseRedirect('user_home.html')
 
     # if a GET (or any other method) we'll create a blank form
     else:

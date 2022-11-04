@@ -1,7 +1,11 @@
 from django import forms
+from .models import Quote
 
 # class QuoteForm(forms.Form):
 #     text = forms.CharField()
 
-class NameForm(forms.Form):
-    your_name = forms.CharField(label='Your name', max_length=100)
+class NameForm(forms.ModelForm):
+    class Meta:
+        model = Quote
+        fields = ["quote_name", "status",]
+        labels = {"quote_name": "Project Name", "status": "status"}

@@ -5,9 +5,9 @@ STATUS = ((0, "Not submitted"), (1, "Submitted"), (2, "Quoted"))
 
 class Quote(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="Userid")
-    quote_name = models.CharField(max_length = 20)
+    quote_name = models.CharField(max_length = 50)
     status = models.IntegerField(choices=STATUS, default=0)
-    submitted_date = models.DateTimeField()
+    submitted_date = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ['submitted_date']
