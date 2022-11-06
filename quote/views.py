@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import generic, View
 from django.views.generic import TemplateView
 from .models import Quote, Item
@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from .forms import NameForm, AddItem
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
+
 
 
 class QuoteList(generic.ListView):
@@ -28,6 +29,8 @@ def get_name(request):
             quote = form.save(commit=False)
             quote.user_id = request.user  # The logged-in user
             quote.save()
+            response = redirect('add_item.html')
+            return response
             print("-------form is valid")
             
             # form.save()
