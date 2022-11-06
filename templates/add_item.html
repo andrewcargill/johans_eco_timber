@@ -40,12 +40,10 @@
                             {{ form.as_p }}
                             <p>
                                 <label>
-                                  <input type="checkbox" />
+                                  <input id="comment" type="checkbox" />
                                   <span>Quarter-Sawn</span>
                                 </label>
                               </p>
-                              <label>Date picker
-                              <input type="text" class="datepicker">
                             </label>
 
                             <!-- <div class="input-field col s12">
@@ -58,6 +56,17 @@
                                 <label>Materialize Select</label>
                               </div> -->
 
+                              <div class="row">
+                                <form class="col s12">
+                                  <div class="row">
+                                    <div class="input-field col s6">
+                                      <i class="material-icons prefix"></i>
+                                      <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                                      <label for="icon_prefix2">First Name</label>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
                           
 
                             <button class="waves-effect waves-light btn" type="submit">Submit</button>

@@ -1,5 +1,8 @@
 from django import forms
+from django.forms import TextInput
 from .models import Quote, Item
+
+
 
 # class QuoteForm(forms.Form):
 #     text = forms.CharField()
@@ -11,11 +14,73 @@ class NameForm(forms.ModelForm):
         labels = {"quote_name": "Project Name", "status": "status"}
 
 
+SPECIES = [('Pine', 'Pine'), ('Birch', 'Birch'), ('Spruce', 'Spruce')]
+
 class AddItem(forms.ModelForm):
     class Meta:
         model = Item
-        fields = ["species", "length",]
-        labels = {"species": "X", "length": "Y",}
+        fields = ['deadline', 'comments', 'species', 'length', 'width', 'thickness',
+                   'quantity', 'quarter_sawn', 'grade']
+        widgets = {
+            'deadline': TextInput( attrs={
+                'type': "date",
+            }),
+            'comments': TextInput( attrs={
+                'type': "text",
+                'class': 'prefix',
+                'id': 'comment',
+                'placeholder': 'Tell me about what you need and any specific instructions'
+            }),
+            'species': TextInput( attrs={
+                'type': "text",
+                'class': 'prefix',
+                'placeholder': 'Tell me about what you need and any specific instructions'
+            }),
+            'length': TextInput( attrs={
+                'type': "text",
+                'class': 'prefix',
+                'placeholder': 'Tell me about what you need and any specific instructions'
+            }),
+            'width': TextInput( attrs={
+                'type': "number",
+                'min': '10',
+                'max': '40',
+                'placeholder': 'Tell me about what you need and any specific instructions'
+            }),
+            'thickness': TextInput( attrs={
+                'type': "number",
+                'min': '10',
+                'max': '40',
+                'placeholder': 'Tell me about what you need and any specific instructions'
+            }),
+            'quantity': TextInput( attrs={
+                'type': "number",
+                'min': '10',
+                'max': '40',
+                'placeholder': 'Tell me about what you need and any specific instructions'
+            }),
+            'quarter_sawn': TextInput( attrs={
+                'type': "number",
+                'min': '10',
+                'max': '40',
+                'placeholder': 'Tell me about what you need and any specific instructions'
+            }),
+            'grade': TextInput( attrs={
+                'type': "number",
+                'min': '10',
+                'max': '40',
+                'placeholder': 'Tell me about what you need and any specific instructions'
+            }),
+        }
+
+
+
+
+# class AddItem(forms.ModelForm):
+#     class Meta:
+#         model = Item
+#         fields = ["species", "length",]
+#         labels = {"species": "X", "length": "Y",}
 
 
 
