@@ -19,28 +19,13 @@ SPECIES = [('Pine', 'Pine'), ('Birch', 'Birch'), ('Spruce', 'Spruce')]
 class AddItem(forms.ModelForm):
     class Meta:
         model = Item
-        fields = ['deadline', 'comments', 'species', 'length', 'width', 'thickness',
+        fields = ['quote_id','deadline', 'comments', 'species', 'length', 'width', 'thickness',
                    'quantity', 'quarter_sawn', 'grade']
         widgets = {
             'deadline': TextInput( attrs={
                 'type': "date",
             }),
-            'comments': TextInput( attrs={
-                'type': "text",
-                'class': 'prefix',
-                'id': 'comment',
-                'placeholder': 'Tell me about what you need and any specific instructions'
-            }),
-            'species': TextInput( attrs={
-                'type': "text",
-                'class': 'prefix',
-                'placeholder': 'Tell me about what you need and any specific instructions'
-            }),
-            'length': TextInput( attrs={
-                'type': "text",
-                'class': 'prefix',
-                'placeholder': 'Tell me about what you need and any specific instructions'
-            }),
+
             'width': TextInput( attrs={
                 'type': "number",
                 'min': '10',
@@ -59,19 +44,8 @@ class AddItem(forms.ModelForm):
                 'max': '40',
                 'placeholder': 'Tell me about what you need and any specific instructions'
             }),
-            'quarter_sawn': TextInput( attrs={
-                'type': "number",
-                'min': '10',
-                'max': '40',
-                'placeholder': 'Tell me about what you need and any specific instructions'
-            }),
-            'grade': TextInput( attrs={
-                'type': "number",
-                'min': '10',
-                'max': '40',
-                'placeholder': 'Tell me about what you need and any specific instructions'
-            }),
         }
+
 
 
 
