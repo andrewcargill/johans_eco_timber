@@ -51,17 +51,10 @@ def NewItem(request):
         print("-------POST is True")
         # create a form instance and populate it with data from the request:
         form = AddItem(request.POST)
+
         # check whether it's valid:
         if form.is_valid():
-            quote = form.save(commit=False)
-            quote.user_id = request.user  # The logged-in user
-            quote.save()
-            print("-------form is valid")
-            
-            # form.save()
-            # return HttpResponseRedirect('user_home.html')
-
-    # if a GET (or any other method) we'll create a blank form
+            form.save()
     else:
         print("-------form is NOT valid")
         form = AddItem()

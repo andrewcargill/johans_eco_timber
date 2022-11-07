@@ -36,10 +36,6 @@ class Item(models.Model):
     comments = models.TextField(max_length=200)
 
 
-
-    status = models.IntegerField(choices=STATUS, default=0)
-    submitted_date = models.DateTimeField()
-
     class Meta:
         ordering = ['deadline']
 

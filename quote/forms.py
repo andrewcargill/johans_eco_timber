@@ -19,8 +19,8 @@ SPECIES = [('Pine', 'Pine'), ('Birch', 'Birch'), ('Spruce', 'Spruce')]
 class AddItem(forms.ModelForm):
     class Meta:
         model = Item
-        fields = ['quote_id','deadline', 'comments', 'species', 'length', 'width', 'thickness',
-                   'quantity', 'quarter_sawn', 'grade']
+        fields = ['quote_id', 'deadline', 'comments', 'species', 'length',
+                  'width', 'thickness', 'quantity', 'quarter_sawn', 'grade']
         widgets = {
             'deadline': TextInput(attrs={
                 'type': "date",
@@ -43,8 +43,6 @@ class AddItem(forms.ModelForm):
                 'max': '40',
                 'placeholder': 'Tell me about what you need and any specific instructions'
             }),
-
-        
         }
 
 
