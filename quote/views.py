@@ -49,7 +49,7 @@ def QuoteInput(request):
             quote = form.save(commit=False)
             quote.user_id = request.user  # The logged-in user
             quote.save()
-            response = redirect('add_item.html')
+            response = redirect('quote_list.html')
             return response
             print("-------form is valid")
     else:
