@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views import generic, View
-from django.views.generic import TemplateView
-from .models import Quote, Item
+from django.views.generic import ListView
+from .models import Quote, Item, QuoteData
 from django.contrib.auth.models import User
 from .forms import NameForm, AddItem, QuoteForm
 from django.core.mail import send_mail
@@ -17,6 +17,17 @@ class QuoteList(generic.ListView):
 
 
 ###New for single quote database
+
+class UserQuoteList(ListView):
+    model = QuoteData
+    queryset = QuoteData.objects.filter(status=0)
+    context_object_name = "quote_list"
+    template_name = 'quote_list.html'
+
+    
+
+
+
 def QuoteInput(request):
     print("-------GETTING CALLED")
     print(request.method)
@@ -36,6 +47,8 @@ def QuoteInput(request):
     else:
         print("-------form is NOT valid")
         form = QuoteForm()
+
+    return render(request, 'user_home.html', {'form': form})
 
 ##Original user_home quote entry
 
@@ -64,7 +77,7 @@ def QuoteInput(request):
     #     print("-------form is NOT valid")
     #     form = NameForm()
 
-    return render(request, 'user_home.html', {'form': form})
+    #  return render(request, 'user_home.html', {'form': form})
 
 def NewItem(request):
     print("-------GETTING CALLED")
@@ -84,3 +97,4 @@ def NewItem(request):
 
     return render(request, 'add_item.html', {'form': form})
 
+      
