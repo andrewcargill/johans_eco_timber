@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    Dave
+    <div>
+
+        <!-- Blog Entries Column -->
+        <div>
+            
+            <div>
+                Dave
+                {% for QuoteData in quote_list %}
+
+
+                <p>Width{{ QuoteData.species }}
+                </p>
+                <p> Length: {{ QuoteData.length }}</p>
+
+
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+</div>
+{%endblock%}
