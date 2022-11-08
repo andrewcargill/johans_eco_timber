@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Quote, Item
+from .models import Quote, Item, QuoteData
 
 @admin.register(Quote)
 class BuckAdmin(admin.ModelAdmin):
@@ -8,4 +8,8 @@ class BuckAdmin(admin.ModelAdmin):
 @admin.register(Item)
 class BuckAdmin(admin.ModelAdmin):
     list_display = ('id', 'quote_id', 'deadline')
+
+@admin.register(QuoteData)
+class BuckAdmin(admin.ModelAdmin):
+    list_display = ('id', 'user_id', 'deadline')
     

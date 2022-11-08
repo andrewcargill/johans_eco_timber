@@ -41,3 +41,24 @@ class Item(models.Model):
 
     def __str__(self):
         return f"Item Id: {self.id} | Quote Id: {self.quote_id} | Deadline date: {self.deadline}"
+
+class QuoteData(models.Model):
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="User_id")
+    species = models.CharField(choices=SPECIES, max_length=15)
+    length = models.IntegerField(choices=LENGTH, default=2)
+    width = models.IntegerField()
+    thickness = models.IntegerField()
+    quantity = models.IntegerField()
+    deadline = models.DateField()
+    quarter_sawn = models.BooleanField(default=False)
+    grade = models.IntegerField(choices=GRADE, default=0)
+    comments = models.TextField(max_length=200)
+    status = models.IntegerField(choices=STATUS, default=0)
+    submitted_date = models.DateTimeField(auto_now=True)
+
+
+    class Meta:
+        ordering = ['deadline']
+
+    def __str__(self):
+        return f"Item Id: {self.id} | Quote Id: {self.user_id} | Deadline date: {self.deadline}"
