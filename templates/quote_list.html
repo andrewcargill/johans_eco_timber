@@ -12,7 +12,6 @@
     <div class="container purple lighten-4">
         <div class="row">
             <p>You are logged in as: {{ user.username }}</p>
-            <p>You are logged in as: {{ user.id }}</p>
         </div>
         <div class="row">
             <h2>User Home</h2>
@@ -44,20 +43,24 @@
 
             <h2>Quote List</h2>
 
-            <table style="width:100%">
+            <table class="table table-hover" style="width:100%">
+                <thead>
                 <tr>
-                    <th>Quote ID</th>
-                    <th>Species</th>
-                    <th>Spec (cm)</th>
-                    <th>Deadline</th>
+                    <th scope="col">#</th>
+                    <th scope="col">Species</th>
+                    <th scope="col">Spec (cm)</th>
+                    <th scope="col">Deadline</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Delete</th>
                 </tr>
-                
+            </thead>  
+            <tbody>
 
             {% for QuoteData in quote_list %}
             <tr>
-                <td>
-                    {{ QuoteData.id }}
-                </td>
+                <th scope="row">
+                    TR1{{ QuoteData.id }}02
+                </th>
                 <td>
                     {{ QuoteData.species }}
                 </td>
@@ -65,12 +68,21 @@
                     {{ QuoteData.width }} x {{ QuoteData.thickness }} x {{ QuoteData.length }}
                 </td>
                 <td>
+                    
+                    
                     {{ QuoteData.deadline }}
+                </td>
+                <td>
+                    {{ QuoteData.status }}
+                </td>
+                <td>
+                    <i class="fa-solid fa-trash"></i>
                 </td>
             </tr>
 
 
             {% endfor %}
+        </tbody>
         </table>
 
         </div>

@@ -20,10 +20,18 @@ class QuoteList(generic.ListView):
 
 class UserQuoteList(ListView):
     model = QuoteData
-    queryset = QuoteData.objects.filter(status=0)
+    # queryset = QuoteData.objects.filter(status=0)
     context_object_name = "quote_list"
     template_name = 'quote_list.html'
+    def get_queryset(self):
+        return QuoteData.objects.filter(user_id=self.request.user)
 
+
+# class UserQuoteList(ListView):
+#     model = QuoteData
+#     queryset = QuoteData.objects.filter(status=0)
+#     context_object_name = "quote_list"
+#     template_name = 'quote_list.html'
     
 
 
