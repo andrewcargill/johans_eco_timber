@@ -45,54 +45,58 @@
 
             <table class="table table-hover" style="width:100%">
                 <thead>
-                <tr>
-                    <th scope="col">#: Title</th>
-                    <th scope="col">Species</th>
-                    <th scope="col">Spec (cm)</th>
-                    <th scope="col">Deadline</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Delete</th>
-                </tr>
-            </thead>  
-            <tbody>
+                    <tr>
+                        <th scope="col">#: Title</th>
+                        <th scope="col">Species</th>
+                        <th scope="col">Spec (cm)</th>
+                        <th scope="col">Deadline</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-            {% for QuoteData in quote_list %}
-            <tr>
-                <th scope="row">
-                    <a href="{% url 'quote_update' QuoteData.id %}" class="post-link">
-                    {{ QuoteData.id }}: {{ QuoteData.title}}
-                    </a>
-                </th>
-                <td>
-                    {{ QuoteData.species }}
-                </td>
-                <td>
-                    {{ QuoteData.width }} x {{ QuoteData.thickness }} x {{ QuoteData.length }}
-                </td>
-                <td>
-                    
-                    
-                    {{ QuoteData.deadline }}
-                </td>
-                <td>
-                    {{ QuoteData.quote_status }}
-                </td>
-                <td>
-                    <i class="fa-solid fa-trash"></i>
-                </td>
-            </tr>
+                    {% for QuoteData in quote_list %}
+                    <tr>
+                        <th scope="row">
+                            <a href="{% url 'quote_update' QuoteData.id %}" class="post-link">
+                                {{ QuoteData.id }}: {{ QuoteData.title}}
+                            </a>
+                        </th>
+                        <td>
+                            {{ QuoteData.species }}
+                        </td>
+                        <td>
+                            {{ QuoteData.width }} x {{ QuoteData.thickness }} x {{ QuoteData.length }}
+                        </td>
+                        <td>
 
 
+                            {{ QuoteData.deadline }}
+                        </td>
+                        <td>
+                            <a href="{% url 'quote_detail' QuoteData.id %}" class="post-link">
+                                {{ QuoteData.quote_status }}
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
 
 
-            {% endfor %}
-        </tbody>
-        </table>
-        <div class="container">
-            <a href="{% url 'user_home' %}">
-            <button type="button" class="btn btn-success">Add Quote</button>
-            </a>
-        </div>
+
+
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="container">
+                <a href="{% url 'user_home' %}">
+                    <button type="button" class="btn btn-success">Add Quote</button>
+                </a>
+            </div>
         </div>
 
     </div>
