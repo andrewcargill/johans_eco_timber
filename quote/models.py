@@ -7,7 +7,7 @@ SPECIES = (('Pine', 'Pine'), ('Birch', 'Birch'), ('Spruce', 'Spruce'))
 
 GRADE = ((0, "0"), (1, "1"), (2, "2"))
 
-QUOTE_STATUS = (("Not submitted", "Not submitted"), ("Submitted", "Submitted"), ("Quoted", "Quoted"))
+QUOTE_STATUS = (("not_submitted", "Not submitted"), ("submitted", "Submitted"), ("quoted", "Quote Emailed"))
 
 LENGTH_NEW = (("300", "300"), ("400", "400"), ("500", "500"))
 
