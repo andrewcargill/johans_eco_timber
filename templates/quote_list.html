@@ -41,9 +41,12 @@
         </div>
         <div class="row">
 
-            <h2>Quote List</h2>
-
-            <table class="table table-hover" style="width:100%">
+            <h2>Quote List</h2><a href="{% url 'user_home' %}">
+                <button type="button" class="btn btn-success">Add Quote</button>
+            </a>
+            <div class="table-responsive" >
+            <table class="table table-hover " style="width:100%">
+                <caption>Your Quotes</caption>
                 <thead>
                     <tr>
                         <th scope="col"><i class="bi bi-file-earmark-bar-graph-fill"></i> Title</th>
@@ -104,6 +107,7 @@ Status</th>
                     {% endfor %}
                 </tbody>
             </table>
+        </div>
             <div class="container">
                 <a href="{% url 'user_home' %}">
                     <button type="button" class="btn btn-success">Add Quote</button>
