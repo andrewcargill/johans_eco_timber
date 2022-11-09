@@ -33,6 +33,7 @@ class QuoteDelete(DeleteView):
     model = QuoteData
     template_name_suffix = '_confirm_delete'
     success_url = reverse_lazy("quote_list")
+    
 
 
 class UserQuoteList(ListView):
@@ -64,9 +65,11 @@ class QuoteDetail(View):
             quote = QuoteData.objects.get(id=id)
             quote.quote_status = "Submitted"
             quote.save()
+            return HttpResponseRedirect(reverse('quote_list'))
+
             
-        def get_success_url(self):
-            return reverse("quote_list")
+        # def get_success_url(self):
+        #     return reverse("quote_list")
 
 
 
