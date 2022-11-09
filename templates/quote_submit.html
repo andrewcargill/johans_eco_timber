@@ -27,7 +27,7 @@
             <p>main top container information</p>
         </div>
         <div class="row">
-            <h2>{{ quote.title }}: {{ quote.quote_status }}: {{ quote.species }}</h2>
+            <h2>Submit Quote Request: {{ quote.title }} </h2>
         </div>
 
     </div>
@@ -37,13 +37,25 @@
         <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
           </div>
-        <div class="row">
-            <p>Form name</p>
+        <div>
+            <p>Yourname: {{ user.username }}</p>
+            <p>Email: {{ user.email }}</p>
+
+
+            <p>Species: {{ quote.species }}</p>
+            <p>Dimensions L/W/D: {{ quote.length }}cm x {{ quote.width }}cm x {{ quote.thickness }}cm </p>
+            <p>Required By: {{ quote.deadline }}</p>
+            <p>Quantity: {{ quote.quantity }}</p>
+            <p>Grade: {{ quote.grade }}</p>
+            <p>Quarter-sawn: {{ quote.quarter_sawn }}</p>
+            <p>Comments: {{ quote.comments }}</p>
+
         </div>
         <div class="row">
             
             <form method="post">
-                Take a look at the information and then Click the button to submit the form for quoting.
+                If the information looks correct then please submit the information and we will get back to you 
+                with a quote within 24hrs.
                 {% csrf_token %}
               
 
