@@ -1,18 +1,18 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views.generic.edit import UpdateView
 from django.views import generic, View
 from django.views.generic import ListView
-from .models import Quote, Item, QuoteData
+from .models import QuoteData
 from django.contrib.auth.models import User
-from .forms import NameForm, AddItem, QuoteForm
+from .forms import QuoteForm
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
+from django.forms import TextInput
 
 
 
 class QuoteList(generic.ListView):
-    model = Quote
-    queryset = Quote.objects.order_by('-submitted_date')
+    model = QuoteData
     template_name = 'index.html'
     paginate_by = 6
 
@@ -21,8 +21,11 @@ class QuoteList(generic.ListView):
 
 class QuoteUpdate(UpdateView):
     model = QuoteData
-    fields = '__all__'
     template_name_suffix = 'form'
+    form_class = QuoteForm
+
+    def get_success_url(self):
+        return reverse("quote_list")
     
 
 class UserQuoteList(ListView):
@@ -30,8 +33,10 @@ class UserQuoteList(ListView):
     # queryset = QuoteData.objects.filter(status=0)
     context_object_name = "quote_list"
     template_name = 'quote_list.html'
+
     def get_queryset(self):
         return QuoteData.objects.filter(user_id=self.request.user)
+
 
 class QuoteDetail(View):
 
@@ -45,17 +50,6 @@ class QuoteDetail(View):
                 "quote": quote,
             }
         )
-
-
-
-# class UserQuoteList(ListView):
-#     model = QuoteData
-#     queryset = QuoteData.objects.filter(status=0)
-#     context_object_name = "quote_list"
-#     template_name = 'quote_list.html'
-    
-
-
 
 def QuoteInput(request):
     print("-------GETTING CALLED")
