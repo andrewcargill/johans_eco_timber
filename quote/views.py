@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+from django.views.generic.edit import UpdateView
 from django.views import generic, View
 from django.views.generic import ListView
 from .models import Quote, Item, QuoteData
@@ -16,7 +17,13 @@ class QuoteList(generic.ListView):
     paginate_by = 6
 
 
-###New for single quote database
+#New for single quote database
+
+class QuoteUpdate(UpdateView):
+    model = QuoteData
+    fields = '__all__'
+    template_name_suffix = 'form'
+    
 
 class UserQuoteList(ListView):
     model = QuoteData
@@ -25,6 +32,20 @@ class UserQuoteList(ListView):
     template_name = 'quote_list.html'
     def get_queryset(self):
         return QuoteData.objects.filter(user_id=self.request.user)
+
+class QuoteDetail(View):
+
+    def get(self, request, id, *args, **kwargs):
+        quote = QuoteData.objects.get(id=id)
+
+        return render(
+            request,
+            "quote_edit.html",
+            {
+                "quote": quote,
+            }
+        )
+
 
 
 # class UserQuoteList(ListView):

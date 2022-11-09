@@ -59,7 +59,9 @@
             {% for QuoteData in quote_list %}
             <tr>
                 <th scope="row">
+                    <a href="{% url 'quote_detail' QuoteData.id %}" class="post-link">
                     {{ QuoteData.id }}: {{ QuoteData.title}}
+                    </a>
                 </th>
                 <td>
                     {{ QuoteData.species }}
