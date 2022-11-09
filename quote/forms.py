@@ -48,7 +48,7 @@ class AddItem(forms.ModelForm):
 class QuoteForm(forms.ModelForm):
     class Meta:
         model = QuoteData
-        fields = ['deadline', 'comments', 'species', 'length',
+        fields = ['title', 'deadline', 'comments', 'species', 'length_new',
                   'width', 'thickness', 'quantity', 'quarter_sawn', 'grade']
         widgets = {
             'deadline': TextInput(attrs={

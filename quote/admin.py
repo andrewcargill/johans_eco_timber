@@ -11,5 +11,5 @@ class BuckAdmin(admin.ModelAdmin):
 
 @admin.register(QuoteData)
 class BuckAdmin(admin.ModelAdmin):
-    list_display = ('id', 'user_id', 'deadline', 'submitted_date')
+    list_display = ('id', 'user_id', 'deadline', 'submitted_date', 'quote_status')
     

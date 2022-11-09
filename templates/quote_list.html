@@ -46,7 +46,7 @@
             <table class="table table-hover" style="width:100%">
                 <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">#: Title</th>
                     <th scope="col">Species</th>
                     <th scope="col">Spec (cm)</th>
                     <th scope="col">Deadline</th>
@@ -59,13 +59,13 @@
             {% for QuoteData in quote_list %}
             <tr>
                 <th scope="row">
-                    TR1{{ QuoteData.id }}02
+                    {{ QuoteData.id }}: {{ QuoteData.title}}
                 </th>
                 <td>
                     {{ QuoteData.species }}
                 </td>
                 <td>
-                    {{ QuoteData.width }} x {{ QuoteData.thickness }} x {{ QuoteData.length }}
+                    {{ QuoteData.width }} x {{ QuoteData.thickness }} x {{ QuoteData.length_new }}
                 </td>
                 <td>
                     
@@ -73,7 +73,7 @@
                     {{ QuoteData.deadline }}
                 </td>
                 <td>
-                    {{ QuoteData.status }}
+                    {{ QuoteData.quote_status }}
                 </td>
                 <td>
                     <i class="fa-solid fa-trash"></i>
