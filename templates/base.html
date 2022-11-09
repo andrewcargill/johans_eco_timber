@@ -57,6 +57,13 @@
             </div>
         </div>
     </nav>
+    <div class="container">
+        {% if user.is_authenticated %}
+        <p>You are logged in as: {{ user.username }}</p>
+        {% else %}
+        <p>You are currently not logged in</p>
+        {% endif %}
+    </div>
     {% block content %}{% endblock content %}
 
 
