@@ -34,8 +34,6 @@ class QuoteDelete(DeleteView):
     template_name_suffix = '_confirm_delete'
     success_url = reverse_lazy("quote_list")
     
-
-
 class UserQuoteList(ListView):
     model = QuoteData
     # queryset = QuoteData.objects.filter(status=0)

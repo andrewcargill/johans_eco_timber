@@ -46,12 +46,21 @@
             <table class="table table-hover" style="width:100%">
                 <thead>
                     <tr>
-                        <th scope="col">#: Title</th>
-                        <th scope="col">Species</th>
-                        <th scope="col">Spec (cm)</th>
-                        <th scope="col">Deadline</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Delete</th>
+                        <th scope="col"><i class="bi bi-file-earmark-bar-graph-fill"></i> Title</th>
+                        <th scope="col">
+                            <i class="fa-solid fa-tree">
+                                
+                            </i> Speices
+                            
+                        </th>
+                        <th scope="col"> <i class="bi bi-rulers"></i>
+                        Spec</th>
+                        <th scope="col"><i class="bi bi-bullseye"></i>
+                            Deadline</th>
+                        <th scope="col">
+                            <i class="bi bi-cloud-arrow-up-fill"></i>
+Status</th>
+                        <th scope="col"> <i class="fa-solid fa-trash"></i></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -60,13 +69,15 @@
                     <tr>
                         <th scope="row">
                             <a href="{% url 'quote_update' QuoteData.id %}" class="post-link">
-                                {{ QuoteData.id }}: {{ QuoteData.title}}
+                                 {{ QuoteData.title}}
                             </a>
                         </th>
                         <td>
+                            
                             {{ QuoteData.species }}
                         </td>
                         <td>
+                            
                             {{ QuoteData.width }} x {{ QuoteData.thickness }} x {{ QuoteData.length }}
                         </td>
                         <td>
@@ -81,7 +92,8 @@
                         </td>
                         <td>
                             <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
-                                <i class="fa-solid fa-trash"></i>
+                                <i class="bi bi-x-square-fill"></i>
+
                             </a>
                         </td>
                     </tr>
