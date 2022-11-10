@@ -26,7 +26,7 @@ class QuoteUpdate(SuccessMessageMixin, UpdateView):
     model = QuoteData
     template_name_suffix = 'form'
     form_class = QuoteForm
-    success_message = "Enquiry successfully updated!"
+    success_message = "Enquiry successfully updated! Submit to receive a quote"
 
     def get_success_url(self):
         return reverse("quote_list")
@@ -73,7 +73,7 @@ class QuoteDetail(View):
             quote.save()
             messages.add_message(
                 request, messages.INFO, 
-                "Thank you for submitting your enquiry! Expect an email within 24 hrs"
+                "Thank you for submitting your enquiry! Expect an email within 24hrs"
                 )
             return HttpResponseRedirect(reverse('quote_list'))
 
@@ -98,7 +98,7 @@ def QuoteInput(request):
             quote.save()
             messages.add_message(
                 request, messages.INFO, 
-                'Enquiry Saved! Submit to request quote'
+                'Enquiry Saved! Submit to receive a quote'
                 )
             response = redirect('quote_list.html')
             return response
