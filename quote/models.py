@@ -9,6 +9,8 @@ GRADE = ((0, "0"), (1, "1"), (2, "2"))
 
 QUOTE_STATUS = (("not_submitted", "Not submitted"), ("submitted", "Submitted"), ("quoted", "Quote Emailed"))
 
+STATUS = ((0, "Not submitted"), (1, "Submitted"), (2, "Quote Emailed"))
+
 LENGTH_NEW = (("300", "300"), ("400", "400"), ("500", "500"))
 
 
@@ -25,6 +27,7 @@ class QuoteData(models.Model):
     grade = models.IntegerField(choices=GRADE, default=0)
     comments = models.TextField(max_length=200)
     submitted_date = models.DateTimeField(auto_now=True)
+    status = models.IntegerField(choices=STATUS, default=0)
     quote_status = models.CharField(choices=QUOTE_STATUS, default="Not Submitted", max_length=20)
 
 

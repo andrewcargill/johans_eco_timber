@@ -61,7 +61,8 @@ class QuoteDetail(View):
         if request.method == 'POST':
             print("Ready to submit")
             quote = QuoteData.objects.get(id=id)
-            quote.quote_status = "submitted"
+            # quote.quote_status = "submitted"
+            quote.status = 1
             quote.save()
             return HttpResponseRedirect(reverse('quote_list'))
 

@@ -57,7 +57,7 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
-LOGIN_REDIRECT_URL = '/user_home.html'
+LOGIN_REDIRECT_URL = '/quote_list.html'
 LOGOUT_REDIRECT_URL = '/'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'

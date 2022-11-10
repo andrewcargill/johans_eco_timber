@@ -45,7 +45,7 @@
     <div class="row">
       <h2>Quote List</h2>
       <a href="{% url 'user_home' %}">
-        <button type="button" class="btn btn-success">Add Quote</button>
+        <button type="button" class="btn btn-success">New Enquiry</button>
       </a>
       <div class="table-responsive">
         <table class="table table-hover" style="width: 100%">
@@ -71,7 +71,7 @@
             {% for QuoteData in quote_list %}
             <tr>
               <th scope="row">
-                {% if QuoteData.quote_status == 'not_submitted' %}
+                {% if QuoteData.status == 0 %}
 
                 <a
                   href="{% url 'quote_update' QuoteData.id %}"
@@ -88,21 +88,21 @@
               </td>
               <td>{{ QuoteData.deadline }}</td>
               <td>
-                {% if QuoteData.quote_status == 'not_submitted' %}
+                {% if QuoteData.status == 0 %}
                 <a
                   href="{% url 'quote_detail' QuoteData.id %}"
                   class="post-link"
                 >
-                  {{ QuoteData.get_quote_status_display }}
+                  {{ QuoteData.get_status_display }}
                 </a>
-                {% else %} {{ QuoteData.get_quote_status_display }} {% endif %}
+                {% else %} {{ QuoteData.get_status_display }} {% endif %}
               </td>
               <td>
                 <a
                   href="{% url 'quote_delete' QuoteData.id %}"
                   class="post-link"
                 >
-                  <i class="bi bi-x-square-fill"></i>
+                  <i class="bi bi-x-square-fill delete_button"></i>
                 </a>
               </td>
             </tr>
@@ -113,7 +113,7 @@
       </div>
       <div class="container">
         <a href="{% url 'user_home' %}">
-          <button type="button" class="btn btn-success">Add Quote</button>
+          <button type="button" class="btn btn-success">New Enquiry</button>
         </a>
       </div>
     </div>
