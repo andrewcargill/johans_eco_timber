@@ -41,7 +41,8 @@ class UserQuoteList(ListView):
     template_name = 'quote_list.html'
 
     def get_queryset(self):
-        return QuoteData.objects.filter(user_id=self.request.user)
+        return QuoteData.objects.filter(
+            user_id=self.request.user).order_by("status")
 
 
 class QuoteDetail(View):

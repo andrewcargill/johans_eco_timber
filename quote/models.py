@@ -28,8 +28,7 @@ class QuoteData(models.Model):
     comments = models.TextField(max_length=200)
     submitted_date = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    quote_status = models.CharField(choices=QUOTE_STATUS, default="Not Submitted", max_length=20)
-
+   
 
     class Meta:
         ordering = ['deadline']
