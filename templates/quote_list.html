@@ -1,24 +1,30 @@
 {% extends "base.html" %} {% block content %}
 
-<div class="container bg-secondary border border-dark">
+<div class="container  ">
   <div class="container purple lighten-4">
     <p>top spacer</p>
   </div>
 </div>
-<div class="container bg-primary border border-dark">
+<div class="container  ">
   <div class="container purple lighten-4">
     <div class="row">
       <p></p>
     </div>
     <div class="row">
-      <h2>User Home</h2>
+      
     </div>
   </div>
 </div>
-<div class="container bg-danger border border-dark">
+<div class="container border border-dark">
   <div class="container purple lighten-4">
-    <div class="row">
-      <p>main top container information</p>
+    <div class="">
+      <h2>Custom Timber Quote System</h2>
+      <p>Welcome {{ user.username }}!</p>
+      <p>This app allows me to assist you with your customer timber projects.
+      </p>
+      <p>Create an enquiry or enquiries and then submit them to me. I will get back to you within 24hours</p>
+      <p>If you need any assistance please get in touch via our contact page.</p>
+      <p>thanks, Johan</p>
     </div>
     <div class="row">
       <h2></h2>
@@ -27,31 +33,18 @@
 </div>
 <div class="">
   <div class="container purple lighten-4 border border-dark">
-    <div class="progress">
-      <div
-        class="progress-bar"
-        role="progressbar"
-        style="width: 25%"
-        aria-valuenow="25"
-        aria-valuemin="0"
-        aria-valuemax="100"
-      >
-        25%
-      </div>
+    
+    <div class="row">
+      
     </div>
     <div class="row">
-      <p>Form name</p>
-    </div>
-    <div class="row">
-      <h2>Quote List</h2>
+      
       <a href="{% url 'user_home' %}">
         <button type="button" class="btn btn-success">New Enquiry</button>
       </a>
       <div class="table-responsive">
         <table class="table table-hover" style="width: 100%">
-          <caption>
-            Your Quotes
-          </caption>
+          
           <thead>
             <tr>
               <th scope="col">
@@ -95,27 +88,35 @@
                 >
                   {{ QuoteData.get_status_display }}
                 </a>
-                {% else %} {{ QuoteData.get_status_display }} {% endif %}
+                {% elif QuoteData.status == 1 %} <div id="submitted"> {{ QuoteData.get_status_display }} </div>
+    
+                {% else %} <div id="quoted"> {{ QuoteData.get_status_display }} </div>{% endif %}
               </td>
+
               <td>
+                {% if QuoteData.status == 1 %}
+                <i id="" class="bi bi-x-square-fill delete_button"></i>
+                {% else %}
                 <a
                   href="{% url 'quote_delete' QuoteData.id %}"
                   class="post-link"
                 >
-                  <i class="bi bi-x-square-fill delete_button"></i>
+                  <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
                 </a>
+                {% endif %}
+
+                
+                
+
               </td>
+              {% endfor %}
             </tr>
 
-            {% endfor %}
+            
           </tbody>
         </table>
       </div>
-      <div class="container">
-        <a href="{% url 'user_home' %}">
-          <button type="button" class="btn btn-success">New Enquiry</button>
-        </a>
-      </div>
+      
     </div>
   </div>
 </div>
