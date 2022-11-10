@@ -93,7 +93,7 @@ def QuoteInput(request):
         print("-------form is NOT valid")
         form = QuoteForm()
 
-    return render(request, 'user_home.html', {'form': form})
+    return render(request, 'new_enquiry.html', {'form': form})
 
 def NewItem(request):
     print("-------GETTING CALLED")
