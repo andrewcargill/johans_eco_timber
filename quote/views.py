@@ -9,6 +9,8 @@ from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.forms import TextInput
 from django.urls import reverse_lazy
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 
@@ -20,19 +22,23 @@ class QuoteList(generic.ListView):
 
 #New for single quote database
 
-class QuoteUpdate(UpdateView):
+class QuoteUpdate(SuccessMessageMixin, UpdateView):
     model = QuoteData
     template_name_suffix = 'form'
     form_class = QuoteForm
+    success_message = "Enquiry successfully updated!"
 
     def get_success_url(self):
         return reverse("quote_list")
 
 
-class QuoteDelete(DeleteView):
+class QuoteDelete(SuccessMessageMixin, DeleteView):
     model = QuoteData
     template_name_suffix = '_confirm_delete'
+    success_message = "Enquiry successfully updated!"
     success_url = reverse_lazy("quote_list")
+
+
     
 class UserQuoteList(ListView):
     model = QuoteData
@@ -65,6 +71,10 @@ class QuoteDetail(View):
             # quote.quote_status = "submitted"
             quote.status = 1
             quote.save()
+            messages.add_message(
+                request, messages.INFO, 
+                "Thank you for submitting your enquiry! Expect an email within 24 hrs"
+                )
             return HttpResponseRedirect(reverse('quote_list'))
 
             
@@ -86,12 +96,17 @@ def QuoteInput(request):
             quote = form.save(commit=False)
             quote.user_id = request.user  # The logged-in user
             quote.save()
+            messages.add_message(
+                request, messages.INFO, 
+                'Enquiry Saved! Submit to request quote'
+                )
             response = redirect('quote_list.html')
             return response
             print("-------form is valid")
     else:
         print("-------form is NOT valid")
         form = QuoteForm()
+        
 
     return render(request, 'new_enquiry.html', {'form': form})
 
