@@ -40,176 +40,276 @@
 
     <div class="row">
     </div>
-    <div class="row">
+    
+    <div>
+      <!--Table for Medium and large screens-->
+      <div class=" row d-none d-sm-block">
 
-      <a href="{% url 'new_enquiry' %}">
-        <button type="button" class="btn btn-success">New Enquiry</button>
-      </a>
+        <a href="{% url 'new_enquiry' %}">
+          <button type="button" class="btn btn-success">New Enquiry</button>
+        </a>
 
-      <!--research table-->
-      <h2>reaseach table</h2>
-      <div class="table-responsive">
-        <table class="table table-hover" style="width: 100%">
+        <!--research table-->
+        <h2>reaseach table</h2>
+        <div class="table-responsive">
+          <table class="table" style="width: 100%">
 
-          <thead>
-            <tr>
-              <th scope="col">
-                <i class="bi bi-file-earmark-bar-graph-fill"></i> Title
-              </th>
-              <th scope="col"><i class="fa-solid fa-tree"> </i> Speices</th>
-              <th scope="col"><i class="bi bi-rulers"></i> Spec</th>
-              <th scope="col"><i class="bi bi-bullseye"></i> Deadline</th>
-              <th scope="col">
-                <i class="bi bi-cloud-arrow-up-fill"></i>
-                Status
-              </th>
-              <th scope="col"><i class="fa-solid fa-trash"></i></th>
-            </tr>
-          </thead>
-          <tbody>
-            <!--FOR STATEMENT-->
-            {% for QuoteData in quote_list %}
+            <thead>
+              <tr>
+                <th scope="col">
+                  <i class="bi bi-file-earmark-bar-graph-fill"></i> Title
+                </th>
+                <th scope="col"><i class="fa-solid fa-tree"> </i> Speices</th>
+                <th scope="col"><i class="bi bi-rulers"></i> SPEC (cm)</th>
+                <th scope="col"><i class="bi bi-bullseye"></i> Deadline</th>
+                <th scope="col">
+                  <i class="bi bi-cloud-arrow-up-fill"></i>
+                  Status
+                </th>
+                <th scope="col"><i class="fa-solid fa-trash"></i></th>
+              </tr>
+            </thead>
+            <tbody>
+              <!--FOR STATEMENT-->
+              {% for QuoteData in quote_list %}
 
-            <!--IF STATEMENT OF STATUS START-->
-            {% if QuoteData.status == 0 %}
-            <tr class="pointer clickable-row" onclick="location.href='{% url 'quote_update' QuoteData.id %}' ">
-              <th scope="row">
-
-                <a href="{% url 'quote_update' QuoteData.id %}" class="post-link">
+              <!--IF STATEMENT OF STATUS START-->
+              {% if QuoteData.status == 0 %}
+              <tr class="pointer clickable-row" onclick="location.href='{% url 'quote_update' QuoteData.id %}' ">
+                <th scope="row">
                   {{ QuoteData.title}}
-                </a>
-              </th>
-              <!--Speices-->
-              <td>
+                </th>
+                <!--Speices-->
+                <td>
 
-                {{ QuoteData.species }}
-              </td>
+                  {{ QuoteData.species }}
+                </td>
 
-              <!--deminsions-->
-              <td>
-                {{ QuoteData.width }} x {{ QuoteData.thickness }} x
-                {{QuoteData.length }}
-              </td>
-              <!--deadline-->
-              <td>{{ QuoteData.deadline }}</td>
-              <!--status-->
-              <td>{{ QuoteData.get_status_display }}</td>
-              <td>
-                <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
-                  <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
-                </a>
-                
-              </td>
-            </tr>
+                <!--deminsions-->
+                <td>
+                  {{ QuoteData.width }} x {{ QuoteData.thickness }} x
+                  {{QuoteData.length }}
+                </td>
+                <!--deadline-->
+                <td>{{ QuoteData.deadline }}</td>
+                <!--status-->
+                <td>{{ QuoteData.get_status_display }}</td>
+                <td>
+                  <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
+                    <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
+                  </a>
 
-            <!--ELSE STATEMENT OF STATUS-->
-            {% else %}
-            <tr>
-              <th scope="row">
-                <!--IF STATEMENT OF STATUS START-->
-                <a href="{% url 'quote_update' QuoteData.id %}" class="post-link">
+                </td>
+              </tr>
+
+              <!--ELIF STATEMENT OF STATUS-->
+              {% elif QuoteData.status == 1 %}
+              <tr class="submitted">
+                <th scope="row">
                   {{ QuoteData.title}}
-                </a>
-              </th>
-              <!--Speices-->
-              <td>
+                </th>
+                <!--Speces-->
+                <td>
 
-                {{ QuoteData.species }}
-              </td>
+                  {{ QuoteData.species }}
+                </td>
 
-              <!--deminsions-->
-              <td>
-                {{ QuoteData.width }} x {{ QuoteData.thickness }} x
-                {{QuoteData.length }}
-              </td>
-              <!--deadline-->
-              <td>{{ QuoteData.deadline }}</td>
-              <!--status-->
-              <td>{{ QuoteData.get_status_display }}</td>
-              <td>
-                <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
-                  <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
-                </a>
-                {% endif %}
-              </td>
-            </tr>
-            <!--End For-->
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
+                <!--deminsions-->
+                <td>
+                  {{ QuoteData.width }} x {{ QuoteData.thickness }} x
+                  {{QuoteData.length }}
+                </td>
+                <!--deadline-->
+                <td>{{ QuoteData.deadline }}</td>
+                <!--status-->
+                <td>Enquiry Received</td>
+                <!--delete-->
+                <td>
+                  <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
+                    <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
+                  </a>
 
-      <!--Orginal table-->
-      <h2>original table</h2>
-      <div class="table-responsive">
-        <table class="table table-hover" style="width: 100%">
-
-          <thead>
-            <tr>
-              <th scope="col">
-                <i class="bi bi-file-earmark-bar-graph-fill"></i> Title
-              </th>
-              <th scope="col"><i class="fa-solid fa-tree"> </i> Speices</th>
-              <th scope="col"><i class="bi bi-rulers"></i> Spec</th>
-              <th scope="col"><i class="bi bi-bullseye"></i> Deadline</th>
-              <th scope="col">
-                <i class="bi bi-cloud-arrow-up-fill"></i>
-                Status
-              </th>
-              <th scope="col"><i class="fa-solid fa-trash"></i></th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for QuoteData in quote_list %}
-            <tr>
-              <th scope="row">
-                {% if QuoteData.status == 0 %}
-                <!--If statement of status starts-->
-                <a href="{% url 'quote_update' QuoteData.id %}" class="post-link">
+                </td>
+              </tr>
+              <!--ELSE STATEMENT OF STATUS-->
+              {% else %}
+              <tr class="check_email">
+                <th scope="row">
                   {{ QuoteData.title}}
-                </a>
-                <!--Else of if statement starts-->
-                {% else %} {{ QuoteData.title}}
-                <!--Endif statement-->
-                {% endif %}
-              </th>
-              <td>{{ QuoteData.species }}</td>
-              <td>
-                {{ QuoteData.width }} x {{ QuoteData.thickness }} x
-                {{QuoteData.length }}
-              </td>
-              <td>{{ QuoteData.deadline }}</td>
+                </th>
+                <!--Speces-->
+                <td>
 
-              <td>
-                {% if QuoteData.status == 0 %}
-                <a href="{% url 'quote_detail' QuoteData.id %}" class="post-link">
-                  {{ QuoteData.get_status_display }}
-                </a>
-                {% elif QuoteData.status == 1 %} <div id="submitted"> {{ QuoteData.get_status_display }} </div>
+                  {{ QuoteData.species }}
+                </td>
 
-                {% else %} <div id="quoted"> {{ QuoteData.get_status_display }} </div>{% endif %}
-              </td>
+                <!--deminsions-->
+                <td>
+                  {{ QuoteData.width }} x {{ QuoteData.thickness }} x
+                  {{QuoteData.length }}
+                </td>
+                <!--deadline-->
+                <td>{{ QuoteData.deadline }}</td>
+                <!--status-->
+                <td>Response Emailed: {{ QuoteData.submitted_date }}</td>
+                <!--delete-->
+                <td>
+                  <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
+                    <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
+                  </a>
 
-              <td>
-                {% if QuoteData.status == 1 %}
-                <i id="" class="bi bi-x-square-fill delete_button"></i>
-                {% else %}
-                <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
-                  <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
-                </a>
-                {% endif %}
+                </td>
+              </tr>
 
-
-
-
-              </td>
+              {% endif %}
+              <!--End For-->
               {% endfor %}
-            </tr>
+            </tbody>
+          </table>
+        </div>
 
+        <!--Original table-->
 
-          </tbody>
-        </table>
+        <!--End of medium/ Large screen view-->
       </div>
+        <!--Table for mobile screens-->
+      <div class="d-block d-sm-none">
+            mobile table!
+        <a href="{% url 'new_enquiry' %}">
+          <button type="button" class="btn btn-success">New Enquiry</button>
+        </a>
+
+        <!--research table-->
+        <h2>reaseach table</h2>
+        <div class="table-responsive">
+          <table class="table" style="width: 100%">
+
+            <thead>
+              <tr>
+                <th scope="col">
+                  <i class="bi bi-file-earmark-bar-graph-fill"></i> Title
+                </th>
+                <th scope="col"><i class="fa-solid fa-tree"> </i> Speices</th>
+                <!-- <th scope="col"><i class="bi bi-rulers"></i> SPEC (cm)</th> -->
+                <!-- <th scope="col"><i class="bi bi-bullseye"></i> Deadline</th> -->
+                <th scope="col">
+                  <i class="bi bi-cloud-arrow-up-fill"></i>
+                  Status
+                </th>
+                <th scope="col"><i class="fa-solid fa-trash"></i></th>
+              </tr>
+            </thead>
+            <tbody>
+              <!--FOR STATEMENT-->
+              {% for QuoteData in quote_list %}
+
+              <!--IF STATEMENT OF STATUS START-->
+              {% if QuoteData.status == 0 %}
+              <tr class="pointer clickable-row" onclick="location.href='{% url 'quote_update' QuoteData.id %}' ">
+                <th scope="row">
+                  {{ QuoteData.title}}
+                </th>
+                <!--Speices-->
+                <td>
+
+                  {{ QuoteData.species }}
+                </td>
+
+                <!--deminsions-->
+                <!-- <td>
+                  {{ QuoteData.width }} x {{ QuoteData.thickness }} x
+                  {{QuoteData.length }}
+                </td> -->
+                <!--deadline-->
+                <!-- <td>{{ QuoteData.deadline }}</td> -->
+                <!--status-->
+                <td>{{ QuoteData.get_status_display }}</td>
+                <td>
+                  <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
+                    <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
+                  </a>
+
+                </td>
+              </tr>
+
+              <!--ELIF STATEMENT OF STATUS-->
+              {% elif QuoteData.status == 1 %}
+              <tr class="submitted">
+                <th scope="row">
+                  {{ QuoteData.title}}
+                </th>
+                <!--Speces-->
+                <td>
+
+                  {{ QuoteData.species }}
+                </td>
+
+                <!--deminsions-->
+                <!-- <td>
+                  {{ QuoteData.width }} x {{ QuoteData.thickness }} x
+                  {{QuoteData.length }}
+                </td> -->
+                <!--deadline-->
+                <!-- <td>{{ QuoteData.deadline }}</td> -->
+                <!--status-->
+                <td>Enquiry Received</td>
+                <!--delete-->
+                <td>
+                  <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
+                    <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
+                  </a>
+
+                </td>
+              </tr>
+              <!--ELSE STATEMENT OF STATUS-->
+              {% else %}
+              <tr class="check_email">
+                <th scope="row">
+                  {{ QuoteData.title}}
+                </th>
+                <!--Speces-->
+                <td>
+
+                  {{ QuoteData.species }}
+                </td>
+
+                <!--deminsions-->
+                <!-- <td>
+                  {{ QuoteData.width }} x {{ QuoteData.thickness }} x
+                  {{QuoteData.length }}
+                </td> -->
+                <!--deadline-->
+                <!-- <td>{{ QuoteData.deadline }}</td> -->
+                <!--status-->
+                <td>Response Emailed: {{ QuoteData.submitted_date }}</td>
+                <!--delete-->
+                <td>
+                  <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
+                    <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
+                  </a>
+
+                </td>
+              </tr>
+
+              {% endif %}
+              <!--End For-->
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+
+        <!--Original table-->
+
+        <!--End of mobile screen view-->
+      </div>
+
+      <div>
+        {% include 'table_views/mobile_table.html' %}
+      </div>
+      <div>
+        {% include 'table_views/standard_table.html' %}
+      </div>
+
 
     </div>
   </div>
