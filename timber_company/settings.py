@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'crispy_forms',
     'quote',
 ]
 
@@ -61,6 +62,7 @@ LOGIN_REDIRECT_URL = '/quote_list.html'
 LOGOUT_REDIRECT_URL = '/'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -24,7 +24,7 @@ class QuoteList(generic.ListView):
 
 class QuoteUpdate(SuccessMessageMixin, UpdateView):
     model = QuoteData
-    template_name_suffix = 'form'
+    template_name_suffix = '_edit_form'
     form_class = QuoteForm
     success_message = "Enquiry successfully updated! Submit to receive a quote"
 
