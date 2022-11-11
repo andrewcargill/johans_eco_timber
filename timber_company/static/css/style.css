@@ -27,3 +27,6 @@
     background-color: lightgreen;
 }
 
+#active-delete {
+    color: red;
+}
