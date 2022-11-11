@@ -8,7 +8,12 @@
 
 }
 
-
+.pointer {
+    cursor: pointer;
+  }
+.clickable-row:hover {
+    background: #fafafa;
+  }
 
 @media 
 only screen and (max-width: 760px),

@@ -37,83 +37,110 @@
 </div>
 <div class="">
   <div class="container purple lighten-4 border border-dark">
-    <!--New Enquiry Button-->
-    <a href="{% url 'new_enquiry' %}">
-      <button type="button" class="btn btn-success">New Enquiry</button>
-    </a>
+
     <div class="row">
     </div>
     <div class="row">
-      
-      <!-- Card view -->
-      {% for QuoteData in quote_list %}
-      <!--Card top-->
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <!--Card Body-->
-        <div class="card-body">
-          <div class="table-responsive">
-            <table class="table table-hover table-sm">
-              <tbody>
-                <tr>
-                  <td>Title</td>
-                  <td>{{ QuoteData.title }}</td>
-                </tr>
-                <tr>
-                  <td>Species</td>
-                  <td> {{ QuoteData.species }}</td>
-                </tr>
-                <tr>
-                  <td>Spec</td>
-                  <td> {{ QuoteData.width }} x {{ QuoteData.thickness }} x
-                    {{QuoteData.length }}</td>
-                </tr>
-                <tr>
-                  <td>Extras</td>
-                  <td> Grade {{ QuoteData.grade }}
-                    {% if QuoteData.quarter_sawn == True %}
-                    & Quarter Quarter Sawn
-                    {% else %}
-                    & Not Quarter Sawn
-                    {% endif %}
-                  </td>
-                </tr>
-                <tr>
-                  <td>Deadline</td>
-                  <td> {{ QuoteData.deadline }}</td>
-                </tr>
-              </tbody>
-            </table>
-            <!--End of table-->
-            <!--Buttons-->
-      <!--Submit button-->
+
       <a href="{% url 'new_enquiry' %}">
-        <button type="button" class="btn btn-success">Submit</button>
+        <button type="button" class="btn btn-success">New Enquiry</button>
       </a>
-      <!--Edit button-->
-      <a href="{% url 'new_enquiry' %}">
-        <button type="button" class="btn btn-success">Edit</button>
-      </a>
-      <!--Delete button-->
-      <a href="{% url 'new_enquiry' %}">
-        <button type="button" class="btn btn-success">Delete</button>
-      </a>
-      <!--End of buttons-->
-          </div>
-        </div>
+
+      <!--research table-->
+      <h2>reaseach table</h2>
+      <div class="table-responsive">
+        <table class="table table-hover" style="width: 100%">
+
+          <thead>
+            <tr>
+              <th scope="col">
+                <i class="bi bi-file-earmark-bar-graph-fill"></i> Title
+              </th>
+              <th scope="col"><i class="fa-solid fa-tree"> </i> Speices</th>
+              <th scope="col"><i class="bi bi-rulers"></i> Spec</th>
+              <th scope="col"><i class="bi bi-bullseye"></i> Deadline</th>
+              <th scope="col">
+                <i class="bi bi-cloud-arrow-up-fill"></i>
+                Status
+              </th>
+              <th scope="col"><i class="fa-solid fa-trash"></i></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!--FOR STATEMENT-->
+            {% for QuoteData in quote_list %}
+
+            <!--IF STATEMENT OF STATUS START-->
+            {% if QuoteData.status == 0 %}
+            <tr class="pointer clickable-row" onclick="location.href='{% url 'quote_update' QuoteData.id %}' ">
+              <th scope="row">
+
+                <a href="{% url 'quote_update' QuoteData.id %}" class="post-link">
+                  {{ QuoteData.title}}
+                </a>
+              </th>
+              <!--Speices-->
+              <td>
+
+                {{ QuoteData.species }}
+              </td>
+
+              <!--deminsions-->
+              <td>
+                {{ QuoteData.width }} x {{ QuoteData.thickness }} x
+                {{QuoteData.length }}
+              </td>
+              <!--deadline-->
+              <td>{{ QuoteData.deadline }}</td>
+              <!--status-->
+              <td>{{ QuoteData.get_status_display }}</td>
+              <td>
+                <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
+                  <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
+                </a>
+                
+              </td>
+            </tr>
+
+            <!--ELSE STATEMENT OF STATUS-->
+            {% else %}
+            <tr>
+              <th scope="row">
+                <!--IF STATEMENT OF STATUS START-->
+                <a href="{% url 'quote_update' QuoteData.id %}" class="post-link">
+                  {{ QuoteData.title}}
+                </a>
+              </th>
+              <!--Speices-->
+              <td>
+
+                {{ QuoteData.species }}
+              </td>
+
+              <!--deminsions-->
+              <td>
+                {{ QuoteData.width }} x {{ QuoteData.thickness }} x
+                {{QuoteData.length }}
+              </td>
+              <!--deadline-->
+              <td>{{ QuoteData.deadline }}</td>
+              <!--status-->
+              <td>{{ QuoteData.get_status_display }}</td>
+              <td>
+                <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
+                  <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
+                </a>
+                {% endif %}
+              </td>
+            </tr>
+            <!--End For-->
+            {% endfor %}
+          </tbody>
+        </table>
       </div>
-      {% endfor %}
 
-      
-      
-
-
-
-      <!--End of Card-->
-
-
-
-      <!-- Table view -->
+      <!--Orginal table-->
+      <h2>original table</h2>
       <div class="table-responsive">
         <table class="table table-hover" style="width: 100%">
 
@@ -137,11 +164,14 @@
             <tr>
               <th scope="row">
                 {% if QuoteData.status == 0 %}
-
+                <!--If statement of status starts-->
                 <a href="{% url 'quote_update' QuoteData.id %}" class="post-link">
                   {{ QuoteData.title}}
                 </a>
-                {% else %} {{ QuoteData.title}} {% endif %}
+                <!--Else of if statement starts-->
+                {% else %} {{ QuoteData.title}}
+                <!--Endif statement-->
+                {% endif %}
               </th>
               <td>{{ QuoteData.species }}</td>
               <td>
@@ -149,6 +179,7 @@
                 {{QuoteData.length }}
               </td>
               <td>{{ QuoteData.deadline }}</td>
+
               <td>
                 {% if QuoteData.status == 0 %}
                 <a href="{% url 'quote_detail' QuoteData.id %}" class="post-link">
