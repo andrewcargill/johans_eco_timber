@@ -1,8 +1,21 @@
 {% extends "base.html" %} {% block content %} {% load static %}
 
+<div class="hero-image">
+    <img class="hero" src="{% static '/media/images/hero_2.jpg' %}" class="rounded" alt="...">
+    <div class="hero-text d-none d-sm-block">
+      <h1>I am John Doe</h1>
+      <p>And I'm a Photographer</p>
+      <button>Hire me</button>
+    </div>
+  </div>
+
+
+  <!-- <div class="text-center hero">
+    <img class="hero" src="{% static '/media/images/hero_2.jpg' %}" class="rounded" alt="...">
+  </div> -->
 
 <!--Hero Image Carousel-->
-<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+<!-- <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -41,7 +54,7 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </button>
-</div>
+</div> -->
 
 
 
@@ -107,25 +120,25 @@
 
 <div class="mt-5" > <!--Element 1: Selective Cut-->
     <div class="row">
-        <div class="col-sm-4 highlight-text" style="background-color:yellow;">
+        <div class="col-sm-4 highlight-text">
             <h5>Take only the trees that help the forest</h5>
             <p>The small forest that I own is managed through selective-cutting. Which means I only remove a limited amount of 
                 trees each year in accordance to my forest plan.
             </p>
         </div>
-        <div class="col-sm-8" style="background-color:pink;">
-            <img src="{% static '/media/images/hero_2.jpg' %}" class="" alt="..." />
+        <div class="col-sm-8">
+            <img class="highlight_image" src="{% static '/media/images/hero_2.jpg' %}" class="rounded" alt="...">
             
         </div>
     </div>
 </div>
 <div class="mt-5" > <!--Element 2: That Creative Process-->
     <div class="row">
-        <div class="col-sm-8 highlight-text" style="background-color:pink;">
-            <img src="{% static '/media/images/hero_2.jpg' %}" class="" alt="..." />
+        <div class="col-sm-8 highlight-text">
+            <img class="highlight_image" src="{% static '/media/images/hero_2.jpg' %}" class="rounded" alt="...">
             
         </div>
-        <div class="col-sm-4" style="background-color:yellow;">
+        <div class="col-sm-4">
             <h5>That creative process</h5>
             <p>The story of the wood is a great part of my customers creative process. I love providing what my amazing customers need.
             </p>
