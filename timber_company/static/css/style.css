@@ -3,10 +3,7 @@
 
 }
 
-#user-bottom-display {
-    height: 30vh;
 
-}
 
 .pointer {
     cursor: pointer;
@@ -30,4 +27,22 @@
 #active-delete {
     color: red;
 }
+
+.hero-image {
+    max-height: 70vh;
+}
+
+.round-image {
+    height: 200px;
+    width: 200px;
+}
+
+.card-body {
+    min-height: 30vh;
+}
+
+.three-card-container {
+    max-width: 500px;
+}
+
 
