@@ -4,27 +4,29 @@
 {% load static %}
 
 
-<div class="container bg-secondary border border-dark">
+<div class="container border border-dark">
     <div class="container purple lighten-4">
         <p>top spacer</p>
 
     </div>
 </div>
-<div class="container bg-primary border border-dark">
+
     <div class="container purple lighten-4">
         <div class="row">
             <p> {% include 'messages.html' %}</p>
         </div>
         <div class="row">
-            <h2>New Enquiry</h2>
+            <img class="enquiry-header" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
         </div>
 
     </div>
-</div>
-<div class="container bg-danger border border-dark">
+
+<div class="container border border-dark">
     <div class="container purple lighten-4">
-        <div class="row">
-            <p>main top container information</p>
+        <!--Header image-->
+        <div class="">
+           <h3>New Enquiry Form</h3>
+           <p>Fill in the form below to get started. I take my...  </p>
         </div>
         <div class="row">
             <h2></h2>
@@ -33,11 +35,9 @@
     </div>
 </div>
 <div class="">
-    <div class="container purple lighten-4 border border-dark">
+    <div class="container purple lighten-4 border border-dark form-container-outer">
 
-        <div class="row">
-            <p>Form name</p>
-        </div>
+        
         <div class="row justify-content-center ">
             <div class=" ">
                 <form id="form-template" method="post">
@@ -45,27 +45,25 @@
 
                     <!--Title-->
                     <span class="row border-dark">
-                        <div class="col-4 text-right">
+                        <div class="col-4 text-left">
                             Project Title:</div>
-                        <div class="col-4">
+                        <div class="col-8">
                             {{ form.title }}</div>
-                        <div class="col-4"></div>
+                        
                     </span>
                     <!--Deadline-->
                     <span class="row border-dark">
-                        <div class="col-4 text-right">
+                        <div class="col-4 text-left">
                             Project Deadline:</div>
-                        <div class="col-4">
+                        <div class="col-8">
                             {{ form.deadline }}</div>
-                        <div class="col-4"></div>
                     </span>
                     <!--species-->
                     <span class="row border-dark">
-                        <div class="col-4 text-right">
+                        <div class="col-4 text-left">
                             Species:</div>
-                        <div class="col-4">
+                        <div class="col-8">
                             {{ form.species }}</div>
-                        <div class="col-4"></div>
                     </span>
 
                     <!--spacer-->
@@ -73,36 +71,31 @@
 
                     <!--width-->
                     <span class="row border-dark">
-                        <div class="col-4 text-right">
+                        <div class="col-4 text-left">
                             Width:</div>
-                        <div class="col-4">
+                        <div class="col-8">
                             {{ form.width }}</div>
-                        <div class="col-4">
-                        </div>
+                        
                     </span>
 
                     <!--depth-->
                     <span class="row border-dark">
-                        <div class="col-4 text-right">
+                        <div class="col-4 text-left">
                             Depth:</div>
 
 
-                        <div class="col-4">
+                        <div class="col-8">
                             {{ form.thickness }}
                         </div>
-                        <div class="col-4"></div>
                     </span>
 
                     <!--length-->
                     <span class="row border-dark">
-                        <div class="col-4 text-right">
+                        <div class="col-4 text-left">
                             Length:
                         </div>
-                        <div class="col-4">
+                        <div class="col-8">
                             {{ form.length }}
-                        </div>
-                        <div class="col-4">
-
                         </div>
                     </span>
 
@@ -111,40 +104,31 @@
 
                     <!--Quarter-Sawn-->
                     <span class="row border-dark">
-                        <div class="col-4 text-right">
+                        <div class="col-4 text-left">
                             Quarter-Sawn:
                         </div>
-                        <div class="col-4">
+                        <div class="col-8">
                             {{ form.quarter_sawn }}
-                        </div>
-                        <div class="col-4">
-
                         </div>
                     </span>
 
                     <!--Grade-->
                     <span class="row border-dark">
-                        <div class="col-4 text-right">
+                        <div class="col-4 text-left">
                             Grade:
                         </div>
-                        <div class="col-4">
+                        <div class="col-8">
                             {{ form.grade }}
-                        </div>
-                        <div class="col-4">
-
                         </div>
                     </span>
 
                     <!--Quantity-->
                     <span class="row border-dark">
-                        <div class="col-4 text-right">
+                        <div class="col-4 text-left">
                             Quantity:
                         </div>
-                        <div class="col-4">
+                        <div class="col-8">
                             {{ form.quantity }}
-                        </div>
-                        <div class="col-4">
-
                         </div>
                     </span>
 
@@ -153,19 +137,18 @@
 
                     <!--Comments-->
                     <span class="row border-dark">
-                        <div class="col-4 text-right">
+                        <div class="col-4 text-left">
                             Comments:
                         </div>
-                        <div class="col-4">
+                        <div class="col-8">
                             
-                        </div>
-                        <div class="col-4">
-
                         </div>
                     </span>
                     <span class="row">
                         <div class="col-12">
+
                             {{ form.comments }}
+                        
                         </div>
                     </span>
 
@@ -174,7 +157,7 @@
 
                     <!--Submit-->
                     <span class="row border-dark">
-                        <div class="col-4 text-right">
+                        <div class="col-4 text-left">
                             
                         </div>
                         <div class="col-4">

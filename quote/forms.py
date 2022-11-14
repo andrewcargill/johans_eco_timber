@@ -7,6 +7,7 @@ from crispy_forms.layout import Submit
 
 
 #Single page solution
+
 class QuoteForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(QuoteForm, self).__init__(*args, **kwargs)
