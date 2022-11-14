@@ -1,10 +1,7 @@
 {% extends "base.html" %}
-{% load crispy_forms_tags %}
 
 {% block content %}
 {% load static %}
-
-
 
 
 <div class="container bg-secondary border border-dark">
@@ -38,20 +35,18 @@
 <div class="">
     <div class="container purple lighten-4 border border-dark">
         
-        <div class="">
+        <div class="row">
             <p>Form name</p>
         </div>
-        <div class="container">
+        <div class="row">
             
-        <div class="col">
-            <form class= method="post">
+            <form method="post">
                 {% csrf_token %}
-                {{ form |crispy }}
+                {{ form.as_table }}
                
                 <button class="bg-secondary" type="submit">Submit</button>
-            
+
             </form>
-        </div>
             
         </div>
 

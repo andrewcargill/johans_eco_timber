@@ -13,7 +13,7 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 
 
-
+#Pages
 class QuoteList(generic.ListView):
     model = QuoteData
     template_name = 'index.html'
@@ -116,7 +116,6 @@ def QuoteInput(request):
         print("-------form is NOT valid")
         form = QuoteForm()
         
-
     return render(request, 'new_enquiry.html', {'form': form})
 
 def NewItem(request):

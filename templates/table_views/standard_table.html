@@ -28,7 +28,7 @@
           <!--FOR STATEMENT-->
           {% for QuoteData in quote_list %}
 
-          <!--IF STATEMENT OF STATUS START-->
+          <!--IF STATEMENT OF STATUS START (Not Submitted)-->
           {% if QuoteData.status == 0 %}
           <tr class="pointer clickable-row" onclick="location.href='{% url 'quote_update' QuoteData.id %}' ">
             <th scope="row">
@@ -48,7 +48,11 @@
             <!--deadline-->
             <td>{{ QuoteData.deadline }}</td>
             <!--status-->
-            <td>{{ QuoteData.get_status_display }}</td>
+            <td>
+              <a href="{% url 'quote_detail' QuoteData.id %}" class="post-link">
+                {{ QuoteData.get_status_display }}
+            </a>
+            </td>
             <td>
               <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
                 <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
@@ -77,7 +81,7 @@
             <!--deadline-->
             <td>{{ QuoteData.deadline }}</td>
             <!--status-->
-            <td>Enquiry Received</td>
+            <td>Enquiry Received: {{ QuoteData.submitted_date }}</td>
             <!--delete-->
             <td>
               <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
