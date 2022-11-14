@@ -38,7 +38,11 @@
 
                         {{ QuoteData.species }}
                     </td>
-                    <td>{{ QuoteData.get_status_display }}</td>
+                    <td>
+                        <a href="{% url 'quote_detail' QuoteData.id %}" class="post-link">
+                            <button type="button" class="btn btn-outline-info">Submit Enquiry</button>
+                        </a>
+                    </td>
                     <td>
                         <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
                             <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>

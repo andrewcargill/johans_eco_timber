@@ -16,7 +16,7 @@
             <p> {% include 'messages.html' %}</p>
         </div>
         <div class="row">
-            <h2>User Home</h2>
+            <h2>New Enquiry</h2>
         </div>
 
     </div>
@@ -39,7 +39,7 @@
             <p>Form name</p>
         </div>
         <div class="row justify-content-center ">
-            <div class="form-container  ">
+            <div class=" ">
                 <form id="form-template" method="post">
                     {% csrf_token %}
 
@@ -69,7 +69,7 @@
                     </span>
 
                     <!--spacer-->
-                    <div class="form-spacer"></div>
+                    <div class="form-spacer"><hr/></div>
 
                     <!--width-->
                     <span class="row border-dark">
@@ -107,7 +107,7 @@
                     </span>
 
                     <!--spacer-->
-                    <div class="form-spacer"></div>
+                    <div class="form-spacer"><hr/></div>
 
                     <!--Quarter-Sawn-->
                     <span class="row border-dark">
@@ -149,7 +149,7 @@
                     </span>
 
                     <!--spacer-->
-                    <div class="form-spacer"></div>
+                    <div class="form-spacer"><hr/></div>
 
                     <!--Comments-->
                     <span class="row border-dark">
@@ -157,10 +157,15 @@
                             Comments:
                         </div>
                         <div class="col-4">
-                            {{ form.comments }}
+                            
                         </div>
                         <div class="col-4">
 
+                        </div>
+                    </span>
+                    <span class="row">
+                        <div class="col-12">
+                            {{ form.comments }}
                         </div>
                     </span>
 
