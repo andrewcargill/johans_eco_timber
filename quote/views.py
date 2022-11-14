@@ -25,6 +25,9 @@ class About(generic.ListView):
     template_name = 'about.html'
     paginate_by = 6
 
+class AboutEnquiry(generic.ListView):
+    model = QuoteData
+    template_name = 'about_enquiry_system.html'
 
 #New for single quote database
 
