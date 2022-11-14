@@ -79,9 +79,13 @@ body, html {
     height: 40vh;
 }
 
-.double-content-container {
-    width: 70%;
-    background-color: pink;
+.highlight-content-container {
+    width: 95%;
+}
+
+.highlight-text-body {
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 /*Page Footer*/
