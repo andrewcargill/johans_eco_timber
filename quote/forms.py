@@ -29,19 +29,19 @@ class QuoteForm(forms.ModelForm):
                 'type': "number",
                 'min': '10',
                 'max': '40',
-                'placeholder': 'Tell me about what you need and any specific instructions'
+                
             }),
             'thickness': TextInput(attrs={
                 'type': "number",
                 'min': '5',
                 'max': '40',
-                'placeholder': 'Tell me about what you need and any specific instructions'
+                
             }),
             'quantity': TextInput(attrs={
                 'type': "number",
                 'min': '1',
                 'max': '40',
-                'placeholder': 'Tell me about what you need and any specific instructions'
+                
             }),
         }
 

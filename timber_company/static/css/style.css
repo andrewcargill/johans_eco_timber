@@ -97,3 +97,14 @@ body, html {
 .single-card {
     width: 95%;
 }
+
+/*form template*/
+
+
+.form-container {
+    width: 90%;
+}
+
+.form-spacer {
+    height: 5vh;
+}

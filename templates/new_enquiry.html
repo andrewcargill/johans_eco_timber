@@ -34,20 +34,212 @@
 </div>
 <div class="">
     <div class="container purple lighten-4 border border-dark">
-        
+
         <div class="row">
             <p>Form name</p>
         </div>
-        <div class="row">
-            
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_table }}
-               
-                <button class="bg-secondary" type="submit">Submit</button>
+        <div class="row justify-content-center ">
+            <div class="form-container  ">
+                <form id="form-template" method="post">
+                    {% csrf_token %}
 
-            </form>
+                    <!--Title-->
+                    <span class="row border-dark">
+                        <div class="col-4 text-right">
+                         Project Title:
+                        
+                                
+                           
+                        </div>
+
+
+                        <div class="col-4">
+                            {{ form.title }}
+                              
+                            
+                        </div>
+                        <div class="col-4">
+                            
+                              
+                            
+                        </div>
+                    </span>
+                    <!--Deadline-->
+                    <span class="row border-dark">
+                        <div class="col-4 text-right">
+                         Project Deadline:
+                        
+                                
+                           
+                        </div>
+
+
+                        <div class="col-4">
+                            {{ form.deadline }}
+                              
+                            
+                        </div>
+                        <div class="col-4">
+                            
+                              
+                            
+                        </div>
+                    </span>
+                    <!--species-->
+                    <span class="row border-dark">
+                        <div class="col-4 text-right">
+                         Species:
+                        
+                                
+                           
+                        </div>
+
+
+                        <div class="col-4">
+                            {{ form.species }}
+                              
+                            
+                        </div>
+                        <div class="col-4">
+                            
+                              
+                            
+                        </div>
+                    </span>
+
+                    <!--spacer-->
+                    <div class="form-spacer"></div>
+
+                    <!--width-->
+                    <span class="row border-dark">
+                        <div class="col-4 text-right">
+                         Width:
+                        
+                                
+                           
+                        </div>
+
+
+                        <div class="col-4">
+                            {{ form.width }}
+                              
+                            
+                        </div>
+                        <div class="col-4">
+                            
+                              
+                            
+                        </div>
+                    </span>
+
+                    <!--depth-->
+                    <span class="row border-dark">
+                        <div class="col-4 text-right">
+                         Depth:
+                        
+                                
+                           
+                        </div>
+
+
+                        <div class="col-4">
+                            {{ form.thickness }}
+                              
+                            
+                        </div>
+                        <div class="col-4">
+                            
+                              
+                            
+                        </div>
+                    </span>
+
+                    <!--length-->
+                    <span class="row border-dark">
+                        <div class="col-4 text-right">
+                         Length:
+                        </div>
+                        <div class="col-4">
+                            {{ form.length }}   
+                        </div>
+                        <div class="col-4">
+                            
+                        </div>
+                    </span>
+
+                    <!--spacer-->
+                    <div class="form-spacer"></div>
+
+                    <!--Quarter-Sawn-->
+                    <span class="row border-dark">
+                        <div class="col-4 text-right">
+                         Quarter-Sawn:
+                        </div>
+                        <div class="col-4">
+                            {{ form.quarter_sawn }}   
+                        </div>
+                        <div class="col-4">
+                            
+                        </div>
+                    </span>
+
+                    <!--Grade-->
+                    <span class="row border-dark">
+                        <div class="col-4 text-right">
+                         Grade:
+                        </div>
+                        <div class="col-4">
+                            {{ form.grade }}   
+                        </div>
+                        <div class="col-4">
+                            
+                        </div>
+                    </span>
+
+                    <!--Quantity-->
+                    <span class="row border-dark">
+                        <div class="col-4 text-right">
+                         Quantity:
+                        </div>
+                        <div class="col-4">
+                            {{ form.quantity }}   
+                        </div>
+                        <div class="col-4">
+                            
+                        </div>
+                    </span>
+
+                    <!--spacer-->
+                    <div class="form-spacer"></div>
+
+                    <!--Comments-->
+                    <span class="row border-dark">
+                        <div class="col-4 text-right">
+                         Comments:
+                        </div>
+                        <div class="col-4">
+                            {{ form.comments }}   
+                        </div>
+                        <div class="col-4">
+                            
+                        </div>
+                    </span>
+
+                    
+
+
+
+                
             
+                    
+
+
+
+
+                    <button class="bg-secondary" type="submit">Submit</button>
+
+                </form>
+            </div>
         </div>
 
     </div>
