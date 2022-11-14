@@ -20,6 +20,12 @@ class QuoteList(generic.ListView):
     paginate_by = 6
 
 
+class About(generic.ListView):
+    model = QuoteData
+    template_name = 'about.html'
+    paginate_by = 6
+
+
 #New for single quote database
 
 class QuoteUpdate(SuccessMessageMixin, UpdateView):

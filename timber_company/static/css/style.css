@@ -92,3 +92,8 @@ body, html {
 .page-footer {
     margin-top: 5vh;
 }
+
+/*about page*/
+.single-card {
+    width: 95%;
+}
