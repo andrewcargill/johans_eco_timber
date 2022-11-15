@@ -4,27 +4,44 @@
 {% load static %}
 
 
-<div class="container bg-secondary border border-dark">
+<div class="container border border-dark">
     <div class="container purple lighten-4">
-        <p>top spacer</p>
+        <h3 class="text-center">Enquiry Form</h3>
 
     </div>
 </div>
-<div class="container bg-primary border border-dark">
-    <div class="container purple lighten-4">
-        <div class="row">
-            <p> {% include 'messages.html' %}</p>
-        </div>
-        <div class="row">
-            <h2>Edit Enquiry</h2>
-        </div>
 
+<div class="container purple lighten-4">
+    <div class="row">
+        <p> {% include 'messages.html' %}</p>
     </div>
+    <div class="row">
+        <img class="enquiry-header" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
+    </div>
+
 </div>
-<div class="container bg-danger border border-dark">
-    <div class="container purple lighten-4">
-        <div class="row">
-            <p>main top container information</p>
+
+<div class="container border border-dark ">
+    <div class="row  justify-content-center">
+    <div class="form-container">
+        <!--Header image-->
+        <div class="text-header">
+
+            <div class="d-block d-sm-none">
+                <p>Edit your enquiry below.</p>
+                <p>Please contact me if you need any assistance.</p>
+                <p>Johan</p>
+            </div>
+
+            
+                <!--text for desktop-->
+            <div class="d-none d-sm-block">
+            <p>Edit your enquiry below.</p>
+            <p>If you need any assistance, please get in touch with me and I'll be happy to help.</p>
+            <p>Johan</p>
+            <p>Sustainable Timber Co.</p>
+            </div>
+            
         </div>
         <div class="row">
             <h2></h2>
@@ -32,153 +49,115 @@
 
     </div>
 </div>
-<div class="">
-    <div class="container purple lighten-4 border border-dark">
+</div>
+<div >
+    <div class="container purple lighten-4 border border-dark form-container-outer">
 
-        <div class="row">
-            <p>Form name</p>
-        </div>
+
         <div class="row justify-content-center ">
-            <div class="form-container  ">
+            <div class="form-container">
                 <form id="form-template" method="post">
                     {% csrf_token %}
 
                     <!--Title-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-right">
-                            Project Title:</div>
-                        <div class="col-4">
-                            {{ form.title }}</div>
-                        <div class="col-4"></div>
-                    </span>
+
+
+                    <div class="form-group">
+                        <label for="title-input">Title:</label>
+                        {{ form.title }}
+
+                    </div>
+
+
+
                     <!--Deadline-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-right">
-                            Project Deadline:</div>
-                        <div class="col-4">
-                            {{ form.deadline }}</div>
-                        <div class="col-4"></div>
-                    </span>
+
+                    <div class="form-group">
+                        <label for="deadline-date">Deadline:</label>
+
+                        {{ form.deadline }}</div>
+
                     <!--species-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-right">
-                            Species:</div>
-                        <div class="col-4">
-                            {{ form.species }}</div>
-                        <div class="col-4"></div>
-                    </span>
+
+                    <div class="form-group">
+                        <label for="species-input">Species:</label>
+                        {{ form.species }}</div>
+
 
                     <!--spacer-->
-                    <div class="form-spacer"></div>
+                    <div class="dropdown-divider">   
+                    </div>
 
                     <!--width-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-right">
-                            Width:</div>
-                        <div class="col-4">
-                            {{ form.width }}</div>
-                        <div class="col-4">
-                        </div>
-                    </span>
-
+                    <div class="form-group">
+                        <label for="width-input">Width:</label>
+                        {{ form.width }}</div>
                     <!--depth-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-right">
-                            Depth:</div>
-
-
-                        <div class="col-4">
-                            {{ form.thickness }}
-                        </div>
-                        <div class="col-4"></div>
-                    </span>
+                    <div class="form-group">
+                        <label for="depth-input">Depth:</label>
+                        {{ form.thickness }}</div>
 
                     <!--length-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-right">
-                            Length:
-                        </div>
-                        <div class="col-4">
-                            {{ form.length }}
-                        </div>
-                        <div class="col-4">
-
-                        </div>
-                    </span>
+                    <div class="form-group">
+                        <label for="length-input">Length:</label>
+                        {{ form.length }}
+                    </div>
 
                     <!--spacer-->
-                    <div class="form-spacer"></div>
+                    <div class="dropdown-divider">   
+                    </div>
 
                     <!--Quarter-Sawn-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-right">
-                            Quarter-Sawn:
-                        </div>
-                        <div class="col-4">
-                            {{ form.quarter_sawn }}
-                        </div>
-                        <div class="col-4">
+                    <div class="form-check">
 
-                        </div>
-                    </span>
+                        {{ form.quarter_sawn }}
+                        <label class="form-check-label" for="quarter-input">Quarter-Sawn</label>
+                    </div>
+
+                    <!--spacer-->
+                    <div class="dropdown-divider">
+                       
+                    </div>
 
                     <!--Grade-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-right">
-                            Grade:
-                        </div>
-                        <div class="col-4">
-                            {{ form.grade }}
-                        </div>
-                        <div class="col-4">
-
-                        </div>
-                    </span>
+                    <div class="form-group">
+                        <label for="grade-input">Wood Grade:</label>
+                        {{ form.grade }}
+                    </div>
 
                     <!--Quantity-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-right">
-                            Quantity:
-                        </div>
-                        <div class="col-4">
-                            {{ form.quantity }}
-                        </div>
-                        <div class="col-4">
+                    <div class="form-group">
+                        <label for="quantity-input">Quantity:</label>
+                        {{ form.quantity }}
+                    </div>
 
-                        </div>
-                    </span>
 
                     <!--spacer-->
-                    <div class="form-spacer"></div>
+                    <div class="dropdown-divider">
+                       
+                    </div>
 
                     <!--Comments-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-right">
-                            Comments:
-                        </div>
-                        <div class="col-4">
+                   
+
+                        <div class="">
+                            <label for="comments-input">Comments: </label>
                             {{ form.comments }}
-                        </div>
-                        <div class="col-4">
 
                         </div>
-                    </span>
+                        <!--spacer-->
+                    <div class="dropdown-divider">
+                       
+                    </div>
 
-                    <!--spacer-->
-                    <div class="form-spacer"></div>
+                    <!--Submit-->
 
-                    <!--Save-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-right">
-                            Comments:
-                        </div>
-                        <div class="col-4">
-                            <button class="bg-secondary" type="submit">Save Updates</button>
-                        </div>
-                        <div class="col-4">
+                            <button class="btn btn-primary btn-block" type="submit">Save Changes</button>
+                        
+                        
 
-                        </div>
-                    </span>
+                      
+                   
 
 
 
@@ -191,7 +170,7 @@
 
 
 
-                    
+
 
                 </form>
             </div>
