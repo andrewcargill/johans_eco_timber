@@ -110,6 +110,12 @@ body, html {
     width: 95%;
 }
 
+/*Enquiry text header*/
+.text-header {
+    padding-top: 25px;
+    padding-bottom: 5px;
+}
+
 /*form template*/
 
 .form-container-outer {
@@ -119,9 +125,10 @@ body, html {
 
 
 .form-container {
-    width: 90%;
+    width: 60vw;
 }
 
 .form-spacer {
     height: 3vh;
 }
+

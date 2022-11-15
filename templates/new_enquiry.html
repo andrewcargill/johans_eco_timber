@@ -6,7 +6,7 @@
 
 <div class="container border border-dark">
     <div class="container purple lighten-4">
-        <p>top spacer</p>
+        <h3>Enquiry Form</h3>
 
     </div>
 </div>
@@ -21,12 +21,29 @@
 
 </div>
 
-<div class="container border border-dark">
-    <div class="container purple lighten-4">
+<div class="container border border-dark ">
+    <div class="row  justify-content-center">
+    <div class="form-container">
         <!--Header image-->
-        <div class="">
-            <h3>New Enquiry Form</h3>
-            <p>Fill in the form below to get started. I take my... </p>
+        <div class="text-header">
+
+            <div class="d-block d-sm-none">
+                <p>Begin by filling in the details below.</p>
+                <p>Contact me if you need any assistance.</p>
+                <p>Johan</p>
+            </div>
+
+            
+                <!--text for desktop-->
+            <div class="d-none d-sm-block">
+            <p>Should your project require timber of varying dimensions and/or wood species, simply create a new enquiry for each.</p>
+            <p>Use the comments section to give instructions or helpful information on how you are going to use the wood,
+            for example: <i>'This will be for a table top - minimum of 100cm will need to be Grade 0'</i>.</p>
+            <p>If you need any assistance, please get in touch with me and I'll be happy to help.</p>
+            <p>Johan</p>
+            <p>Sustainable Timber Co.</p>
+            </div>
+            
         </div>
         <div class="row">
             <h2></h2>
@@ -34,12 +51,13 @@
 
     </div>
 </div>
-<div class="">
+</div>
+<div >
     <div class="container purple lighten-4 border border-dark form-container-outer">
 
 
         <div class="row justify-content-center ">
-            <div class=" ">
+            <div class="form-container">
                 <form id="form-template" method="post">
                     {% csrf_token %}
 

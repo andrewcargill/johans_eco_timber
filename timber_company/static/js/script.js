@@ -10,7 +10,3 @@ document.addEventListener("DOMContentLoaded", function () {
   var instances = M.FormSelect.init(elems, options);
 });
 
-
-
-
-
