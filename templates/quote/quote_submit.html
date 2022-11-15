@@ -3,35 +3,54 @@
 {% block content %}
 {% load static %}
 
-<div class="container bg-secondary border border-dark">
+<!--Top Section-->
+<div class="container border border-dark">
     <div class="container purple lighten-4">
-        <p>top spacer</p>
+        <h3 class="text-center">Enquiry Form</h3>
 
     </div>
 </div>
-<div class="container bg-primary border border-dark">
-    <div class="container purple lighten-4">
-        <div class="row">
-            <p></p>
-        </div>
-        <div class="row">
-            <h2>Add to quote</h2>
+
+<div class="container purple lighten-4">
+    <div class="row">
+        <p> {% include 'messages.html' %}</p>
+    </div>
+    <div class="row">
+        <img class="enquiry-header" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
+    </div>
+
+</div>
+
+<div class="container border border-dark ">
+    <div class="row  justify-content-center">
+    <div class="form-container">
+        <!--Header image-->
+        <div class="text-header">
+
+            <div class="d-block d-sm-none">
+                <p>Edit your enquiry below.</p>
+                <p>Please contact me if you need any assistance.</p>
+                <p>Johan</p>
+            </div>
+
+            
+                <!--text for desktop-->
+            <div class="d-none d-sm-block">
+            <p>Edit your enquiry below.</p>
+            <p>If you need any assistance, please get in touch with me and I'll be happy to help.</p>
+            <p>Johan</p>
+            <p>Sustainable Timber Co.</p>
+            </div>
             
         </div>
-
-    </div>
-</div>
-<div class="container bg-danger border border-dark">
-    <div class="container purple lighten-4">
         <div class="row">
-            <p>main top container information</p>
-        </div>
-        <div class="row">
-            <h2>Submit Quote Request: {{ quote.title }} </h2>
+            <h2></h2>
         </div>
 
     </div>
 </div>
+</div>
+<!--bottom-->
 <div class="">
     <div class="container purple lighten-4 border border-dark">
         <div class="progress">

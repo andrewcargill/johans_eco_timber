@@ -3,7 +3,106 @@
 {% block content %}
 {% load static %}
 
-<div class="container bg-secondary border border-dark">
+
+
+
+
+<!--Top Section-->
+<div class="container border border-dark">
+    <div class="container purple lighten-4">
+        <h3 class="text-center">Enquiry Form</h3>
+
+    </div>
+</div>
+
+<div class="container purple lighten-4">
+    <div class="row">
+        <p> {% include 'messages.html' %}</p>
+    </div>
+    <div class="row">
+        <img class="enquiry-header" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
+    </div>
+
+</div>
+
+<div class="container border border-dark ">
+    <div class="row  justify-content-center">
+        <div class="form-container">
+            <!--Header image-->
+            <div class="text-header">
+
+                
+                    <p>Check the details below and submit.</p>
+                    <p>If you need any assistance, please get in touch with me and I'll be happy to help.</p>
+                    <p>Johan</p>
+                    <p>Sustainable Timber Co.</p>
+
+                    <h3>Details</h3>
+                    <table class="table">
+                        <tr>
+                            <th scope="col">Enquiry Title</th>
+                            <td>{{ quote.title }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Deadline/ Required By</th>
+                            <td>{{ quote.deadline }}</td>
+                        </tr>
+                        <tr>
+                            <th>Your Username</th>
+                            <td>{{ user.username }}</td>
+                        </tr>
+                        <tr>
+                            <th>Your Email</th>
+                            <td>{{ user.email }}</td>
+                        </tr>
+                    </table>
+                    <h3>Summary</h3>
+                    <table class="table">
+                        <tr>
+                            <th scope="col">Dimensions (L/W/D)</th>
+                            <td>{{ quote.length }}cm x {{ quote.width }}cm x {{ quote.thickness }}cm</td>
+                        </tr>
+                        <tr>
+                            <th>Species and Grade</th>
+                            <td>{{ quote.species }} (Grade {{ quote.grade }})</td>
+                        </tr>
+                        <tr>
+                            <th>Quantity</th>
+                            <td>{{ quote.quantity }}</td>
+                        </tr>
+                        <tr>
+                            <th>Quarter-Sawn</th>
+                            <td>{{ quote.quarter_sawn }}</td>
+                        </tr>
+                        <tr>
+                            <th>Comments</th>
+                            <td>{{ quote.comments }}</td>
+                        </tr>
+                    </table>
+
+
+
+                <div class="row">
+
+                    <form method="post">
+
+                        {% csrf_token %}
+
+
+                        <button class="btn btn-primary" type="submit">Submit</button>
+
+                    </form>
+                </div>
+
+            </div>
+            <div class="row">
+                <h2></h2>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- <div class="container bg-secondary border border-dark">
     <div class="container purple lighten-4">
         <p>top spacer</p>
 
@@ -15,7 +114,7 @@
             <p></p>
         </div>
         <div class="row">
-            <h2>Add to quote</h2>
+            <h2>Add to quote !! </h2>
             
         </div>
 
@@ -31,42 +130,16 @@
         </div>
 
     </div>
-</div>
-<div class="">
+</div> -->
+<!-- <div class="">
     <div class="container purple lighten-4 border border-dark">
         <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
           </div>
-        <div>
-            <p>Yourname: {{ user.username }}</p>
-            <p>Email: {{ user.email }}</p>
-
-
-            <p>Species: {{ quote.species }}</p>
-            <p>Dimensions L/W/D: {{ quote.length }}cm x {{ quote.width }}cm x {{ quote.thickness }}cm </p>
-            <p>Required By: {{ quote.deadline }}</p>
-            <p>Quantity: {{ quote.quantity }}</p>
-            <p>Grade: {{ quote.grade }}</p>
-            <p>Quarter-sawn: {{ quote.quarter_sawn }}</p>
-            <p>Comments: {{ quote.comments }}</p>
-
-        </div>
-        <div class="row">
-            
-            <form method="post">
-                If the information looks correct then please submit the information and we will get back to you 
-                with a quote within 24hrs.
-                {% csrf_token %}
-              
-
-                <button class="bg-secondary" type="submit">Submit</button>
-
-            </form>
-            
-        </div>
+        
 
     </div>
-</div>
+</div> -->
 
 <!-- <script src="{% static '/js/index.js' %}"></script> -->
 
