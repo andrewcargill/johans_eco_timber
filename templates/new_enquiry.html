@@ -11,22 +11,22 @@
     </div>
 </div>
 
-    <div class="container purple lighten-4">
-        <div class="row">
-            <p> {% include 'messages.html' %}</p>
-        </div>
-        <div class="row">
-            <img class="enquiry-header" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
-        </div>
-
+<div class="container purple lighten-4">
+    <div class="row">
+        <p> {% include 'messages.html' %}</p>
     </div>
+    <div class="row">
+        <img class="enquiry-header" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
+    </div>
+
+</div>
 
 <div class="container border border-dark">
     <div class="container purple lighten-4">
         <!--Header image-->
         <div class="">
-           <h3>New Enquiry Form</h3>
-           <p>Fill in the form below to get started. I take my...  </p>
+            <h3>New Enquiry Form</h3>
+            <p>Fill in the form below to get started. I take my... </p>
         </div>
         <div class="row">
             <h2></h2>
@@ -37,136 +37,111 @@
 <div class="">
     <div class="container purple lighten-4 border border-dark form-container-outer">
 
-        
+
         <div class="row justify-content-center ">
             <div class=" ">
                 <form id="form-template" method="post">
                     {% csrf_token %}
 
                     <!--Title-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-left">
-                            Project Title:</div>
-                        <div class="col-8">
-                            {{ form.title }}</div>
-                        
-                    </span>
+
+
+                    <div class="form-group">
+                        <label for="title-input">Title:</label>
+                        {{ form.title }}
+
+                    </div>
+
+
+
                     <!--Deadline-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-left">
-                            Project Deadline:</div>
-                        <div class="col-8">
-                            {{ form.deadline }}</div>
-                    </span>
+
+                    <div class="form-group">
+                        <label for="deadline-date">Deadline:</label>
+
+                        {{ form.deadline }}</div>
+
                     <!--species-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-left">
-                            Species:</div>
-                        <div class="col-8">
-                            {{ form.species }}</div>
-                    </span>
+
+                    <div class="form-group">
+                        <label for="species-input">Species:</label>
+                        {{ form.species }}</div>
+
 
                     <!--spacer-->
-                    <div class="form-spacer"><hr/></div>
+                    <div class="dropdown-divider">   
+                    </div>
 
                     <!--width-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-left">
-                            Width:</div>
-                        <div class="col-8">
-                            {{ form.width }}</div>
-                        
-                    </span>
-
+                    <div class="form-group">
+                        <label for="width-input">Width:</label>
+                        {{ form.width }}</div>
                     <!--depth-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-left">
-                            Depth:</div>
-
-
-                        <div class="col-8">
-                            {{ form.thickness }}
-                        </div>
-                    </span>
+                    <div class="form-group">
+                        <label for="depth-input">Depth:</label>
+                        {{ form.thickness }}</div>
 
                     <!--length-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-left">
-                            Length:
-                        </div>
-                        <div class="col-8">
-                            {{ form.length }}
-                        </div>
-                    </span>
+                    <div class="form-group">
+                        <label for="length-input">Length:</label>
+                        {{ form.length }}
+                    </div>
 
                     <!--spacer-->
-                    <div class="form-spacer"><hr/></div>
+                    <div class="dropdown-divider">   
+                    </div>
 
                     <!--Quarter-Sawn-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-left">
-                            Quarter-Sawn:
-                        </div>
-                        <div class="col-8">
-                            {{ form.quarter_sawn }}
-                        </div>
-                    </span>
+                    <div class="form-check">
+
+                        {{ form.quarter_sawn }}
+                        <label class="form-check-label" for="quarter-input">Quarter-Sawn</label>
+                    </div>
+
+                    <!--spacer-->
+                    <div class="dropdown-divider">
+                       
+                    </div>
 
                     <!--Grade-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-left">
-                            Grade:
-                        </div>
-                        <div class="col-8">
-                            {{ form.grade }}
-                        </div>
-                    </span>
+                    <div class="form-group">
+                        <label for="grade-input">Wood Grade:</label>
+                        {{ form.grade }}
+                    </div>
 
                     <!--Quantity-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-left">
-                            Quantity:
-                        </div>
-                        <div class="col-8">
-                            {{ form.quantity }}
-                        </div>
-                    </span>
+                    <div class="form-group">
+                        <label for="quantity-input">Quantity:</label>
+                        {{ form.quantity }}
+                    </div>
+
 
                     <!--spacer-->
-                    <div class="form-spacer"><hr/></div>
+                    <div class="dropdown-divider">
+                       
+                    </div>
 
                     <!--Comments-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-left">
-                            Comments:
-                        </div>
-                        <div class="col-8">
-                            
-                        </div>
-                    </span>
-                    <span class="row">
-                        <div class="col-12">
+                   
 
+                        <div class="">
+                            <label for="comments-input">Comments: </label>
                             {{ form.comments }}
-                        
-                        </div>
-                    </span>
 
-                    <!--spacer-->
-                    <div class="form-spacer"></div>
+                        </div>
+                        <!--spacer-->
+                    <div class="dropdown-divider">
+                       
+                    </div>
 
                     <!--Submit-->
-                    <span class="row border-dark">
-                        <div class="col-4 text-left">
-                            
-                        </div>
-                        <div class="col-4">
-                            <button class="bg-secondary" type="submit">Save Enquiry</button>
-                        </div>
-                        <div class="col-4">
 
-                        </div>
-                    </span>
+                            <button class="btn btn-primary btn-block" type="submit">Save Enquiry</button>
+                        
+                        
+
+                      
+                   
 
 
 
@@ -179,7 +154,7 @@
 
 
 
-                    
+
 
                 </form>
             </div>
