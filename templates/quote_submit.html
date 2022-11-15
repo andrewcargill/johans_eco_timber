@@ -82,16 +82,20 @@
 
 
 
-                <div class="row">
+                <div>
 
                     <form method="post">
 
                         {% csrf_token %}
 
 
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button class="btn btn-primary btn-block" type="submit">Submit</button>
 
                     </form>
+                    <div>
+                        <br>
+                    <a href="{{request.META.HTTP_REFERER}}"><button class="btn btn-secondary btn-block" type="">Don't Submit & Return to list view</button></a>
+                </div>
                 </div>
 
             </div>
