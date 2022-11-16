@@ -1,73 +1,45 @@
-{% extends "base.html" %} {% block content %} {% load static %}
+{% extends "base.html" %} 
+{% block content %} 
+{% load static %}
 
-
+<!--Page header image-->
 <div class="hero-image">
     <img class="highlight_image_about" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
-
 </div>
+
+<!--page content-->
 <div class="row justify-content-center">
-    <!--3 Card Container-->
     <div class="col-sm mt-5">
-        <!--1st Card-->
-        <div class="card text-center border-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h5>My Background</h5>
+                    <p>
+                        I brought a forest and then studied wood and metal work at Vindeln College. This is
+                        where my passion for the nature and sustainable forestry began. As my forest is only
+                         30 hectares and close to the main farm I am able to work in a small scale without the
+                          need for large equipment.</p>
+                        <p> I brought the sawmill for my own timber projects and then quickly realised that I
+                        produced more timber than I needed.</p>
 
-            <div class="container">
-                <div class="card-body text-justify text-sm-left text-center">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <h5 class="card-title">My Background</h5>
-                            <p class="card-text">
-                                I brought a forest and then studied wood and metal work at Vindeln College. This is
-                                where my
-                                passion for the nature and sustainable forestry began.
+                        <h5>Other interests</h5>
+                        <p>I love making music and playing guitar! Of course being out in the nature is fun too.
+                            I have girls with a big interest in horses, so this takes up a lot of the free time.
+                            But most of all, chatting with friends and customers about their next amazing wood project!
+                        </p>
 
-                                As my forest is only 30 hectares and close to the main farm I am able to work in a small
-                                scale
-                                without the need for large equipment.
-
-                                I brought the sawmill for my own timber projects and then quickly realised that I
-                                produced
-                                more
-                                timber than I needed.
-
-                                <h5>Other interests</h5>
-
-                                <p>I love making music and playing guitar! Of course being out in the nature is fun too.
-
-                                    I have girls with a big interest in horses, so this takes up a lot of the free time.
-            
-                                    But most of all, chatting with friends and customers about their next amazing wood project!
-                                </p>
-            
-                                <p>Simply sign-up and start planning your next project. Submit an inquiry and then I'll get in touch
-                                    with you!</p>
-                            </p>
-                            <a href="{% url 'account_signup' %}" class="btn btn-dark">Create a Login >></a>
-                        </div>
-                        <div class="col-sm-4">
-                            <img class="side_image_about" src="{% static '/media/images/sawmill_hero2.jpg' %}"
-                                class="rounded" alt="...">
-                        </div>
-                    </div>
-                  
-
-                
-
-
+                        <p>Simply sign-up and start planning your next project. Submit an inquiry and then I'll get in
+                            touch with you!</p>
                     
-
+                    <a href="{% url 'account_signup' %}" class="btn btn-dark">Create a Login >></a>
                 </div>
-                
-                
+                <div class="col-sm-4">
+                    <img class="side_image_about" src="{% static '/media/images/sawmill_hero2.jpg' %}" class="rounded"
+                        alt="...">
+                </div>
             </div>
         </div>
     </div>
-
 </div>
-<!--End of 3 card section-->
-
-
-
-
 
 {% endblock content %}

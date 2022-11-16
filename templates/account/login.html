@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 
-
 {% load i18n %}
 {% load account socialaccount %}
 
@@ -8,30 +7,26 @@
 
 {% block content %}
 
-
 {% load static %}
-<!--Header-->
+<!--Header Title-->
 <div class="container border  bg-dark text-white border-dark">
   <div class="container lighten-4">
     <h3 class="text-center">Customer Login</h3>
-
   </div>
 </div>
 
+ <!--Header image-->
 <div class="container purple lighten-4">
-  <!--Header image-->
   <div class="row">
     <img class="account-header-image" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
   </div>
-
 </div>
 
+<!--Content-->
 <div class="container border border-dark ">
   <div class="row justify-content-center">
-
+    <!--Content-->
     <div class="form-container d-flex flex-column">
-      <!--Top Box Content (all devices)-->
-
       <div class="p-2 text-center">
         <!--Sign in Code-->
         <h4 class="text-center">{% trans "Sign In" %}</h4>
@@ -45,13 +40,10 @@
           for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
         <div class="socialaccount_ballot">
-
           <ul class="socialaccount_providers">
             {% include "socialaccount/snippets/provider_list.html" with process="login" %}
           </ul>
-
           <div class="login-or">{% trans 'or' %}</div>
-
         </div>
 
         {% include "socialaccount/snippets/login_extra.html" %}
@@ -71,31 +63,10 @@
           <button class="primaryAction btn btn-success" type="submit">{% trans "Sign In" %}</button>
         </form>
         <!--End of Sign in Code-->
-
       </div>
-
-
-
-
-      <!--Top Box Content (mobile only devices)-->
-      <div class="d-block d-sm-none">
-
       </div>
-
-
-      <!--Top Box Content (tablet and desktop devices)-->
-      <div class="d-none d-sm-block">
-
-      </div>
-
     </div>
-
   </div>
-
 </div>
-
-
-
-
 
 {% endblock %}

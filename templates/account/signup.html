@@ -3,33 +3,28 @@
 {% load i18n %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
-
 {% block content %}
-
-
-
 {% load static %}
-<!--Header-->
+<!--Header Title-->
 <div class="container border  bg-dark text-white border-dark">
   <div class="container lighten-4">
     <h3 class="text-center">Customer Registration</h3>
-
   </div>
 </div>
 
+<!--Header image-->
 <div class="container purple lighten-4">
-  <!--Header image-->
   <div class="row">
     <img class="account-header-image" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
   </div>
 
 </div>
-<!--Info container-->
+<!--Content-->
 <div class="container border border-dark">
   <div class="container">
     <div>
+      <!--Login code-->
       <h4>{% trans "Sign Up" %}</h4>
-    
       <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
       
       <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
@@ -41,11 +36,8 @@
         <button type="submit" class="btn btn-success">{% trans "Sign Up" %} &raquo;</button>
       </form>
       <br>
-    
     </div>
-
   </div>
-
 </div>
 
 

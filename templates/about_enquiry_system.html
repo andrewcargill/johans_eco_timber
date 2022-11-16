@@ -1,60 +1,46 @@
-{% extends "base.html" %} {% block content %} {% load static %}
+{% extends "base.html" %} 
+{% block content %} 
+{% load static %}
 
-
+<!--Page header image-->
 <div class="hero-image">
-    <img class="highlight_image_about" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
-
+    <img class="highlight_image_about" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="..." />
 </div>
+
+<!--page content-->
 <div class="row justify-content-center">
-    <!--3 Card Container-->
     <div class="col-sm mt-5">
-        <!--1st Card-->
-        <div class="card text-center border-0">
-
-            <div class="container">
-                <div class="card-body text-justify text-sm-left text-center">
-                    <div class="row">
-                        <div class="col-sm-8">
-
-                            <h5>An easy way to order your timber</h5>
-
-                            <p>Every customers requirements are different when it comes to the specific 
-                                wood needed for a project. 
-                            </p>
-
-                            <h5>Online Enquires for Customer Milled Timber</h5>
-                            <p>
-                                We have a system to manage enquires and to allow you to recieve accurate pricing on custom cut timber.
-                            </p>
-                            <p>You can tell me about the project you are planning, set a deadline and specify exactly what you need.</p>
-
-                            <h5>Setting up an on-line chat</h5>
-
-                            <p>Once I have read your requirements I can email you with a guide price for the project and then we can arrange
-                                to chat online and finalize the details. 
-                            </p>
-                                <a href="{% url 'account_signup' %}" class="btn btn-dark">Create a Login >></a>
-                        </div>
-                        <div class="col-sm-4">
-                            <img class="side_image_about" src="{% static '/media/images/enquiry1.png' %}"
-                                class="rounded" alt="...">
-                        </div>
-                    </div>
-
-                
-
-
-                    
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h5>An easy way to order your timber</h5>
+                    <p>
+                        Every customers requirements are different when it comes to the
+                        specific wood needed for a project.
+                    </p>
+                    <h5>Online Enquires for Customer Milled Timber</h5>
+                    <p>
+                        We have a system to manage enquires and to allow you to recieve
+                        accurate pricing on custom cut timber.
+                    </p>
+                    <p>
+                        You can tell me about the project you are planning, set a deadline
+                        and specify exactly what you need.
+                    </p>
+                    <h5>Setting up an on-line chat</h5>
+                    <p>
+                        Once I have read your requirements I can email you with a guide
+                        price for the project and then we can arrange to chat online and
+                        finalize the details.
+                    </p>
+                    <a href="{% url 'account_signup' %}" class="btn btn-dark">Create a Login >></a>
+                </div>
+                <div class="col-sm-4">
+                    <img class="side_image_about" src="{% static '/media/images/enquiry1.png' %}" class="rounded"
+                        alt="..." />
                 </div>
             </div>
         </div>
     </div>
-
 </div>
-<!--End of 3 card section-->
-
-
-
-
-
 {% endblock content %}

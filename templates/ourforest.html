@@ -1,61 +1,39 @@
 {% extends "base.html" %} {% block content %} {% load static %}
 
-
+<!--Page header image-->
 <div class="hero-image">
     <img class="highlight_image_about" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
-
 </div>
+
+<!--Page Content-->
 <div class="row justify-content-center">
-    <!--3 Card Container-->
     <div class="col-sm mt-5">
-        <!--1st Card-->
-        <div class="card text-center border-0">
-
-            <div class="container">
-                <div class="card-body text-justify text-sm-left text-center">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <h5 class="card-title">Our Forest</h5>
-                            <p class="card-text">
-                                The forest is rougly 100 acres. The forest soil is sand-based meaning that it is ideal for Pine and spruce.
-                                 Tree age ranges throughout the forest, but we have access to trees as old as 100 years.</p>
-
-
-                                <h5>Managing the forest</h5>
-
-                                <p>Selective cut forestry is our method of choice as it allows the nature to remain unharmed and
-                                    encourages the forest to become mixed-age and mixed species over time. Around 40 percent of the 
-                                    trees we mill are wind-fallen (Trees that fell due to high-winds).
-                                </p>
-            
-                                <p>We only use small machines to remove the trees and every tree we take down is selected and felled by hand.</p>
-                            </p>
-                            <a href="{% url 'about_enquiry_system' %}" class="btn btn-dark">Enquire About Customer Timber</a>
-                        </div>
-                        <div class="col-sm-4">
-                            <img class="side_image_about" src="{% static '/media/images/forest.png' %}"
-                                class="rounded" alt="...">
-                        </div>
-                    </div>
-                  
-
-                
-
-
-                    
-
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h5>Our Forest</h5>
+                    <p>
+                        The forest is rougly 100 acres. The forest soil is sand-based meaning that it is ideal for Pine
+                        and spruce.
+                        Tree age ranges throughout the forest, but we have access to trees as old as 100 years.
+                    </p>
+                    <h5>Managing the forest</h5>
+                    <p>Selective cut forestry is our method of choice as it allows the nature to remain unharmed and
+                        encourages the forest to become mixed-age and mixed species over time. Around 40 percent of the
+                        trees we mill are wind-fallen (Trees that fell due to high-winds).
+                    </p>
+                    <p>We only use small machines to remove the trees and every tree we take down is selected and felled
+                        by hand.</p>
+                    </p>
+                    <a href="{% url 'about_enquiry_system' %}" class="btn btn-dark">Enquire About Customer Timber</a>
                 </div>
-                
-                
+                <div class="col-sm-4">
+                    <img class="side_image_about" src="{% static '/media/images/forest.png' %}" class="rounded"
+                        alt="...">
+                </div>
             </div>
         </div>
     </div>
-
 </div>
-<!--End of 3 card section-->
-
-
-
-
 
 {% endblock content %}

@@ -4,95 +4,78 @@
 {% load static %}
 <!--Header-->
 <div class="container border  bg-dark text-white border-dark">
-  <div class="container lighten-4">
-    <h3 class="text-center">Customer Timber Enquiry </h3>
-
-  </div>
-</div>
-
-<div class="container purple lighten-4">
-  <!--Header image-->
-  <div class="row">
-    <img class="account-header-image" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
-  </div>
-
-</div>
-
-<div class="container border border-dark ">
-    <div class="row  justify-content-center">
-    <div class="form-container">
-        <!--Header image-->
-        <div class="text-header">
-
-            <div class="d-block d-sm-none">
-                <h4>Tell me about your project</h4>
-                <p>Begin by filling in the details below.</p>
-                <p>Contact me if you need any assistance.</p>
-                <p>Johan</p>
-            </div>
-
-            
-                <!--text for desktop-->
-            <div class="d-none d-sm-block">
-                <h4>Tell me about your project</h4>
-            <p>Should your project require timber of varying dimensions and/or wood species, simply create a new enquiry for each.</p>
-            
-            <p>If you need any assistance, please get in touch with me and I'll be happy to help.</p>
-            <p>Johan</p>
-            <p>Sustainable Timber Co.</p>
-            </div>
-            
-        </div>
-        <div class="row">
-            <h2></h2>
-        </div>
-
+    <div class="container lighten-4">
+        <h3 class="text-center">Customer Timber Enquiry </h3>
     </div>
 </div>
+
+<!--Header image-->
+<div class="container purple lighten-4">
+    <div class="row">
+        <img class="account-header-image" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
+    </div>
 </div>
-<!--Bottom Box Container-->
-<div >
+
+<!--Top Info Container-->
+<div class="container border border-dark ">
+    <div class="row justify-content-center">
+        <div class="form-container">
+            <div class="text-header">
+                <!--text for mobile-->
+                <div class="d-block d-sm-none">
+                    <h4>Tell me about your project</h4>
+                    <p>Begin by filling in the details below.</p>
+                    <p>Contact me if you need any assistance.</p>
+                    <p>Johan</p>
+                </div>
+
+                <!--text for desktop-->
+                <div class="d-none d-sm-block">
+                    <h4>Tell me about your project</h4>
+                    <p>Should your project require timber of varying dimensions and/or wood species, simply create a new
+                        enquiry for each.</p>
+
+                    <p>If you need any assistance, please get in touch with me and I'll be happy to help.</p>
+                    <p>Johan</p>
+                    <p>Sustainable Timber Co.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Bottom Container-Form-->
+<div>
     <div class="container purple lighten-4 border border-dark form-container-outer">
-
-
         <div class="row justify-content-center ">
             <div class="form-container">
                 <form id="form-template" method="post">
                     {% csrf_token %}
 
                     <!--Title-->
-
-
                     <div class="form-group">
                         <label for="title-input">Title:</label>
                         {{ form.title }}
-
                     </div>
 
-
-
                     <!--Deadline-->
-
                     <div class="form-group">
                         <label for="deadline-date">Deadline:</label>
-
                         {{ form.deadline }}</div>
 
                     <!--species-->
-
                     <div class="form-group">
                         <label for="species-input">Species:</label>
                         {{ form.species }}</div>
 
-
                     <!--spacer-->
-                    <div class="dropdown-divider">   
+                    <div class="dropdown-divider">
                     </div>
 
                     <!--width-->
                     <div class="form-group">
                         <label for="width-input">Width:</label>
                         {{ form.width }}</div>
+
                     <!--depth-->
                     <div class="form-group">
                         <label for="depth-input">Depth:</label>
@@ -105,19 +88,17 @@
                     </div>
 
                     <!--spacer-->
-                    <div class="dropdown-divider">   
+                    <div class="dropdown-divider">
                     </div>
 
                     <!--Quarter-Sawn-->
                     <div class="form-check">
-
                         {{ form.quarter_sawn }}
                         <label class="form-check-label" for="quarter-input">Quarter-Sawn</label>
                     </div>
 
                     <!--spacer-->
                     <div class="dropdown-divider">
-                       
                     </div>
 
                     <!--Grade-->
@@ -132,38 +113,31 @@
                         {{ form.quantity }}
                     </div>
 
-
                     <!--spacer-->
                     <div class="dropdown-divider">
-                       
                     </div>
 
                     <!--Comments-->
-                   
+                    <div class="">
+                        <label for="comments-input">Comments: </label>
+                        {{ form.comments }}
+                    </div>
 
-                        <div class="">
-                            <label for="comments-input">Comments: </label>
-                            {{ form.comments }}
-
-                        </div>
-                        <!--spacer-->
+                    <!--spacer-->
                     <div class="dropdown-divider">
-                       
                     </div>
 
                     <!--Submit-->
-
-                            <button class="btn btn-success btn-block" type="submit">Save Enquiry</button>
-
+                    <button class="btn btn-success btn-block" type="submit">Save Enquiry</button>
                 </form>
-                
+
                 <div>
                     <br>
-                <a href="{{request.META.HTTP_REFERER}}"><button class="btn btn-dark btn-block" type="">Cancel</button></a>
-            </div>
+                    <a href="{{request.META.HTTP_REFERER}}"><button class="btn btn-dark btn-block"
+                            type="">Cancel</button></a>
+                </div>
             </div>
         </div>
-
     </div>
 </div>
 
