@@ -42,6 +42,10 @@
     </div>
     
     <div>
+      <!--All screens-->
+      <div>
+        <a class="btn btn-primary" href="{% url 'account_logout' %}">Sign Out</a>
+      </div>
       <!--Table for mobile screens-->
       <div>
         {% include 'table_views/mobile_table.html' %}
@@ -50,6 +54,8 @@
       <div>
         {% include 'table_views/standard_table.html' %}
       </div>
+      
+      
     </div>
   </div>
 </div>
