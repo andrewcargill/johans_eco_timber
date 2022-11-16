@@ -5,17 +5,73 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Sign Up" %}</h1>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-</form>
+
+{% load static %}
+<!--Header-->
+<div class="container border  bg-dark text-white border-dark">
+  <div class="container lighten-4">
+    <h3 class="text-center">Customer Sign Up</h3>
+
+  </div>
+</div>
+
+<div class="container purple lighten-4">
+  <!--Header image-->
+  <div class="row">
+    <img class="account-header-image" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
+  </div>
+
+</div>
+
+<div class="container border border-dark ">
+  <div class="row justify-content-center">
+
+    <div class="form-container d-flex flex-column">
+      <!--Top Box Content (all devices)-->
+
+      <div class="p-2">
+        <h4>{% trans "Sign Up" %}</h4>
+
+        <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+        
+        <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+          <button type="submit" class="btn btn-primary">{% trans "Sign Up" %} &raquo;</button>
+        </form>
+
+      </div>
+
+
+
+
+      <!--Top Box Content (mobile only devices)-->
+      <div class="d-block d-sm-none">
+
+      </div>
+
+
+      <!--Top Box Content (tablet and desktop devices)-->
+      <div class="d-none d-sm-block">
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!--Login Code-->
+
+
+
+
 
 {% endblock %}

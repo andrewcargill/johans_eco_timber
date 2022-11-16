@@ -33,6 +33,7 @@
       <!--Top Box Content (all devices)-->
 
       <div class="p-2 text-center">
+        <!--Sign in Code-->
         <h4 class="text-center">{% trans "Sign In" %}</h4>
 
         {% get_providers as socialaccount_providers %}
@@ -69,6 +70,7 @@
           <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
           <button class="primaryAction btn btn-primary" type="submit">{% trans "Sign In" %}</button>
         </form>
+        <!--End of Sign in Code-->
 
       </div>
 
