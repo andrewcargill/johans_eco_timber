@@ -37,7 +37,7 @@
                     <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Our Forest</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'forest' %}">Our Forest</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{% url 'home' %}">User Stories</a>
@@ -68,7 +68,14 @@
         {% if user.is_authenticated %}
         <p>You are logged in as: {{ user.username }}</p>
         {% else %}
-        <p>You are currently not logged in</p>
+       
+        {% if messages %}
+  {% for message in messages %}
+    
+      <p>{{message}}</p>
+    
+ {% endfor %}
+{% endif %}
         {% endif %}
     </div>
     

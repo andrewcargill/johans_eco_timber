@@ -4,6 +4,7 @@ from django.urls import path
 urlpatterns = [
     path('', views.QuoteList.as_view(), name='home'),
     path('about.html', views.About.as_view(), name='about'),
+    path('ourforest.html', views.Forest.as_view(), name='forest'),
     path('about_enquiry_system.html', views.AboutEnquiry.as_view(), name='about_enquiry_system'),
     path('new_enquiry.html', views.QuoteInput, name='new_enquiry'),
     path('quote_list.html', views.UserQuoteList.as_view(), name='quote_list'),

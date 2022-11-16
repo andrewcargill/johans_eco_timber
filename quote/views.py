@@ -29,6 +29,10 @@ class AboutEnquiry(generic.ListView):
     model = QuoteData
     template_name = 'about_enquiry_system.html'
 
+class Forest(generic.ListView):
+    model = QuoteData
+    template_name = 'ourforest.html'
+
 #New for single quote database
 
 class QuoteUpdate(SuccessMessageMixin, UpdateView):
