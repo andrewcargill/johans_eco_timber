@@ -54,7 +54,6 @@ class QuoteDelete(SuccessMessageMixin, DeleteView):
 
 class UserQuoteList(ListView):
     model = QuoteData
-    # queryset = QuoteData.objects.filter(status=0)
     context_object_name = "quote_list"
     template_name = 'quote_list.html'
 
@@ -88,16 +87,11 @@ class QuoteDetail(View):
                 )
             return HttpResponseRedirect(reverse('quote_list'))
 
-            
-        # def get_success_url(self):
-        #     return reverse("quote_list")
-
-
 
 def QuoteInput(request):
     print("-------GETTING CALLED")
     print(request.method)
-    # if this is a POST request we need to process the form data
+
     if request.method == 'POST':
         print("-------POST is True")
         # create a form instance and populate it with data from the request:
@@ -120,10 +114,11 @@ def QuoteInput(request):
         
     return render(request, 'new_enquiry.html', {'form': form})
 
+
 def NewItem(request):
     print("-------GETTING CALLED")
     print(request.method)
-    # if this is a POST request we need to process the form data
+    
     if request.method == 'POST':
         print("-------POST is True")
         # create a form instance and populate it with data from the request:
@@ -138,4 +133,3 @@ def NewItem(request):
 
     return render(request, 'add_item.html', {'form': form})
 
-      
