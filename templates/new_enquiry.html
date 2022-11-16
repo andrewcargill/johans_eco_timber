@@ -2,22 +2,19 @@
 
 {% block content %}
 {% load static %}
+<!--Header-->
+<div class="container border  bg-dark text-white border-dark">
+  <div class="container lighten-4">
+    <h3 class="text-center">Customer Timber Enquiry </h3>
 
-<!--Top Box Container-->
-<div class="container border border-dark">
-    <div class="container purple lighten-4">
-        <h3 class="text-center">Enquiry Form</h3>
-
-    </div>
+  </div>
 </div>
 
 <div class="container purple lighten-4">
-    <div class="row">
-        <p> {% include 'messages.html' %}</p>
-    </div>
-    <div class="row">
-        <img class="enquiry-header" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
-    </div>
+  <!--Header image-->
+  <div class="row">
+    <img class="account-header-image" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
+  </div>
 
 </div>
 
@@ -28,6 +25,7 @@
         <div class="text-header">
 
             <div class="d-block d-sm-none">
+                <h4>Tell me about your project</h4>
                 <p>Begin by filling in the details below.</p>
                 <p>Contact me if you need any assistance.</p>
                 <p>Johan</p>
@@ -36,8 +34,9 @@
             
                 <!--text for desktop-->
             <div class="d-none d-sm-block">
+                <h4>Tell me about your project</h4>
             <p>Should your project require timber of varying dimensions and/or wood species, simply create a new enquiry for each.</p>
-            <p>Use the comments section to give instructions or helpful information on how you are going to use the wood,
+            <p>Use the comments section to give instructions or helpful information,
             for example: <i>'This will be for a table top - minimum of 100cm will need to be Grade 0'</i>.</p>
             <p>If you need any assistance, please get in touch with me and I'll be happy to help.</p>
             <p>Johan</p>
@@ -102,7 +101,7 @@
 
                     <!--length-->
                     <div class="form-group">
-                        <label for="length-input">Length:</label>
+                        <label for="length-input">Length (cm):</label>
                         {{ form.length }}
                     </div>
 
@@ -158,9 +157,10 @@
                             <button class="btn btn-primary btn-block" type="submit">Save Enquiry</button>
 
                 </form>
+                
                 <div>
                     <br>
-                <a href="{{request.META.HTTP_REFERER}}"><button class="btn btn-secondary btn-block" type="">Don't Save & Return to list view</button></a>
+                <a href="{{request.META.HTTP_REFERER}}"><button class="btn btn-secondary btn-block" type="">Cancel</button></a>
             </div>
             </div>
         </div>

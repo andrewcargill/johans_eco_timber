@@ -55,41 +55,57 @@
         <span class="sr-only">Next</span>
     </button>
 </div> -->
+<div class="hero-image">
+    <img class="highlight_image_about" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
 
+</div>
 <div class="row justify-content-center">
     <!--3 Card Container-->
     <div class="col-sm mt-5">
         <!--1st Card-->
         <div class="card text-center border-0">
-            <div class="card-header border-0 bg-transparent">
-                <img class="highlight_image_about" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
-            </div>
+
             <div class="container">
                 <div class="card-body text-justify text-sm-left text-center">
-                    <h5 class="card-title">My Background</h5>
-                    <p class="card-text">
-                        I brought a forest and then studied wood and metal work at Vindeln College. This is where my
-                        passion for the nature and sustainable forestry began.
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h5 class="card-title">My Background</h5>
+                            <p class="card-text">
+                                I brought a forest and then studied wood and metal work at Vindeln College. This is
+                                where my
+                                passion for the nature and sustainable forestry began.
 
-                        As my forest is only 30 hectares and close to the main farm I am able to work in a small scale
-                        without the need for large equipment.
+                                As my forest is only 30 hectares and close to the main farm I am able to work in a small
+                                scale
+                                without the need for large equipment.
 
-                        I brought the sawmill for my own timber projects and then quickly realised that I produced more
-                        timber than I needed.
-                    </p>
+                                I brought the sawmill for my own timber projects and then quickly realised that I
+                                produced
+                                more
+                                timber than I needed.
 
-                    <h5 class="card-title">Other Interests</h5>
-                    <p class="card-text">
-                        I love making music and playing guitar! Of course being out in the nature is fun too.
+                                <h5>Other interests</h5>
 
-                        I have girls with a big interest in horses, so this takes up a lot of the free time.
+                                <p>I love making music and playing guitar! Of course being out in the nature is fun too.
 
-                        But most of all, chatting with friends and customers about their next amazing wood project!
-                    </p>
+                                    I have girls with a big interest in horses, so this takes up a lot of the free time.
+            
+                                    But most of all, chatting with friends and customers about their next amazing wood project!
+                                </p>
+            
+                                <p>Simply sign-up and start planning your next project. Submit an inquiry and then I'll get in touch
+                                    with you!</p>
+                            </p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img class="side_image_about" src="{% static '/media/images/sawmill_hero2.jpg' %}"
+                                class="rounded" alt="...">
+                        </div>
+                    </div>
 
-                    <p>Simply sign-up and start planning your next project. Submit an inquiry and then I'll get in touch with you!</p>
+                
 
-                    
+
                     <a href="{% url 'account_signup' %}" class="btn btn-primary">Create a Login >></a>
                 </div>
             </div>
@@ -100,43 +116,6 @@
 <!--End of 3 card section-->
 
 
-
-<!--Highlight section-->
-<div class="highlight-content-container container col align-self-center">
-    <div class="mt-5">
-        <!--Element 1: Selective Cut-->
-        <div class="row bg-light">
-            <div class="col-sm-4 highlight-text text-justify text-sm-right text-center highlight-text-body">
-                <h5>Take only the trees that help the forest</h5>
-                <p>The small forest that I own is managed through selective-cutting. Which means I only remove a limited
-                    amount of
-                    trees each year in accordance to my forest plan.
-                </p>
-                <a href="#" class="btn btn-primary">Read More >></a>
-            </div>
-            <div class="col-sm-8">
-                <img class="highlight_image" src="{% static '/media/images/hero_2.jpg' %}" class="rounded" alt="...">
-
-            </div>
-        </div>
-    </div>
-    <div class="mt-5">
-        <!--Element 2: That Creative Process-->
-        <div class="row bg-light">
-            <div class="col-sm-8 highlight-text">
-                <img class="highlight_image" src="{% static '/media/images/hero_2.jpg' %}" class="rounded" alt="...">
-
-            </div>
-            <div class="col-sm-4 highlight-text text-justify text-sm-left text-center highlight-text-body">
-                <h5>That creative process</h5>
-                <p>The story of the wood is a great part of my customers creative process. I love providing what my
-                    amazing customers need.
-                </p>
-                <a href="#" class="btn btn-primary">Read More >></a>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 

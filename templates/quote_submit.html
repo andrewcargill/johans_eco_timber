@@ -2,26 +2,19 @@
 
 {% block content %}
 {% load static %}
+<!--Header-->
+<div class="container border  bg-dark text-white border-dark">
+  <div class="container lighten-4">
+    <h3 class="text-center">Submit Enquiry </h3>
 
-
-
-
-
-<!--Top Section-->
-<div class="container border border-dark">
-    <div class="container purple lighten-4">
-        <h3 class="text-center">Enquiry Form</h3>
-
-    </div>
+  </div>
 </div>
 
 <div class="container purple lighten-4">
-    <div class="row">
-        <p> {% include 'messages.html' %}</p>
-    </div>
-    <div class="row">
-        <img class="enquiry-header" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
-    </div>
+  <!--Header image-->
+  <div class="row">
+    <img class="account-header-image" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
+  </div>
 
 </div>
 
@@ -30,13 +23,6 @@
         <div class="form-container">
             <!--Header image-->
             <div class="text-header">
-
-                
-                    <p>Check the details below and submit.</p>
-                    <p>If you need any assistance, please get in touch with me and I'll be happy to help.</p>
-                    <p>Johan</p>
-                    <p>Sustainable Timber Co.</p>
-
                     <h3>Details</h3>
                     <table class="table">
                         <tr>
@@ -94,7 +80,7 @@
                     </form>
                     <div>
                         <br>
-                    <a href="{{request.META.HTTP_REFERER}}"><button class="btn btn-secondary btn-block" type="">Don't Submit & Return to list view</button></a>
+                    <a href="{{request.META.HTTP_REFERER}}"><button class="btn btn-secondary btn-block" type="">Cancel</button></a>
                 </div>
                 </div>
 
