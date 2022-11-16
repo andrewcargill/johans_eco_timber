@@ -33,7 +33,7 @@ class QuoteForm(forms.ModelForm):
             'comments': widgets.Textarea(attrs={
                 'class': 'form-control',
                 'id': 'comments-input',
-                'placeholder': 'Leave us some comments'
+                'placeholder': 'Use this field to give specific instructions or to ask any questions.'
             }),
             'deadline': widgets.DateInput(attrs={
                 'type': 'date',
@@ -80,10 +80,10 @@ class QuoteForm(forms.ModelForm):
             'quantity': TextInput(attrs={
                 'type': "number",
                 'min': '1',
-                'max': '40',
+                'max': '100',
                 'id': 'quantity-input',
                 'class': 'form-control',
-                'placeholder': 'Enter number of items'
+                'placeholder': 'Enter the number of items'
                 
             }),
         }
