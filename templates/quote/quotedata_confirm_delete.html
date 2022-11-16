@@ -1,17 +1,16 @@
 {% extends "base.html" %}
-
 {% block content %}
 {% load static %}
-<!--Header-->
+
+<!--Header Title-->
 <div class="container border  bg-dark text-white border-dark">
   <div class="container lighten-4">
     <h3 class="text-center">Custom Timber Enquiry System </h3>
-
   </div>
 </div>
 
+<!--Header image-->
 <div class="container">
-  <!--Header image-->
   <div class="row">
     <img class="account-header-image" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
   </div>
@@ -21,21 +20,9 @@
 <!--Info Container-->
 <div class="container border border-dark">
     <div class="container">
-
-        
-        
-        
-        
-        
-        
-        
-        
         <div>
-
-
             <br>
-            <p>Are you sure you want to delete this record {{ user.username }}?</p>
-
+            <p>Are you sure you want to delete this record?</p>
         </div>
         <form action="" method="POST">
             {% csrf_token %}
@@ -51,9 +38,7 @@
         </div>
         <br>
     </div>
-
 </div>
-
 
 </div>
 

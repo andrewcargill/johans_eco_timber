@@ -13,7 +13,6 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 
 
-#Pages
 class QuoteList(generic.ListView):
     model = QuoteData
     template_name = 'index.html'
@@ -25,15 +24,16 @@ class About(generic.ListView):
     template_name = 'about.html'
     paginate_by = 6
 
+
 class AboutEnquiry(generic.ListView):
     model = QuoteData
     template_name = 'about_enquiry_system.html'
+
 
 class Forest(generic.ListView):
     model = QuoteData
     template_name = 'ourforest.html'
 
-#New for single quote database
 
 class QuoteUpdate(SuccessMessageMixin, UpdateView):
     model = QuoteData
@@ -52,7 +52,6 @@ class QuoteDelete(SuccessMessageMixin, DeleteView):
     success_url = reverse_lazy("quote_list")
 
 
-    
 class UserQuoteList(ListView):
     model = QuoteData
     # queryset = QuoteData.objects.filter(status=0)
@@ -81,7 +80,6 @@ class QuoteDetail(View):
         if request.method == 'POST':
             print("Ready to submit")
             quote = QuoteData.objects.get(id=id)
-            # quote.quote_status = "submitted"
             quote.status = 1
             quote.save()
             messages.add_message(

@@ -5,30 +5,26 @@
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
 {% block content %}
-
-
 {% load static %}
-<!--Header-->
+
+<!--Header/Title-->
 <div class="container border  bg-dark text-white border-dark">
   <div class="container lighten-4">
     <h3 class="text-center">Customer Sign Out</h3>
-
   </div>
 </div>
 
+<!--Header image-->
 <div class="container purple lighten-4">
-  <!--Header image-->
   <div class="row">
     <img class="account-header-image" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
   </div>
-
 </div>
+
 <!--info container-->
 <div class="container border border-dark ">
   <div class="container">
-
-
-
+    <!--Logout Code-->
     <div>
       <p> {% include 'messages.html' %}</p>
     </div>
@@ -48,20 +44,7 @@
       <a href="{{request.META.HTTP_REFERER}}"><button class="btn btn-dark" type="">Cancel</button></a>
     </div>
     <br>
-
-
-
-
-
-
-
-
-
   </div>
-
 </div>
-
-
-
 
 {% endblock %}

@@ -1,90 +1,75 @@
 {% extends "base.html" %}
-
 {% block content %}
 {% load static %}
-<!--Header-->
-<div class="container border  bg-dark text-white border-dark">
-  <div class="container lighten-4">
-    <h3 class="text-center">Edit Enquiry</h3>
 
-  </div>
+<!--Header/ Title-->
+<div class="container border  bg-dark text-white border-dark">
+    <div class="container lighten-4">
+        <h3 class="text-center">Edit Enquiry</h3>
+    </div>
 </div>
 
+<!--Header image-->
 <div class="container purple lighten-4">
-  <!--Header image-->
-  <div class="row">
-    <img class="account-header-image" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
-  </div>
-
+    <div class="row">
+        <img class="account-header-image" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
+    </div>
 </div>
 
 <div class="container border border-dark ">
     <div class="row  justify-content-center">
-    <div class="form-container">
-        <!--Header image-->
-        <div class="text-header">
-
-            <div class="d-block d-sm-none">
-                <p>Edit your enquiry below.</p>
-                <p>Please contact me if you need any assistance.</p>
-                <p>Johan</p>
-            </div>
-
-            
+        <!--Top information container-->
+        <div class="form-container">
+            <div class="text-header">
+                <!--Text for mobile-->
+                <div class="d-block d-sm-none">
+                    <p>Edit your enquiry below.</p>
+                    <p>Please contact me if you need any assistance.</p>
+                    <p>Johan</p>
+                </div>
                 <!--text for desktop-->
-            <div class="d-none d-sm-block">
-            <p>Edit your enquiry below.</p>
-            <p>If you need any assistance, please get in touch with me and I'll be happy to help.</p>
-            <p>Johan</p>
-            <p>Sustainable Timber Co.</p>
-            </div>
-            
-        </div>
-        <div class="row">
-            <h2></h2>
-        </div>
+                <div class="d-none d-sm-block">
+                    <p>Edit your enquiry below.</p>
+                    <p>If you need any assistance, please get in touch with me and I'll be happy to help.</p>
+                    <p>Johan</p>
+                    <p>Sustainable Timber Co.</p>
+                </div>
 
+            </div>
+            <div class="row">
+                <h2></h2>
+            </div>
+
+        </div>
     </div>
 </div>
-</div>
 
-<!--Bottom Section-->
-<div >
+<!--Edit Form Container-->
+<div>
     <div class="container purple lighten-4 border border-dark form-container-outer">
-
-
         <div class="row justify-content-center ">
             <div class="form-container">
                 <form id="form-template" method="post">
                     {% csrf_token %}
 
                     <!--Title-->
-
-
                     <div class="form-group">
                         <label for="title-input">Title:</label>
                         {{ form.title }}
-
                     </div>
 
-
-
                     <!--Deadline-->
-
                     <div class="form-group">
                         <label for="deadline-date">Deadline:</label>
-
                         {{ form.deadline }}</div>
-
                     <!--species-->
 
                     <div class="form-group">
                         <label for="species-input">Species:</label>
                         {{ form.species }}</div>
 
-
                     <!--spacer-->
-                    <div class="dropdown-divider">   
+                    <div class="dropdown-divider">
                     </div>
 
                     <!--width-->
@@ -92,6 +77,7 @@
                         <label for="width-input">Width:</label>
                         {{ form.width }}</div>
                     <!--depth-->
+
                     <div class="form-group">
                         <label for="depth-input">Depth:</label>
                         {{ form.thickness }}</div>
@@ -103,19 +89,17 @@
                     </div>
 
                     <!--spacer-->
-                    <div class="dropdown-divider">   
+                    <div class="dropdown-divider">
                     </div>
 
                     <!--Quarter-Sawn-->
                     <div class="form-check">
-
                         {{ form.quarter_sawn }}
                         <label class="form-check-label" for="quarter-input">Quarter-Sawn</label>
                     </div>
 
                     <!--spacer-->
                     <div class="dropdown-divider">
-                       
                     </div>
 
                     <!--Grade-->
@@ -130,56 +114,30 @@
                         {{ form.quantity }}
                     </div>
 
-
                     <!--spacer-->
                     <div class="dropdown-divider">
-                       
                     </div>
 
                     <!--Comments-->
-                   
-
-                        <div class="">
-                            <label for="comments-input">Comments: </label>
-                            {{ form.comments }}
-
-                        </div>
-                        <!--spacer-->
+                    <div class="">
+                        <label for="comments-input">Comments: </label>
+                        {{ form.comments }}
+                    </div>
+                    <!--spacer-->
                     <div class="dropdown-divider">
-                       
                     </div>
 
-                    <!--Submit-->
-
-                            <button class="btn btn-primary btn-block" type="submit">Save Changes</button>
-                            
-                        
-
-                      
-                   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    <!--Submit Button-->
+                    <button class="btn btn-primary btn-block" type="submit">Save Changes</button>
                 </form>
                 <div>
                     <br>
-                <a href="{{request.META.HTTP_REFERER}}"><button class="btn btn-secondary btn-block" type="">Don't Save Changes</button></a>
-            </div>
+                    <!--Return to last screen Button-->
+                    <a href="{{request.META.HTTP_REFERER}}"><button class="btn btn-secondary btn-block" type="">Don't
+                            Save Changes</button></a>
+                </div>
             </div>
         </div>
-
     </div>
 </div>
-
 {% endblock content %}

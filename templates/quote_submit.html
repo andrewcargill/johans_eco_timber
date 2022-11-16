@@ -2,88 +2,79 @@
 
 {% block content %}
 {% load static %}
-<!--Header-->
-<div class="container border  bg-dark text-white border-dark">
-  <div class="container lighten-4">
-    <h3 class="text-center">Submit Enquiry </h3>
 
-  </div>
+<!--Header Title-->
+<div class="container border  bg-dark text-white border-dark">
+    <div class="container lighten-4">
+        <h3 class="text-center">Submit Enquiry </h3>
+    </div>
 </div>
 
+<!--Header image-->
 <div class="container purple lighten-4">
-  <!--Header image-->
-  <div class="row">
-    <img class="account-header-image" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
-  </div>
-
+    <div class="row">
+        <img class="account-header-image" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
+    </div>
 </div>
 
 <div class="container border border-dark ">
     <div class="row  justify-content-center">
+        <!--Page main content-->
         <div class="form-container">
-            <!--Header image-->
             <div class="text-header">
-                    <h3>Details</h3>
-                    <table class="table">
-                        <tr>
-                            <th scope="col">Enquiry Title</th>
-                            <td>{{ quote.title }}</td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Deadline/ Required By</th>
-                            <td>{{ quote.deadline }}</td>
-                        </tr>
-                        <tr>
-                            <th>Your Username</th>
-                            <td>{{ user.username }}</td>
-                        </tr>
-                        <tr>
-                            <th>Your Email</th>
-                            <td>{{ user.email }}</td>
-                        </tr>
-                    </table>
-                    <h3>Summary</h3>
-                    <table class="table">
-                        <tr>
-                            <th scope="col">Dimensions (L/W/D)</th>
-                            <td>{{ quote.length }}cm x {{ quote.width }}cm x {{ quote.thickness }}cm</td>
-                        </tr>
-                        <tr>
-                            <th>Species and Grade</th>
-                            <td>{{ quote.species }} (Grade {{ quote.grade }})</td>
-                        </tr>
-                        <tr>
-                            <th>Quantity</th>
-                            <td>{{ quote.quantity }}</td>
-                        </tr>
-                        <tr>
-                            <th>Quarter-Sawn</th>
-                            <td>{{ quote.quarter_sawn }}</td>
-                        </tr>
-                        <tr>
-                            <th>Comments</th>
-                            <td>{{ quote.comments }}</td>
-                        </tr>
-                    </table>
-
-
-
+                <h3>Details</h3>
+                <table class="table">
+                    <tr>
+                        <th scope="col">Enquiry Title</th>
+                        <td>{{ quote.title }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Deadline/ Required By</th>
+                        <td>{{ quote.deadline }}</td>
+                    </tr>
+                    <tr>
+                        <th>Your Username</th>
+                        <td>{{ user.username }}</td>
+                    </tr>
+                    <tr>
+                        <th>Your Email</th>
+                        <td>{{ user.email }}</td>
+                    </tr>
+                </table>
+                <h3>Summary</h3>
+                <table class="table">
+                    <tr>
+                        <th scope="col">Dimensions (L/W/D)</th>
+                        <td>{{ quote.length }}cm x {{ quote.width }}cm x {{ quote.thickness }}cm</td>
+                    </tr>
+                    <tr>
+                        <th>Species and Grade</th>
+                        <td>{{ quote.species }} (Grade {{ quote.grade }})</td>
+                    </tr>
+                    <tr>
+                        <th>Quantity</th>
+                        <td>{{ quote.quantity }}</td>
+                    </tr>
+                    <tr>
+                        <th>Quarter-Sawn</th>
+                        <td>{{ quote.quarter_sawn }}</td>
+                    </tr>
+                    <tr>
+                        <th>Comments</th>
+                        <td>{{ quote.comments }}</td>
+                    </tr>
+                </table>
                 <div>
-
                     <form method="post">
-
                         {% csrf_token %}
-
-
                         <button class="btn btn-success btn-block" type="submit">Submit</button>
-
                     </form>
                     <div>
                         <br>
-                    <a href="{{request.META.HTTP_REFERER}}"><button class="btn btn-dark btn-block" type="">Cancel</button></a>
+                        <a href="{{request.META.HTTP_REFERER}}"><button class="btn btn-dark btn-block"
+                                type="">Cancel</button></a>
+                    </div>
                 </div>
-                </div>
-
             </div>
             <div class="row">
                 <h2></h2>
@@ -92,47 +83,4 @@
         </div>
     </div>
 </div>
-<!-- <div class="container bg-secondary border border-dark">
-    <div class="container purple lighten-4">
-        <p>top spacer</p>
-
-    </div>
-</div>
-<div class="container bg-primary border border-dark">
-    <div class="container purple lighten-4">
-        <div class="row">
-            <p></p>
-        </div>
-        <div class="row">
-            <h2>Add to quote !! </h2>
-            
-        </div>
-
-    </div>
-</div>
-<div class="container bg-danger border border-dark">
-    <div class="container purple lighten-4">
-        <div class="row">
-            <p>main top container information</p>
-        </div>
-        <div class="row">
-            <h2>Submit Quote Request: {{ quote.title }} </h2>
-        </div>
-
-    </div>
-</div> -->
-<!-- <div class="">
-    <div class="container purple lighten-4 border border-dark">
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-          </div>
-        
-
-    </div>
-</div> -->
-
-<!-- <script src="{% static '/js/index.js' %}"></script> -->
-
-
-
 {% endblock content %}
