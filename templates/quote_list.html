@@ -5,13 +5,13 @@
 {% load static %}
 <!--Header-->
 <div class="container border  bg-dark text-white border-dark">
-  <div class="container lighten-4">
+  <div class="container">
     <h3 class="text-center">Custom Timber Enquiry System </h3>
 
   </div>
 </div>
 
-<div class="container purple lighten-4">
+<div class="container">
   <!--Header image-->
   <div class="row">
     <img class="account-header-image" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
@@ -19,31 +19,28 @@
 
 </div>
 
-
+<!--Info container-->
 <div class="container border border-dark">
-  <div class="container purple lighten-4">
-    <div class="">
-      <div>
-        <p> {% include 'messages.html' %}</p>
-      </div>
-      <h4>Welcome {{ user.username }}!</h4>
+  <div class="container">
 
-      <p>This app allows me to assist you with your customer timber projects.
-      </p>
-      <p>Create an enquiry or enquiries and then submit them to me. I will get back to you within 24hours</p>
-      <p>If you need any assistance please get in touch via our contact page.</p>
-      <p>thanks, Johan</p>
-    </div>
     <div>
-      <a href="{% url 'new_enquiry' %}">
-        <button type="button" class="btn btn-success">New Enquiry</button>
-      </a>
+      <p> {% include 'messages.html' %}</p>
+    </div>
+    <h4>Welcome {{ user.username }}!</h4>
+
+    <p>This app allows me to assist you with your customer timber projects.
+    </p>
+    <p>Create an enquiry or enquiries and then submit them to me. I will get back to you within 24hours</p>
+    <p>If you need any assistance please get in touch via our contact page.</p>
+    <p>thanks, Johan</p>
+
+    <div>
+      <a class="btn btn-success" href="{% url 'new_enquiry' %}">New Enquiry</a>
+
       <a class="btn btn-primary" href="{% url 'account_logout' %}">Sign Out</a>
     </div>
-    
-    <div class="">
-      <h2></h2>
-    </div>
+    <br>
+
   </div>
 </div>
 <div class="">
@@ -51,10 +48,10 @@
 
     <div class="row">
     </div>
-    
+
     <div>
       <!--All screens-->
-      
+
       <!--Table for mobile screens-->
       <div>
         {% include 'table_views/mobile_table.html' %}
@@ -63,8 +60,8 @@
       <div>
         {% include 'table_views/standard_table.html' %}
       </div>
-      
-      
+
+
     </div>
   </div>
 </div>

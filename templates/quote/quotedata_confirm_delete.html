@@ -10,29 +10,36 @@
   </div>
 </div>
 
-<div class="container purple lighten-4">
+<div class="container">
   <!--Header image-->
   <div class="row">
     <img class="account-header-image" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
   </div>
 
 </div>
-<div class="">
-    <div class="container purple lighten-4 border border-dark">
 
-        <div class="row">
-            <p>Form name</p>
-        </div>
-        <div class="row">
+<!--Info Container-->
+<div class="container border border-dark">
+    <div class="container">
+
+        
+        
+        
+        
+        
+        
+        
+        
+        <div>
 
 
-
+            <br>
             <p>Are you sure you want to delete this record {{ user.username }}?</p>
 
         </div>
         <form action="" method="POST">
             {% csrf_token %}
-            <div class="row">
+            <div>
                 <button class="btn btn-primary" type="submit">Yes - Delete Enquiry</button>
                 {% comment %} <input type="submit" value="Yes, delete." /> {% endcomment %}
             </div>
@@ -40,7 +47,9 @@
         <div>
             <br>
             <a href="{{request.META.HTTP_REFERER}}"><button class="btn btn-secondary" type="">Cancel</button></a>
+            <br>
         </div>
+        <br>
     </div>
 
 </div>

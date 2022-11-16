@@ -23,49 +23,39 @@
   </div>
 
 </div>
-
+<!--info container-->
 <div class="container border border-dark ">
-  <div class="row justify-content-center">
-
-    <div class="form-container d-flex flex-column">
-      <!--Top Box Content (all devices)-->
-
-      <div class="p-2 text-center">
-        <!--logout code-->
-
-        <h4>{% trans "Sign Out" %}</h4>
-
-        <p>{% trans 'Are you sure you want to sign out?' %}</p>
-
-        <form method="post" action="{% url 'account_logout' %}">
-          {% csrf_token %}
-          {% if redirect_field_value %}
-          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-          {% endif %}
-          <button type="submit" class="btn btn-primary" >{% trans 'Sign Out' %}</button>
-        </form>
-        <div>
-          <br>
-      <a href="{{request.META.HTTP_REFERER}}"><button class="btn btn-secondary" type="">Cancel</button></a>
-  </div>
-
-      </div>
+  <div class="container">
 
 
 
-
-      <!--Top Box Content (mobile only devices)-->
-      <div class="d-block d-sm-none">
-
-      </div>
-
-
-      <!--Top Box Content (tablet and desktop devices)-->
-      <div class="d-none d-sm-block">
-
-      </div>
-
+    <div>
+      <p> {% include 'messages.html' %}</p>
     </div>
+    <h4>{% trans "Sign Out" %}</h4>
+
+    <p>{% trans 'Are you sure you want to sign out?' %}</p>
+
+    <form method="post" action="{% url 'account_logout' %}">
+      {% csrf_token %}
+      {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
+      <button type="submit" class="btn btn-primary">{% trans 'Sign Out' %}</button>
+    </form>
+    <div>
+      <br>
+      <a href="{{request.META.HTTP_REFERER}}"><button class="btn btn-secondary" type="">Cancel</button></a>
+    </div>
+    <br>
+
+
+
+
+
+
+
+
 
   </div>
 
