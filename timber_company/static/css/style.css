@@ -85,10 +85,18 @@ body, html {
     height: 25vh;
 }
 
+/*Header images*/
+
 .enquiry-header {
     object-fit: cover;
     width: 100%;
     height: 25vh;
+}
+
+.account-header-image {
+    object-fit: cover;
+    width: 100%;
+    height: 15vh;
 }
 
 .highlight-content-container {
