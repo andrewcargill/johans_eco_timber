@@ -11,12 +11,16 @@ from django.forms import TextInput
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
+from django.views.generic import TemplateView
 
 
-class QuoteList(generic.ListView):
-    model = QuoteData
+# class QuoteList(generic.ListView):
+#     model = QuoteData
+#     template_name = 'index.html'
+#     paginate_by = 6
+
+class QuoteList(TemplateView):
     template_name = 'index.html'
-    paginate_by = 6
 
 
 class About(generic.ListView):
