@@ -5,7 +5,7 @@
 <div class="hero-image">
     <img class="hero" src="{% static 'images/hero_2.jpg' %}" class="rounded" alt="..." />
     <div class="hero-text d-none d-sm-block">
-        <h1>Put nature first</h1>
+        <h1>Put the Nature first</h1>
         <p>Custom milled Pine, Spruce & Birch</p>
         <a href="{% url 'forest' %}" class="btn btn-dark">Learn More >></a>
     </div>
@@ -17,7 +17,7 @@
     <div class="col-sm mt-5 three-card-container">
         <div class="card text-center border-0 bg-light">
             <div class="card-header border-0 bg-transparent">
-                <img src="{{ MEDIA_URL }}johan_hero.jpg" class="round-image rounded-circle" alt="..." />
+                <img src="{% static 'images/johan_hero.jpg' %}" class="round-image rounded-circle" alt="..." />
             </div>
             <div class="card-body">
                 <h5 class="card-title">Hello, I'm Johan</h5>
@@ -34,7 +34,7 @@
     <div class="col-sm mt-5 three-card-container">
         <div class="card text-center border-0 bg-light">
             <div class="card-header border-0 bg-transparent">
-                <img src="{{ MEDIA_URL }}eco_hero.jpg" class="round-image rounded-circle" alt="..." />
+                <img src="{% static 'images/eco_hero.jpg' %}" class="round-image rounded-circle" alt="..." />
             </div>
             <div class="card-body">
                 <h5 class="card-title">True Sustainable Forestry</h5>
@@ -52,7 +52,7 @@
     <div class="col-sm mt-5 three-card-container">
         <div class="card text-center border-0 bg-light">
             <div class="card-header border-0 bg-transparent">
-                <img src="{{ MEDIA_URL }}project_hero.png" class="round-image rounded-circle" alt="..." />
+                <img src="{% static 'images/project_hero.png' %}" class="round-image rounded-circle" alt="..." />
             </div>
             <div class="card-body">
                 <h5 class="card-title">How I can help your next project</h5>
@@ -82,7 +82,7 @@
                 <a href="{% url 'forest' %}" class="btn btn-dark">Read More >></a>
             </div>
             <div class="col-sm-8">
-                <img class="highlight_image" src="{{ MEDIA_URL }}highlight1.png" class="rounded"
+                <img class="highlight_image" src="{% static 'images/highlight1.png' %}" class="rounded"
                     alt="..." />
             </div>
         </div>
@@ -91,7 +91,7 @@
     <div class="mt-5">
         <div class="row bg-light">
             <div class="col-sm-8 highlight-text">
-                <img class="highlight_image" src="{{ MEDIA_URL }}highlight2.png" class="rounded"
+                <img class="highlight_image" src="{% static 'images/highlight2.png' %}" class="rounded"
                     alt="..." />
             </div>
             <div class="col-sm-4 highlight-text text-justify text-sm-left text-center highlight-text-body">

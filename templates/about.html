@@ -4,7 +4,7 @@
 
 <!--Page header image-->
 <div class="hero-image">
-    <img class="highlight_image_about" src="{{ MEDIA_URL }}about_hero.jpg" class="rounded" alt="...">
+    <img class="highlight_image_about" src="{% static 'images/about_hero.jpg' %}" class="rounded" alt="...">
 </div>
 
 <!--page content-->
@@ -34,7 +34,7 @@
                     <a href="{% url 'account_signup' %}" class="btn btn-dark">Create a Login >></a>
                 </div>
                 <div class="col-sm-4">
-                    <img class="side_image_about" src="{{ MEDIA_URL }}sawmill_hero2.jpg" class="rounded"
+                    <img class="side_image_about" src="{% static 'images/sawmill_hero2.jpg' %}" class="rounded"
                         alt="...">
                 </div>
             </div>
