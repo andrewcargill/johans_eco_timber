@@ -2,7 +2,7 @@
 
 <!--Page header image-->
 <div class="hero-image">
-    <img class="highlight_image_about" src="{% static '/media/images/about_hero.jpg' %}" class="rounded" alt="...">
+    <img class="highlight_image_about" src="{{ MEDIA_URL }}about_hero.jpg" class="rounded" alt="...">
 </div>
 
 <!--Page Content-->
@@ -28,7 +28,7 @@
                     <a href="{% url 'about_enquiry_system' %}" class="btn btn-dark">Enquire About Customer Timber</a>
                 </div>
                 <div class="col-sm-4">
-                    <img class="side_image_about" src="{% static '/media/images/forest.png' %}" class="rounded"
+                    <img class="side_image_about" src="{{ MEDIA_URL }}forest.png" class="rounded"
                         alt="...">
                 </div>
             </div>
