@@ -113,6 +113,11 @@ body, html {
     margin-top: 5vh;
 }
 
+/*Pages with little content - sets a min height for better footer placement*/
+.low-content {
+    min-height: 50vh;
+}
+
 /*about page*/
 .single-card {
     width: 95%;
