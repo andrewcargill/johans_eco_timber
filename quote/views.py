@@ -13,12 +13,6 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import TemplateView
 
-
-# class QuoteList(generic.ListView):
-#     model = QuoteData
-#     template_name = 'index.html'
-#     paginate_by = 6
-
 class QuoteList(TemplateView):
     template_name = 'index.html'
 
@@ -98,12 +92,11 @@ def QuoteInput(request):
 
     if request.method == 'POST':
         print("-------POST is True")
-        # create a form instance and populate it with data from the request:
         form = QuoteForm(request.POST)
-        # check whether it's valid:
+
         if form.is_valid():
             quote = form.save(commit=False)
-            quote.user_id = request.user  # The logged-in user
+            quote.user_id = request.user
             quote.save()
             messages.add_message(
                 request, messages.INFO, 
@@ -114,15 +107,14 @@ def QuoteInput(request):
             print("-------form is valid")
     else:
         print("-------form is NOT valid")
-        form = QuoteForm()
-        
+        form = QuoteForm()       
     return render(request, 'new_enquiry.html', {'form': form})
 
 
 def NewItem(request):
     print("-------GETTING CALLED")
     print(request.method)
-    
+
     if request.method == 'POST':
         print("-------POST is True")
         # create a form instance and populate it with data from the request:
@@ -136,4 +128,3 @@ def NewItem(request):
         form = AddItem()
 
     return render(request, 'add_item.html', {'form': form})
-
