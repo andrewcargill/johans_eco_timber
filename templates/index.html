@@ -1,112 +1,148 @@
-{% extends "base.html" %} 
-{% block content %} 
-{% load static %}
+{% extends "base.html" %} {% block content %} {% load static %}
 
+<!--Hero Image-->
 <div class="hero-image">
-    <img class="hero" src="{% static 'images/hero.webp' %}" class="rounded" alt="..." />
-    <div class="hero-text d-none d-sm-block">
-        <h1>Nature first</h1>
-        <p class="hero-sub-text">Custom Milled Timber</p>
-    </div>
-    <div class="hero-text d-block d-sm-none">
-        <h1>Nature First</h1>
-        <p class="hero-sub-text">Custom Milled Timber</p>
-    </div>
+  <img
+    class="hero"
+    src="{% static 'images/hero.webp' %}"
+    class="rounded"
+    alt="..."
+  />
+  <div class="hero-text d-none d-sm-block">
+    <h1>Nature first</h1>
+    <p class="hero-sub-text">Custom Milled Timber</p>
+  </div>
+  <div class="hero-text d-block d-sm-none">
+    <h1>Nature First</h1>
+    <p class="hero-sub-text">Custom Milled Timber</p>
+  </div>
 </div>
 
 <!--3 Card Container-->
 <div class="row justify-content-center">
-    <!--1st Card - Meet Johan -->
-    <div class="col-sm mt-5 three-card-container">
-        <div class="card text-center border-0 bg-light">
-            <div class="card-header border-0 bg-transparent">
-                <img src="{% static 'images/johan_hero.webp' %}" class="round-image rounded-circle" alt="..." />
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Hello, I'm Johan</h5>
-                <p class="card-text">Welcome to my company website.</p>
-                <p>
-                    I work with instrument makers and carpenters to provide the very best
-                    sustainable timber.
-                </p>
-                <p class="signature">Johan</p>
-                <a href="{% url 'about' %}" class="btn btn-dark button-bottom">Read More >></a>
-            </div>
-        </div>
+  <!--1st Card - Meet Johan -->
+  <div class="col-sm mt-5 three-card-container">
+    <div class="card text-center border-0 bg-light">
+      <div class="card-header border-0 bg-transparent">
+        <img
+          src="{% static 'images/johan_hero.webp' %}"
+          class="round-image rounded-circle"
+          alt="..."
+        />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Hello, I'm Johan</h5>
+        <p class="card-text">Welcome to my company website.</p>
+        <p>
+          I work with instrument makers and carpenters to provide the very best
+          sustainable timber.
+        </p>
+        <p class="signature">Johan</p>
+        <a href="{% url 'about' %}" class="btn btn-dark button-bottom"
+          >Read More >></a
+        >
+      </div>
     </div>
-    <!--2nd Card - True Sustainable Forestry -->
-    <div class="col-sm mt-5 three-card-container">
-        <div class="card text-center border-0 bg-light">
-            <div class="card-header border-0 bg-transparent">
-                <img src="{% static 'images/eco_hero.webp' %}" class="round-image rounded-circle" alt="..." />
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">True Sustainable Forestry</h5>
-                <p class="card-text">
-                    In my other life I am a computer programmer and have created a
-                    customer database system that documents every tree, log and plank
-                    produced.
-                </p>
-                <a href="{% url 'forest' %}" class="btn btn-dark button-bottom">Learn More >></a>
-            </div>
-        </div>
+  </div>
+  <!--2nd Card - True Sustainable Forestry -->
+  <div class="col-sm mt-5 three-card-container">
+    <div class="card text-center border-0 bg-light">
+      <div class="card-header border-0 bg-transparent">
+        <img
+          src="{% static 'images/eco_hero.webp' %}"
+          class="round-image rounded-circle"
+          alt="..."
+        />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">True Sustainable Forestry</h5>
+        <p class="card-text">
+          In my other life I am a computer programmer and have created a
+          customer database system that documents every tree, log and plank
+          produced.
+        </p>
+        <a href="{% url 'forest' %}" class="btn btn-dark button-bottom"
+          >Learn More >></a
+        >
+      </div>
     </div>
-    <!--3rd Card - How I can help your next project-->
-    <div class="col-sm mt-5 three-card-container">
-        <div class="card text-center border-0 bg-light">
-            <div class="card-header border-0 bg-transparent">
-                <img src="{% static 'images/project_hero.webp' %}" class="round-image rounded-circle" alt="..." />
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">How I can help your next project</h5>
-                <p class="card-text">
-                    I provide the timber specifically for your project. The first step is
-                    completing the enquiry form and from there we can set up an chat
-                    online.
-                </p>
-                <a href="{% url 'about_enquiry_system' %}" class="btn btn-dark button-bottom">Read More >></a>
-            </div>
-        </div>
+  </div>
+  <!--3rd Card - How I can help your next project-->
+  <div class="col-sm mt-5 three-card-container">
+    <div class="card text-center border-0 bg-light">
+      <div class="card-header border-0 bg-transparent">
+        <img
+          src="{% static 'images/project_hero.webp' %}"
+          class="round-image rounded-circle"
+          alt="..."
+        />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">How I can help your next project</h5>
+        <p class="card-text">
+          I provide the timber specifically for your project. The first step is
+          completing the enquiry form and from there we can set up an chat
+          online.
+        </p>
+        <a
+          href="{% url 'about_enquiry_system' %}"
+          class="btn btn-dark button-bottom"
+          >Read More >></a
+        >
+      </div>
     </div>
+  </div>
 </div>
 
 <!--Highlight section-->
 <div class="highlight-content-container container col align-self-center">
-    <!--Element 1: Selective Cut-->
-    <div class="mt-5">
-        <div class="row bg-light">
-            <div class="col-sm-4 highlight-text text-justify text-sm-right text-center highlight-text-body">
-                <h5>Take only the trees that help the forest</h5>
-                <p>
-                    The small forest that I own is managed through selective-cutting.
-                    Which means I only remove a limited amount of trees each year in
-                    accordance to my forest plan.
-                </p>
-                <a href="{% url 'forest' %}" class="btn btn-dark">Read More >></a>
-            </div>
-            <div class="col-sm-8">
-                <img class="highlight_image" src="{% static 'images/highlight1.webp' %}" class="rounded"
-                    alt="..." />
-            </div>
-        </div>
+  <!--Element 1: Selective Cut-->
+  <div class="mt-5">
+    <div class="row bg-light">
+      <div
+        class="col-sm-4 highlight-text text-justify text-sm-right text-center highlight-text-body"
+      >
+        <h5>Take only the trees that help the forest</h5>
+        <p>
+          The small forest that I own is managed through selective-cutting.
+          Which means I only remove a limited amount of trees each year in
+          accordance to my forest plan.
+        </p>
+        <a href="{% url 'forest' %}" class="btn btn-dark">Read More >></a>
+      </div>
+      <div class="col-sm-8">
+        <img
+          class="highlight_image"
+          src="{% static 'images/highlight1.webp' %}"
+          class="rounded"
+          alt="..."
+        />
+      </div>
     </div>
-    <!--Element 2: That Creative Process-->
-    <div class="mt-5">
-        <div class="row bg-light">
-            <div class="col-sm-8 highlight-text">
-                <img class="highlight_image" src="{% static 'images/highlight2.webp' %}" class="rounded"
-                    alt="..." />
-            </div>
-            <div class="col-sm-4 highlight-text text-justify text-sm-left text-center highlight-text-body">
-                <h5>That creative process</h5>
-                <p>
-                    The story of the wood is a great part of my customers creative
-                    process. I love providing what my amazing customers need.
-                </p>
-                <a href="{% url 'forest' %}" class="btn btn-dark">Read More >></a>
-            </div>
-        </div>
+  </div>
+  <!--Element 2: That Creative Process-->
+  <div class="mt-5">
+    <div class="row bg-light">
+      <div class="col-sm-8 highlight-text">
+        <img
+          class="highlight_image"
+          src="{% static 'images/highlight2.webp' %}"
+          class="rounded"
+          alt="..."
+        />
+      </div>
+      <div
+        class="col-sm-4 highlight-text text-justify text-sm-left text-center highlight-text-body"
+      >
+        <h5>That creative process</h5>
+        <p>
+          The story of the wood is a great part of my customers creative
+          process. I love providing what my amazing customers need.
+        </p>
+        <a href="{% url 'forest' %}" class="btn btn-dark">Read More >></a>
+      </div>
     </div>
+  </div>
 </div>
 
 {% endblock content %}

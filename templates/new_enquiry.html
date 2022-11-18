@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-
 {% block content %}
 {% load static %}
 <!--Header-->
@@ -27,7 +26,6 @@
                     <p>Begin by filling in the details below.</p>
                     <p>Contact me if you need any assistance.</p>
                 </div>
-
                 <!--text for desktop-->
                 <div class="d-none d-sm-block">
                     <h4>Tell me about your project</h4>
@@ -127,7 +125,7 @@
                     <!--Submit-->
                     <button class="btn btn-success btn-block" type="submit">Save Enquiry</button>
                 </form>
-
+                <!--Cancel button-->
                 <div>
                     <br>
                     <a href="{{request.META.HTTP_REFERER}}"><button class="btn btn-dark btn-block"
