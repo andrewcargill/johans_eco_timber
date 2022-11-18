@@ -13,6 +13,7 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import TemplateView
 
+
 class QuoteList(TemplateView):
     template_name = 'index.html'
 
@@ -80,8 +81,10 @@ class QuoteDetail(View):
             quote.status = 1
             quote.save()
             messages.add_message(
-                request, messages.INFO, 
-                "Thank you for submitting your enquiry! Expect an email within 24hrs"
+                request, messages.INFO,
+                """Thank you for submitting your enquiry!
+                 Expect an email within 24hrs
+                """
                 )
             return HttpResponseRedirect(reverse('quote_list'))
 
@@ -99,7 +102,7 @@ def QuoteInput(request):
             quote.user_id = request.user
             quote.save()
             messages.add_message(
-                request, messages.INFO, 
+                request, messages.INFO,
                 'Enquiry Saved! Submit to receive a quote'
                 )
             response = redirect('quote_list.html')
@@ -107,7 +110,7 @@ def QuoteInput(request):
             print("-------form is valid")
     else:
         print("-------form is NOT valid")
-        form = QuoteForm()       
+        form = QuoteForm()
     return render(request, 'new_enquiry.html', {'form': form})
 
 

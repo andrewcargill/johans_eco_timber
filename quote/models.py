@@ -32,4 +32,7 @@ class QuoteData(models.Model):
         ordering = ['deadline']
 
     def __str__(self):
-        return f"Item Id: {self.id} | Quote Id: {self.user_id} | Deadline date: {self.deadline}"
+        return f"""
+        Item Id: {self.id} | Quote Id: {self.user_id}
+         | Deadline date: {self.deadline}
+         """
