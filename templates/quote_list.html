@@ -21,7 +21,7 @@
     <div>
       <p> {% include 'messages.html' %}</p>
     </div>
-    <h4>Welcome {{ user.username }}!</h4>
+    <h4>Welcome {{ user.username|capfirst }}!</h4>
     <p>This app allows me to assist you with your customer timber projects.
     </p>
     <p>Create an enquiry or enquiries and then submit them to me. I will get back to you within 24hours</p>

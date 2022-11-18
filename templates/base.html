@@ -87,7 +87,7 @@
             <div class="d-sm-none d-none d-lg-block bg-light text-muted">
                 
                 {% if user.is_authenticated %}
-                <p class="status-large-display"><i class="bi bi-person-circle"></i> {{ user.username }}</p>
+                <p class="status-large-display"><i class="bi bi-person-circle"></i> {{ user.username|capfirst }}</p>
                 {% else %}
 
                 {% if messages %}
@@ -106,7 +106,7 @@
         <div class="nav-spacer2"></div>
         <div class="bg-light text-muted">
             {% if user.is_authenticated %}
-            <p><i class="bi bi-person-circle"></i> {{ user.username }}</p>
+            <p><i class="bi bi-person-circle"></i> {{ user.username|capfirst }}</p>
             {% else %}
 
             {% if messages %}
