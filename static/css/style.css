@@ -1,6 +1,41 @@
+h1 {
+    font-family: apparat, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: capitalize;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.1em;
+    font-size: 4em;
+}
+
+p, ul {
+    font-family: rival-sans,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero-sub-text {
+    font-family: apparat,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: brown;
+}
+
+h5, h4, .btn {
+    font-family: rival-sans,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.signature {
+    font-family: baka-too, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: x-large;
+}
+
 #user-top-display {
     height: 30vh;
-
 }
 
 .pointer {
@@ -37,10 +72,19 @@
 
 .card-body {
     min-height: 30vh;
+    padding-bottom: 50px;
 }
 
 .three-card-container {
     max-width: 500px;
+}
+
+/*Align buttons to bottom of container*/
+.button-bottom {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 body, html {
@@ -155,6 +199,13 @@ body, html {
 @media (max-width: 576px) { 
     .form-container {
         width: 95%; 
-    
+    }
+
+    .hero-text {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 3em;
     }
 }

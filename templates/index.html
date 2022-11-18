@@ -5,9 +5,12 @@
 <div class="hero-image">
     <img class="hero" src="{% static 'images/hero_2.jpg' %}" class="rounded" alt="..." />
     <div class="hero-text d-none d-sm-block">
-        <h1>Put the Nature first</h1>
-        <p>Custom milled Pine, Spruce & Birch</p>
-        <a href="{% url 'forest' %}" class="btn btn-dark">Learn More >></a>
+        <h1>Nature first</h1>
+        <p class="hero-sub-text">Custom Milled Timber</p>
+    </div>
+    <div class="hero-text d-block d-sm-none">
+        <h1>Nature First</h1>
+        <p class="hero-sub-text">Custom Milled Timber</p>
     </div>
 </div>
 
@@ -26,7 +29,9 @@
                     I work with instrument makers and carpenters to provide the very best
                     sustainable timber.
                 </p>
-                <a href="{% url 'about' %}" class="btn btn-dark">Read More >></a>
+
+                <p class="signature">Johan</p>
+                <a href="{% url 'about' %}" class="btn btn-dark button-bottom">Read More >></a>
             </div>
         </div>
     </div>
@@ -43,8 +48,7 @@
                     customer database system that documents every tree, log and plank
                     produced.
                 </p>
-
-                <a href="{% url 'forest' %}" class="btn btn-dark">Learn More >></a>
+                <a href="{% url 'forest' %}" class="btn btn-dark button-bottom">Learn More >></a>
             </div>
         </div>
     </div>
@@ -61,7 +65,7 @@
                     completing the enquiry form and from there we can set up an chat
                     online.
                 </p>
-                <a href="{% url 'about_enquiry_system' %}" class="btn btn-dark">Read More >></a>
+                <a href="{% url 'about_enquiry_system' %}" class="btn btn-dark button-bottom">Read More >></a>
             </div>
         </div>
     </div>
