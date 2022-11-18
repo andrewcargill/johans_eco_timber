@@ -20,7 +20,7 @@
 
 <body>
     <!--Navigation-->
-    <nav class="fixed-top navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="fixed-top navbar-nav-scroll navbar navbar-expand-lg navbar-light bg-light">
         <img class="swedish-flag" src="{% static 'images/swedishflag.png' %}" class="rounded" alt="...">
         <a class="navbar-brand" href="#">Sustainable Timber Co.</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -43,28 +43,28 @@
                     <a class="nav-link active" aria-current="page" href="{% url 'home' %}">User Stories</a>
                 </li> -->
                 {% if user.is_authenticated %}
-                        <li>
-                        <a class="nav-link" href="{% url 'quote_list' %}">Enquiries</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="{% url 'new_enquiry' %}">New Enquiry</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                    </li>
-                        {% else %}
-                        <li>
-                        <a class="nav-link" href="{% url 'about_enquiry_system' %}">Custom Timber
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="{% url 'account_signup' %}">Sign-up</a>
-                    </li>
-                        {% endif %}
-                
+                <li>
+                    <a class="nav-link" href="{% url 'quote_list' %}">Enquiries</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="{% url 'new_enquiry' %}">New Enquiry</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li>
+                    <a class="nav-link" href="{% url 'about_enquiry_system' %}">Custom Timber
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="{% url 'account_signup' %}">Sign-up</a>
+                </li>
+                {% endif %}
+
                 <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -83,24 +83,44 @@
                     </div>
                 </li> -->
             </ul>
+            <!--User Login Status for desktop and large-->
+            <div class="d-sm-none d-none d-lg-block bg-light text-muted">
+                
+                {% if user.is_authenticated %}
+                <p class="status-large-display"><i class="bi bi-person-circle"></i> {{ user.username }}</p>
+                {% else %}
+
+                {% if messages %}
+                {% for message in messages %}
+
+                <p class="status-large-display">{{message}}</p>
+
+                {% endfor %}
+                {% endif %}
+                {% endif %}
+            </div>
         </div>
     </nav>
-    <!--User Login Status-->
-    <div class="nav-spacer"></div>
-    <div class="bg-light text-muted">
-        {% if user.is_authenticated %}
-        <p>You are logged in as: {{ user.username }}</p>
-        {% else %}
+    <!--User Login Status for tablet and mobile-->
+    <div class="d-none d-md-block d-sm-block d-block d-lg-none" id="mobile-status">
+        <div class="nav-spacer2"></div>
+        <div class="bg-light text-muted">
+            {% if user.is_authenticated %}
+            <p><i class="bi bi-person-circle"></i> {{ user.username }}</p>
+            {% else %}
 
-        {% if messages %}
-        {% for message in messages %}
+            {% if messages %}
+            {% for message in messages %}
 
-        <p>{{message}}</p>
+            <p>{{message}}</p>
 
-        {% endfor %}
-        {% endif %}
-        {% endif %}
+            {% endfor %}
+            {% endif %}
+            {% endif %}
+        </div>
     </div>
+    <!--Spacing for fixed navigation on larger viewing devices-->
+    <div class="d-sm-none d-none d-lg-block nav-spacer"></div>
     {% block content %}{% endblock content %}
 
     <!--Footer-->
@@ -116,7 +136,7 @@
 
                 </div>
                 <div class="col l3 s12">
-                   <p>Tel: 07384 383789</p>
+                    <p>Tel: 07384 383789</p>
                 </div>
             </div>
         </div>

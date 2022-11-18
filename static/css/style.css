@@ -36,7 +36,21 @@ h5, h4, h3, .btn {
 
 /*Compensates the navigation being fixed*/
 .nav-spacer {
-    height: 50px;
+    height: 62px;
+}
+
+.nav-spacer2 {
+    height: 55px;
+}
+
+#mobile-status {
+    padding-left: 15px;
+    text-align: left;
+    font-size: smaller;
+}
+
+.status-large-display{
+    margin-bottom: 0;
 }
 
 #user-top-display {
@@ -98,8 +112,8 @@ body, html {
 
 /*swedish flag*/
 .swedish-flag {
-    width: 20px;
-    height: auto;
+    width: auto;
+    height: 20px;
     margin-right: 4px;
 }
 
