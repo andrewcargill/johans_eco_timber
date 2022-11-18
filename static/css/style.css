@@ -127,6 +127,11 @@ body, html {
     height: 25vh;
 }
 
+/*applies margin on content when viewed via mobile*/
+.text-margin {
+    margin-bottom: 20px;
+}
+
 /*Header images*/
 
 .enquiry-header {
@@ -202,10 +207,20 @@ body, html {
     }
 
     .hero-text {
+        text-align: center;
+        position: relative;
+        top: -110px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
         width: 80%;
     }
 
     h1 {
         font-size: 3em;
+    }
+
+    p {
+        font-size: smaller;
     }
 }
