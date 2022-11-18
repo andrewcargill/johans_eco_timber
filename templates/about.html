@@ -1,10 +1,8 @@
-{% extends "base.html" %} 
-{% block content %} 
-{% load static %}
+{% extends "base.html" %} {% block content %} {% load static %}
 
 <!--Page header image-->
 <div class="hero-image">
-    <img class="highlight_image_about" src="{% static 'images/about_hero.jpg' %}" class="rounded" alt="...">
+    <img class="highlight_image_about" src="{% static 'images/about_hero.jpg' %}" alt="Beaming sun through a forest">
 </div>
 
 <!--page content-->
@@ -15,29 +13,36 @@
                 <div class="col-md-8 col-sm-12 text-margin">
                     <h5>My Background</h5>
                     <p>
-                        I brought a forest and then studied wood and metal work at Vindeln College. This is
-                        where my passion for the nature and sustainable forestry began. As my forest is only
-                         30 hectares and close to the main farm I am able to work in a small scale without the
-                          need for large equipment.</p>
-                        <p> I brought the sawmill for my own timber projects and then quickly realised that I
-                        produced more timber than I needed.</p>
+                        I brought a forest and then studied wood and metal work at Vindeln
+                        College. This is where my passion for the nature and sustainable
+                        forestry began. As my forest is only 30 hectares and close to the
+                        main farm I am able to work in a small scale without the need for
+                        large equipment.
+                    </p>
+                    <p>
+                        I brought the sawmill for my own timber projects and then quickly
+                        realised that I produced more timber than I needed.
+                    </p>
 
-                        <h5>Other interests</h5>
-                        <p>I love making music and playing guitar! Of course being out in the nature is fun too.
-                            I have girls with a big interest in horses, so this takes up a lot of the free time.
-                            But most of all, chatting with friends and customers about their next amazing wood project!
-                        </p>
+                    <h5>Other interests</h5>
+                    <p>
+                        I love making music and playing guitar! Of course being out in the
+                        nature is fun too. I have girls with a big interest in horses, so
+                        this takes up a lot of the free time. But most of all, chatting with
+                        friends and customers about their next amazing wood project!
+                    </p>
 
-                        <p>Simply sign-up and start planning your next project. Submit an inquiry and then I'll get in
-                            touch with you!</p>
-                        
-                        <p class="signature">Johan</p>
-                    
+                    <p>
+                        Simply sign-up and start planning your next project. Submit an
+                        inquiry and then I'll get in touch with you!
+                    </p>
+
+                    <p class="signature">Johan</p>
+
                     <a href="{% url 'account_signup' %}" class="btn btn-dark">Create a Login >></a>
                 </div>
                 <div class="col-md-4 offset-md-0 col-sm-12">
-                    <img class="side_image_about" src="{% static 'images/sawmill_hero2.jpg' %}" class="rounded"
-                        alt="...">
+                    <img class="side_image_about rounded" src="{% static 'images/sawmill_hero2.jpg' %}" alt="...">
                 </div>
             </div>
         </div>

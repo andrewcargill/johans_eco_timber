@@ -33,12 +33,10 @@ class QuoteForm(forms.ModelForm):
                 'type': 'date',
                 'id': 'deadline-date',
                 'class': 'form-control',
-                'placeholder': 'Deadline'
             }),
             'species': widgets.Select(attrs={
                 'id': 'species-input',
                 'class': 'form-control',
-                'placeholder': 'Select Species'
             }),
             'width': TextInput(attrs={
                 'type': "number",
@@ -59,7 +57,6 @@ class QuoteForm(forms.ModelForm):
             'length': widgets.Select(attrs={
                 'id': 'length-input',
                 'class': 'form-control',
-                'placeholder': 'Select Length (cm)'
             }),
             'quarter_sawn': widgets.CheckboxInput(attrs={
                 'id': 'quarter-input',
@@ -68,7 +65,6 @@ class QuoteForm(forms.ModelForm):
             'grade': widgets.Select(attrs={
                 'id': 'grade-input',
                 'class': 'form-control',
-                'placeholder': 'Select wood grade'
             }),
             'quantity': TextInput(attrs={
                 'type': "number",
