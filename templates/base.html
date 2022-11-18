@@ -86,6 +86,7 @@
         </div>
     </nav>
     <!--User Login Status-->
+    <div class="nav-spacer"></div>
     <div class="bg-light text-muted">
         {% if user.is_authenticated %}
         <p>You are logged in as: {{ user.username }}</p>
@@ -100,7 +101,6 @@
         {% endif %}
         {% endif %}
     </div>
-
     {% block content %}{% endblock content %}
 
     <!--Footer-->

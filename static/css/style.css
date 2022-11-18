@@ -34,6 +34,11 @@ h5, h4, h3, .btn {
     font-size: x-large;
 }
 
+/*Compensates the navigation being fixed*/
+.nav-spacer {
+    height: 50px;
+}
+
 #user-top-display {
     height: 30vh;
 }
