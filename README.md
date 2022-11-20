@@ -45,6 +45,8 @@ Much research was carried out. I visited the sawmill and spoke with the owner ab
 ### Video Proposal
 Here is my mock proposal video, which I used to shape up the project before starting development. 
 
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/HH_DNE370Mw)
+
 ### Wireframes
 My original wireframes for the project look a little different to the finished project. These evolved as the project progressed. 
 
