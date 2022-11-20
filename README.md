@@ -3,12 +3,6 @@
 <details><summary><font size="4">Contents</font></summary>
 <p>
 
-
-
-
-
-
-
 Project Introduction
 - [Presentation of the project](#presentation-of-the-project)
 - [Overview of the development journey](#overview-of-the-development-journey)
@@ -117,6 +111,25 @@ I have put together a small time line to document the progress of the project fr
 - Displays custom menu for logged in user
 - Display custom menu for Admin (Superuser)
 - Displays status of user login - logged out
+
+</details>
+
+<details><summary>Website</summary>
+
+- Responsive design
+- Simple information
+- Clearly displaying 'Johan' to build customer trust
+
+</details>
+
+<details><summary>Enquiry System</summary>
+
+- Responsive design
+- User can create an enquiry
+- User can edit an enquiry
+- User can submit an enquiry
+- User can delete an enquiry
+- Admin can update the status to 'emailed'. This will reflect in users view
 
 </details>
 
