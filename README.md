@@ -1,53 +1,13 @@
 # Sustainable Timber Co. 
 
-<details><summary><font size="4">Contents</font></summary>
-<p>
-
-Project Introduction
-- [Presentation of the project](#presentation-of-the-project)
-- [Overview of the development journey](#overview-of-the-development-journey)
-
-
-UX Design
-- [The company](#the-company)
-- [Research](#research)
-- [Customer Interviews](#customer-interviews)
-- [Video Proposal](#video-proposal)
-- [Wireframes](#wireframes)
-- [Planning & Design](#planning--design)
-
-Agile
-- [User Stories](#user-stories)
-- [Story Points](#story-points)
-- [Epics into User Stories](#epics-into-user-stories)
-- [The Timeline (Document)](#the-timeline-document)
+| Page        | Description           | Result  |
+| ------------- |-------------| -----|
+| Index.html    | About button | Pass |
+|      | Sustainable Timber Button      |   Pass |
+|  | Learn about Enquires Button      |Pass |
+||Learn about our forest Button|Pass|
 
 
-Features
-- [Existing Features](#existing-features)
-- [Future Features](#future-features)
-
-Testing
-- [Manual Testing ](#manual-testing)
-- [Automated Testing](#automated-testing) 
-
-Bugs
-- [Solved](#solved)
-- [Unsolved](#unsolved)
-
-Deployment
-- [Deploying to Heroku](#deploying-to-heroku)
-- [Database setup](#database-setup)
-- [Cloudinary](#cloudinary)
-
-And finally...
-- [Credits](#credits)
-- [Acknowledgements](#acknowledgements) 
-
-</p>
-</details>
-
-----
 
 <details><summary><font size="4">Project Presentation</font></summary>
 
@@ -83,21 +43,33 @@ My original plan was to use two databases but this was later simplified to one d
 
 <details><summary><font size="4">Agile</font></summary>
 
-### User Stories
+<details><summary>User Stories
+</summary>
 I generated over 100 user stories in developing this project. I made use of the 'project' feature within GitHub to manage the ordering and completion. 
+</details>
 
-### Story Points & Sprints
+<details><summary>Story Points & Sprints
+</summary>
 My allocation and valuing of story points moved a little as the project progressed. I completed my first sprint and re-assessed the value of 1 story point - After the first week of development I was confident on the value of one story point. For me this was a User Story that I knew how to complete and required little background research. 
 
 Sprint lengths changed depending on my work/ study hours for that day or week of production. This would be much easier with a standard 40hr week, but I did feel that it was useful to apply sprints to my work even when working alone and studying as I do, as it helped me set goals for sections of the projects development.
+</details>
 
-### Epics into User Stories
+
+
+<details><summary>Epics into User Stories
+</summary>
 I have two examples of where I have set epics and then broken them down into User Stories. 
 - Final design
 - Documentation
+</details>
 
-### The Timeline (Document)
+
+
+<details><summary>Timeline - Development
+</summary>
 I have put together a small time line to document the progress of the project from start to end. This highlights my sprints and allocation of story points etc.
+</details>
 
 </details>
 
@@ -138,16 +110,63 @@ I have put together a small time line to document the progress of the project fr
 </details>
 
 <details><summary><font size="4">Testing</font></summary>
+<details><summary>Manual Testing 
+</summary>
 
-### Manual Testing 
-### Automated Testing
+| Page        | Description           | Result  |
+| ------------- |-------------| -----|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 </details>
+
+<details><summary>Automated Testing
+</summary>
+Xxx
+</details>
+
+</details>
+
 
 <details><summary><font size="4">Bugs</font></summary>
 
 ### Solved
+
+<details><summary>Bootstrap & Materialize
+</summary>
+I had zero experience on these and as both were used in the walkthroughs I thought they were equals. I went with Materialise. This backfired when I was trying to work out forms as I was informed by a tutor that Materialise was seen as very dated and that I would experience problems with Django should I choice to continue working with it. 
+
+As this project involves many elements I found that I didn’t really have the time to focus and learn the true powers of Bootstrap. For this project it is used on a basic level.
+</details>
+<details><summary>Power of Agile - A change of direction
+</summary>
+I needed to change direction on the enquiry system implementation. My original plan was to allow the user to create an enquiry, add a number of items to the enquiry and then submit the enquiry. At the stage where I had the database models installed and was trying to solve the problem of including items within the enquiry I realised that this was maybe a little ambitious for this project. 
+
+I decided to simplify the idea into one database and enable the user to create an enquiry and then submit the enquiry. The system would allow the user to create and submit any number of enquires. 
+</details>
+
+<details><summary>Deployment
+</summary>
+I spent 3 hours working with Rebecca (Tutor) to help me get the site live. 
+</details>
+
 ### Unsolved
+
+<details><summary>Styling of Sign up
+</summary>
+I just ran out of time!
+</details>
+
+<details><summary>Selecting deadline date
+</summary>
+There should be an error if a user selects a date which is in the past. I looked into solving this but I felt I just didn't have the time to do it. 
+</details>
+
+<details><summary>Another
+</summary>
+Xxx
+</details>
 
 </details>
 
