@@ -43,6 +43,10 @@ h5, h4, h3, .btn {
     height: 55px;
 }
 
+.admin-nav {
+    font-weight: 700;
+}
+
 #mobile-status {
     padding-left: 15px;
     text-align: left;

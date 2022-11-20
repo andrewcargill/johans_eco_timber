@@ -42,25 +42,35 @@
                     <a class="nav-link active" aria-current="page" href="{% url 'forest' %}">Our Forest</a>
                 </li>
                 {% if user.is_authenticated %}
-                <li>
-                    <a class="nav-link" href="{% url 'quote_list' %}">Enquiries</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="{% url 'new_enquiry' %}">New Enquiry</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                </li>
+                    {% if user.username == 'admin' %}
+                    <li>
+                        <a class="nav-link admin-nav active" href="{% url 'admin:index' %}">*Admin Control Panel*</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active" href="{% url 'account_logout' %}">Sign Out</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a class="nav-link active" href="{% url 'quote_list' %}">Enquiries</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active" href="{% url 'new_enquiry' %}">New Enquiry</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active" href="{% url 'account_logout' %}">Sign out</a>
+                    </li>
+                    {% endif%}
                 {% else %}
                 <li>
-                    <a class="nav-link" href="{% url 'about_enquiry_system' %}">Custom Timber
+                    <a class="nav-link active" href="{% url 'about_enquiry_system' %}">Custom Timber
+                    </a>
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                    <a class="nav-link active" href="{% url 'account_login' %}">Login</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="{% url 'account_signup' %}">Sign-up</a>
+                    <a class="nav-link active" href="{% url 'account_signup' %}">Sign-up</a>
                 </li>
                 {% endif %}
             </ul>
@@ -68,7 +78,11 @@
             <div class="d-sm-none d-none d-lg-block bg-light text-muted">
                 
                 {% if user.is_authenticated %}
-                <p class="status-large-display"><i class="bi bi-person-circle"></i> {{ user.username|capfirst }}</p>
+                    {% if user.username == 'admin' %}
+                        <p class="status-large-display"><i class="bi bi-person-circle"></i> {{ user.username|capfirst }}</p>
+                    {% else %}
+                        <p class="status-large-display"><i class="bi bi-person-circle"></i>  {{ user.username|capfirst }}</p>
+                    {% endif%}
                 {% else %}
 
                 {% if messages %}

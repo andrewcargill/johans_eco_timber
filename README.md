@@ -25,8 +25,6 @@ Agile
 Features
 - [Existing Features](#existing-features)
 - [Future Features](#future-features)
-- 
-- 
 
 Testing
 - [Manual Testing ](#manual-testing)
@@ -35,8 +33,6 @@ Testing
 Bugs
 - [Solved](#solved)
 - [Unsolved](#unsolved)
-- 
-- 
 
 Deployment
 - [Deploying to Heroku](#deploying-to-heroku)
