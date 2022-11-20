@@ -1,14 +1,14 @@
 # Sustainable Timber Co. 
 
-[alt text](static/images/about_hero.jpg)
+![alt text](static/images/about_hero.jpg)
 
-It's time to really celebrate and support businesses that have the environment at the heart of their products. Sustainable Timber Co is owned and run by Johan Johansson, a highly creative person with a small forest and sawmill.
+It's time to really celebrate and support businesses that have the environment at the heart of their products. Sustainable Timber Co. is owned and run by Johan Johansson, a highly creative person with a small forest and sawmill.
 
-For Johan the nature is important and every tree has a story. His method of forestry ensures that the nature remains unharmed and that every tree removed is removed for a good reason. As a result Johan only removes a small number of trees each year and the price of those trees must be of a premium. 
+For Johan the nature is important and every tree has a story. Based in the north of Swedish, his method of forestry ensures that the nature remains unharmed and that every tree removed is removed for a good reason. As a result Johan only removes a small number of trees each year and the price of those trees must be of a premium. 
 
 Johan is able to custom mill the trees to exactly what his customers require. Customers like instrument builders, furniture makers and timber-frame house renovators. 
 
-Johan is part of the team. Solving a problem for his customers. What better way to do this than a custom built enquiry system that allows users to specifically detail what they require and when they need it. Giving Johan the information he needs to really offer his customers a unique and premium experience.  
+Johan is part of the team. Solving a problem for his customers. What better way to do this than a custom built online enquiry system that allows users to specifically detail what they need and when they need it. Giving Johan the information he needs to really offer his customers a unique and premium experience.  
 
 <details><summary><font size="4">Project Presentation</font></summary>
 
@@ -20,16 +20,27 @@ Before I begin documenting this projects development I wanted to highlight that 
 </details>
 
 
-<details><summary><font size="4">UX Design</font></summary>
+<details><summary><font size="4">Design Thinking</font></summary>
 
 ### The company
 This is based on a real-life company in the North of Sweden. For these small sawmills it is currently hard for them to connect with customers, without having a custom made website and backend. Often enquires and communications are done via Facebook or some-kind of primitive local online market place. 
 
-### Research
-Much research was carried out. I visited the sawmill and spoke with the owner about his needs and desires.
-
 ### Customer Interviews
+![alt text](readme_media/interview1.png)
+![alt text](readme_media/interview2.png)
+![alt text](readme_media/interview3.png)
 I spoke with several people who worked made custom wood products, that I know would need to buy timber. 
+
+
+### Research
+Brain Storm 1 - General ideas for the website
+![alt text](readme_media/brain_storm.png)
+Brain Storm 2 - Focusing in on viable ideas
+![alt text](readme_media/brain_storm2.png)
+The projects - Persona
+![alt text](readme_media/research_persona.png)
+
+Much research was carried out. I visited the sawmill and spoke with the owner about his needs and desires.
 
 ### Video Proposal
 Here is my mock proposal video, which I used to shape up the project before starting development. 
