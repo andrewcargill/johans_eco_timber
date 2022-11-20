@@ -1,5 +1,15 @@
 # Sustainable Timber Co. 
 
+[alt text](static/images/about_hero.jpg)
+
+It's time to really celebrate and support businesses that have the environment at the heart of their products. Sustainable Timber Co is owned and run by Johan Johansson, a highly creative person with a small forest and sawmill.
+
+For Johan the nature is important and every tree has a story. His method of forestry ensures that the nature remains unharmed and that every tree removed is removed for a good reason. As a result Johan only removes a small number of trees each year and the price of those trees must be of a premium. 
+
+Johan is able to custom mill the trees to exactly what his customers require. Customers like instrument builders, furniture makers and timber-frame house renovators. 
+
+Johan is part of the team. Solving a problem for his customers. What better way to do this than a custom built enquiry system that allows users to specifically detail what they require and when they need it. Giving Johan the information he needs to really offer his customers a unique and premium experience.  
+
 <details><summary><font size="4">Project Presentation</font></summary>
 
 ### Presentation of the project
