@@ -10,6 +10,8 @@ Johan is able to custom mill the trees to exactly what his customers require. Cu
 
 Johan is part of the team. Solving a problem for his customers. What better way to do this than a custom built online enquiry system that allows users to specifically detail what they need and when they need it. Giving Johan the information he needs to really offer his customers a unique and premium experience.  
 
+![alt text](readme_media/hero_image.jpg)
+
 <details><summary><font size="4">Design Thinking</font></summary>
 
 ### Video Proposal
@@ -112,6 +114,8 @@ Below is an example of how I turned an epic into User Stories.
 
 <details><summary>Navigation</summary>
 
+![Sprint](readme_media/navigation.jpg)
+
 - Responsive design
 - Displays custom menu for logged in user
 - Display custom menu for Admin (Superuser)
@@ -121,6 +125,8 @@ Below is an example of how I turned an epic into User Stories.
 
 <details><summary>Website</summary>
 
+![Sprint](readme_media/website.jpg)
+
 - Responsive design
 - Simple information
 - Clearly displaying 'Johan' to build customer trust
@@ -129,12 +135,23 @@ Below is an example of how I turned an epic into User Stories.
 
 <details><summary>Enquiry System</summary>
 
+![Sprint](readme_media/enquiry_system.jpg)
+
 - Responsive design
 - User can create an enquiry
 - User can edit an enquiry
 - User can submit an enquiry
 - User can delete an enquiry
 - Admin can update the status to 'emailed'. This will reflect in users view
+
+</details>
+
+<details><summary>Johan at the centre</summary>
+
+![Sprint](readme_media/johan.jpg)
+
+- Personal experience and personal service
+
 
 </details>
 
