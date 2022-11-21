@@ -12,7 +12,43 @@ Johan is part of the team. Solving a problem for his customers. What better way 
 
 ![alt text](readme_media/hero_image.jpg)
 
-<details><summary><font size="4">Design Thinking</font></summary>
+## Contents
+### [Design Thinking](#design-thinking-1)
+- [Video Proposal](#video-proposal)
+- [The Company](#the-company)
+- [Knowing the customer](#knowing-the-customer)
+- [Persona](#persona)
+- [Brainstorm](#brainstorm)
+- [Wireframes](#wireframes)
+- [Planning & Design](#planning--design)
+### [Agile](#agile-1)
+- [User Stories and Agile](#user-stories--agile)
+- [Story points and Sprints](#story-points--sprints)
+- [Epics into User stories](#epics-into-user-stories)
+### [Features](#features-1)
+- [Existing Features](#existing-features)
+    - [Navigation](#navigation)
+    - [Website](#website)
+    - [Enquiry System](#enquiry-system)
+    - [Johan at the centre](#johan-at-the-centre)
+- [Future Features](#future-features)
+### [Testing](#testing-1)
+- [Manual Testing](#manual-testing)
+- [Automated Testing](#automated-testing)
+### [Bugs](#bugs-1)
+- [Solved](#solved)
+- [Unsolved](#unsolved)
+### [Deployment](#deployment-1)
+- [Deployinig to Heroku](#deploying-to-heroku)
+- [Database Setup](#database-setup)
+- [Cloudinary](#cloudinary)
+### [Credits & Acknowledgments](#credits-and-acknowledgements)
+- [Credits](#credits)
+- [Acknowledgements](#acknowledgements)
+
+
+
+## Design Thinking
 
 ### Video Proposal
 I created a proposal video. This would be presented to owners or investors.
@@ -26,7 +62,9 @@ This is based on a real-life company in the North of Sweden. For these small saw
 I spoke with a number of people that worked with wood. Daniel and Niklas stood out as the kind of people that would use a custom milled timber company. 
 
 There results are below, with keywords highlighted in red text.
+
 ![Interview 1](readme_media/interview1.png)
+
 ![Interview 2](readme_media/interview2.png)
 
 ### Persona 
@@ -35,8 +73,11 @@ The projects - Persona
 
 ### Brainstorm
 Brain Storm 1 - General ideas for the website
+
 ![Brainstorm 1](readme_media/brain_storm.png)
+
 Brain Storm 2 - Focusing in on viable ideas
+
 ![brainstorm 2](readme_media/brain_storm2.png)
 
 ### Wireframes
@@ -54,13 +95,10 @@ Below is the database model I switched to using for the project.
 
 ![Wireframes](readme_media/project_planning2.jpg)
 
+## Agile
 
-</details>
+### User Stories & Agile
 
-<details><summary><font size="4">Agile</font></summary>
-
-<details><summary>User Stories & Agile
-</summary>
 I generated over 100 user stories in the development of this project. I made use of the 'project' feature within GitHub to manage the ordering and completion. 
 
 [Link to the Github Project used in this project](https://github.com/users/andrewcargill/projects/7)
@@ -69,22 +107,16 @@ User Stories were very useful during development as they allowed me to closely t
 
 ![User Story](readme_media/userstory.jpg)
 
-</details>
+### Story Points & Sprints
 
-<details><summary>Story Points & Sprints
-</summary>
 My allocation and valuing of story points moved a little as the project progressed. I completed my first sprint and re-assessed the value of 1 story point - After the first week of development I was confident on the value of one story point. For me this was a User Story that I knew how to complete and required little background research. 
 
 Sprint lengths changed depending on my work/ study hours for that day or week of production. This would be much easier with a standard 40hr week, but I did feel that it was useful to apply sprints to my work even when working alone and studying as I do, as it helped me set goals for sections of the projects development.
 
 ![Sprint](readme_media/sprint.png)
 
-</details>
+### Epics into User Stories
 
-
-
-<details><summary>Epics into User Stories
-</summary>
 Below is an example of how I turned an epic into User Stories. 
 
 
@@ -103,39 +135,32 @@ Below is an example of how I turned an epic into User Stories.
 ||[Navigation fixed to top of screen](https://github.com/andrewcargill/johans_eco_timber/issues/70)    |
 ||[Favicon](https://github.com/andrewcargill/johans_eco_timber/issues/33)    |
 
-</details>
-
-
-</details>
-
-<details><summary><font size="4">Features</font></summary>
+## Features
 
 ### Existing Features
 
-<details><summary>Navigation</summary>
+#### Navigation
 
-![Sprint](readme_media/navigation.jpg)
+![Navigation](readme_media/navigation.jpg)
 
 - Responsive design
 - Displays custom menu for logged in user
 - Display custom menu for Admin (Superuser)
 - Displays status of user login - logged out
 
-</details>
 
-<details><summary>Website</summary>
 
-![Sprint](readme_media/website.jpg)
+#### Website
+
+![Website](readme_media/website.jpg)
 
 - Responsive design
 - Simple information
 - Clearly displaying 'Johan' to build customer trust
 
-</details>
+#### Enquiry System
 
-<details><summary>Enquiry System</summary>
-
-![Sprint](readme_media/enquiry_system.jpg)
+![Enquiry System](readme_media/enquiry_system.jpg)
 
 - Responsive design
 - User can create an enquiry
@@ -144,24 +169,20 @@ Below is an example of how I turned an epic into User Stories.
 - User can delete an enquiry
 - Admin can update the status to 'emailed'. This will reflect in users view
 
-</details>
 
-<details><summary>Johan at the centre</summary>
 
-![Sprint](readme_media/johan.jpg)
+#### Johan at the centre
+
+![Johan](readme_media/johan.jpg)
 
 - Personal experience and personal service
 
-
-</details>
-
 ### Future Features
 
-</details>
+## Testing
 
-<details><summary><font size="4">Testing</font></summary>
-<details><summary>Manual Testing 
-</summary>
+### Manual Testing 
+
 
 | Page        | Description           | Result  |
 | ------------- |-------------| -----|
@@ -232,69 +253,55 @@ Below is an example of how I turned an epic into User Stories.
 ||Admin logged in - Log out links to accounts/logout/|Pass|
 |Admin view|Admin changes status to emailed - Updates list view|Pass|
 
-</details>
+### Automated Testing
 
-<details><summary>Automated Testing
-</summary>
-Xxx
-</details>
-
-</details>
-
-
-<details><summary><font size="4">Bugs</font></summary>
+## Bugs
 
 ### Solved
 
-<details><summary>Bootstrap & Materialize
-</summary>
+#### Bootstrap & Materialize
+
 I had zero experience on these and as both were used in the walkthroughs I thought they were equals. I went with Materialise. This backfired when I was trying to work out forms as I was informed by a tutor that Materialise was seen as very dated and that I would experience problems with Django should I choice to continue working with it. 
 
 As this project involves many elements I found that I didn’t really have the time to focus and learn the true powers of Bootstrap. For this project it is used on a basic level.
-</details>
-<details><summary>Power of Agile - A change of direction
-</summary>
+
+#### Power of Agile
+
 I needed to change direction on the enquiry system implementation. My original plan was to allow the user to create an enquiry, add a number of items to the enquiry and then submit the enquiry. At the stage where I had the database models installed and was trying to solve the problem of including items within the enquiry I realised that this was maybe a little ambitious for this project. 
 
 I decided to simplify the idea into one database and enable the user to create an enquiry and then submit the enquiry. The system would allow the user to create and submit any number of enquires. 
-</details>
 
-<details><summary>Deployment
-</summary>
+#### Deployment
+
 I spent 3 hours working with Rebecca (Tutor) to help me get the site live. 
-</details>
+
 
 ### Unsolved
 
-<details><summary>Styling of Sign up
-</summary>
+#### Styling of Sign up
+
 I just ran out of time!
-</details>
 
-<details><summary>Selecting deadline date
-</summary>
+#### Selecting deadline date
+
 There should be an error if a user selects a date which is in the past. I looked into solving this but I felt I just didn't have the time to do it. 
-</details>
 
-<details><summary>Another
-</summary>
+
+#### Another
+
 Xxx
-</details>
 
-</details>
-
-<details><summary><font size="4">Deployment</font></summary>
+## Deployment
 
 ### Deploying to Heroku
 ### Database setup
 ### Cloudinary
 
-</details>
-
-<details><summary><font size="4">Credit & Acknowledgements</font></summary>
+## Credits and Acknowledgements
 
 ### Credits
+
 ### Acknowledgements
-</details>
+
 
 
