@@ -10,56 +10,63 @@ Johan is able to custom mill the trees to exactly what his customers require. Cu
 
 Johan is part of the team. Solving a problem for his customers. What better way to do this than a custom built online enquiry system that allows users to specifically detail what they need and when they need it. Giving Johan the information he needs to really offer his customers a unique and premium experience.  
 
-<details><summary><font size="4">Project Presentation</font></summary>
-
-### Presentation of the project
-Custom Timber Co. is a small company up in the north of Sweden that specialise in custom milled timber, owned by Johan, a guy who is passionate about the nature and the environment. This website is connecting Johan to his customers and helping communication in a modern and effective way.
-
-### Overview of the development journey
-Before I begin documenting this projects development I wanted to highlight that this project really did help me understand the effectiveness of 'agile' and that my original planning proposed the creation of a two database system  - but early into development I understood that this was not going to work and so I privotted the project and created a really great solution. I will document this later within my documentation. But I felt it important to make the reader away. 
-</details>
-
-
 <details><summary><font size="4">Design Thinking</font></summary>
+
+### Video Proposal
+I created a proposal video. This would be presented to owners or investors.
+
+[![Watch the video](readme_media/video_thumbnail.png)](https://youtu.be/HH_DNE370Mw)
 
 ### The company
 This is based on a real-life company in the North of Sweden. For these small sawmills it is currently hard for them to connect with customers, without having a custom made website and backend. Often enquires and communications are done via Facebook or some-kind of primitive local online market place. 
 
-### Customer Interviews
-![alt text](readme_media/interview1.png)
-![alt text](readme_media/interview2.png)
-![alt text](readme_media/interview3.png)
-I spoke with several people who worked made custom wood products, that I know would need to buy timber. 
+### Knowing the customer
+I spoke with a number of people that worked with wood. Daniel and Niklas stood out as the kind of people that would use a custom milled timber company. 
 
+There results are below, with keywords highlighted in red text.
+![Interview 1](readme_media/interview1.png)
+![Interview 2](readme_media/interview2.png)
 
-### Research
-Brain Storm 1 - General ideas for the website
-![alt text](readme_media/brain_storm.png)
-Brain Storm 2 - Focusing in on viable ideas
-![alt text](readme_media/brain_storm2.png)
+### Persona 
 The projects - Persona
-![alt text](readme_media/research_persona.png)
+![persona image](readme_media/research_persona.png)
 
-Much research was carried out. I visited the sawmill and spoke with the owner about his needs and desires.
-
-### Video Proposal
-Here is my mock proposal video, which I used to shape up the project before starting development. 
-
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/HH_DNE370Mw)
+### Brainstorm
+Brain Storm 1 - General ideas for the website
+![Brainstorm 1](readme_media/brain_storm.png)
+Brain Storm 2 - Focusing in on viable ideas
+![brainstorm 2](readme_media/brain_storm2.png)
 
 ### Wireframes
-My original wireframes for the project look a little different to the finished project. These evolved as the project progressed. 
+Below is an example of my original wireframes for this project. You can see that the final website evolved from these first concepts of how the website would look.
+![Wireframes](readme_media/thumbnails1.jpg)
+
 
 ### Planning & Design
-My original plan was to use two databases but this was later simplified to one database linked to the users primary key. 
+My original plan was to use two databases. One containing quotes and the other containing items that would sit within quotes. Allowing the user to request a number of items within a single quote.
+![Wireframes](readme_media/project_planning1.jpg)
+
+After trying this in production I came across the problem of tieing together the quote ID to the Items database. This felt a little too advanced for this project as so I simplified the idea to one database. The user could still make multiple enquires, but it would be contained in one database. This felt more realistic given my skill level and the time allocated for the project.
+
+Below is the database model I switched to using for the project.
+
+![Wireframes](readme_media/project_planning2.jpg)
+
 
 </details>
 
 <details><summary><font size="4">Agile</font></summary>
 
-<details><summary>User Stories
+<details><summary>User Stories & Agile
 </summary>
-I generated over 100 user stories in developing this project. I made use of the 'project' feature within GitHub to manage the ordering and completion. 
+I generated over 100 user stories in the development of this project. I made use of the 'project' feature within GitHub to manage the ordering and completion. 
+
+[Link to the Github Project used in this project](https://github.com/users/andrewcargill/projects/7)
+
+User Stories were very useful during development as they allowed me to closely track progress. I discovered that using tick-boxes for each 'task' really helped monitor the completion of a user story.
+
+![User Story](readme_media/userstory.jpg)
+
 </details>
 
 <details><summary>Story Points & Sprints
@@ -67,23 +74,35 @@ I generated over 100 user stories in developing this project. I made use of the 
 My allocation and valuing of story points moved a little as the project progressed. I completed my first sprint and re-assessed the value of 1 story point - After the first week of development I was confident on the value of one story point. For me this was a User Story that I knew how to complete and required little background research. 
 
 Sprint lengths changed depending on my work/ study hours for that day or week of production. This would be much easier with a standard 40hr week, but I did feel that it was useful to apply sprints to my work even when working alone and studying as I do, as it helped me set goals for sections of the projects development.
+
+![Sprint](readme_media/sprint.png)
+
 </details>
 
 
 
 <details><summary>Epics into User Stories
 </summary>
-I have two examples of where I have set epics and then broken them down into User Stories. 
-- Final design
-- Documentation
+Below is an example of how I turned an epic into User Stories. 
+
+
+| Epic       | User Stories          |
+| ------------- |-------------|
+| [Final Design - EPIC](https://github.com/andrewcargill/johans_eco_timber/issues/44)    | [Calendar](https://github.com/andrewcargill/johans_eco_timber/issues/80)  |
+||[Redirect on login](https://github.com/andrewcargill/johans_eco_timber/issues/77)    |
+||[Hero Image text](https://github.com/andrewcargill/johans_eco_timber/issues/72)    |
+||[Optimal image sizes](https://github.com/andrewcargill/johans_eco_timber/issues/73)    |
+||[Copyright icon](https://github.com/andrewcargill/johans_eco_timber/issues/74)    |
+||[Fix mobile design for specific pages](https://github.com/andrewcargill/johans_eco_timber/issues/75)    |
+||[Change 'register' to 'signup'](https://github.com/andrewcargill/johans_eco_timber/issues/76)    |
+||[Capitalize user name when displayed](https://github.com/andrewcargill/johans_eco_timber/issues/78)    |
+||[Explore information container background color](https://github.com/andrewcargill/johans_eco_timber/issues/79)    |
+||[Align Navigation](https://github.com/andrewcargill/johans_eco_timber/issues/45)    |
+||[Navigation fixed to top of screen](https://github.com/andrewcargill/johans_eco_timber/issues/70)    |
+||[Favicon](https://github.com/andrewcargill/johans_eco_timber/issues/33)    |
+
 </details>
 
-
-
-<details><summary>Timeline - Development
-</summary>
-I have put together a small time line to document the progress of the project from start to end. This highlights my sprints and allocation of story points etc.
-</details>
 
 </details>
 
