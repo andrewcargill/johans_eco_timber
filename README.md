@@ -85,7 +85,7 @@ Below is an example of my original wireframes for this project. You can see that
 ![Wireframes](readme_media/thumbnails1.jpg)
 
 
-### Planning & Design
+### Planning
 My original plan was to use two databases. One containing quotes and the other containing items that would sit within quotes. Allowing the user to request a number of items within a single quote.
 ![Wireframes](readme_media/project_planning1.jpg)
 
@@ -94,6 +94,19 @@ After trying this in production I came across the problem of tieing together the
 Below is the database model I switched to using for the project.
 
 ![Wireframes](readme_media/project_planning2.jpg)
+
+### Design
+The website is designed to give the user the experience they expect from a website. The website design should not challenge the user in any way - They shouldn't visit the site and be 'impressed by the design' - the site design should go un-noticed - something running in the background - it shouldn't enter their mind. 
+
+I designed the homepage so the user will take in these key elements
+- The swedish flag ( the location of the company )
+- image of trees ( the hero image )
+- 'nature first' ( the message of the company )
+- 'custom timber' ( what the company offers )
+
+These are the important messages that a potential customers will need. Simple. At home. Not intimidating. 
+
+Once this core message has been conveyed the next detail they will see is Johan's signature. This is key to building the users trust. We asking the user to make the effort to sign up and fill in a form. For them to do this they will need to trust the site and trust that the man behind the site is the one that can help them.
 
 ## Agile
 
