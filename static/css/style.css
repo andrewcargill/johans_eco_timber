@@ -222,6 +222,13 @@ body, html {
     height: 3vh;
 }
 
+/*sign up form styling*/
+
+.sign-up-error {
+    color: red;
+    font-size: smaller;
+}
+
 
 
 @media (max-width: 576px) { 
