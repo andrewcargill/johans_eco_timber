@@ -85,7 +85,7 @@ Below is an example of my original wireframes for this project. You can see that
 ![Wireframes](readme_media/thumbnails1.jpg)
 
 
-### Planning
+### Planning & Data Schema
 My original plan was to use two databases. One containing quotes and the other containing items that would sit within quotes. Allowing the user to request a number of items within a single quote.
 ![Wireframes](readme_media/project_planning1.jpg)
 
@@ -94,6 +94,20 @@ After trying this in production I came across the problem of tieing together the
 Below is the database model I switched to using for the project.
 
 ![Wireframes](readme_media/project_planning2.jpg)
+
+### How the database works
+||What happens|Reaction|
+|--|--|--|
+|1|User creates login|user information stored in Django Users database|
+|2|User completes an enquiry form and saves|Users ID is added when saved|
+|||Status is set to 'not submitted'|
+|||Submitted date/time is automatically saved|
+|3|user updates enquiry|Relevant fields are updated|
+|||Submitted data/time is automatically updated|
+|4|User submits form|Status is changed to 'Submitted'|
+|||Submitted date/time is automatically updated|
+|5|Admin (superuser) changes status to 'quote emailed'|Submitted date/time is automatically updated|
+
 
 ### Design
 The website is designed to give the user the experience they expect from a website. The website design should not challenge the user in any way - They shouldn't visit the site and be 'impressed by the design' - the site design should go un-noticed - something running in the background - it shouldn't enter their mind. 
@@ -198,6 +212,23 @@ Below is an example of how I turned an epic into User Stories.
 - Enquiry form could evolve into online chat/video booking system
 
 ## Testing
+
+
+
+### Code testing
+
+All python code was checked with Pycodestyle & [Code Institute Python Checker](https://pep8ci.herokuapp.com/)
+
+Lighthouse report - Index.html
+![Index lighthouse](readme_media/index_testing.png)
+
+Lighthouse report - About.html
+![about lighhouse](readme_media/about_testing.png)
+- the main problems reference the CSS files not being local
+(I was advised by a tutor to keep the CSS files as CDN)
+
+
+
 
 ### Manual Testing 
 
