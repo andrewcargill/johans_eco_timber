@@ -1,7 +1,7 @@
 <div class=" row d-none d-sm-block">
     <div class="table-responsive">
       <table class="table" style="width: 100%">
-
+        <!--Table headers-->
         <thead>
           <tr>
             <th scope="col">
@@ -24,6 +24,7 @@
           <!--IF STATEMENT OF STATUS START (Not Submitted)-->
           {% if QuoteData.status == 0 %}
           <tr class="pointer clickable-row" onclick="location.href='{% url 'quote_update' QuoteData.id %}' ">
+            <!--Title-->
             <th scope="row">
               {{ QuoteData.title}}
             </th>
@@ -32,7 +33,6 @@
 
               {{ QuoteData.species }}
             </td>
-
             <!--deminsions-->
             <td>
               {{ QuoteData.width }} x {{ QuoteData.thickness }} x
@@ -50,22 +50,20 @@
               <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
                 <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
               </a>
-
             </td>
           </tr>
-
           <!--ELIF STATEMENT OF STATUS-->
           {% elif QuoteData.status == 1 %}
           <tr class="submitted">
-            <th scope="row">
+            <!--Title-->
+            <td scope="row">
               {{ QuoteData.title}}
-            </th>
+            </td>
             <!--Speces-->
             <td>
 
               {{ QuoteData.species }}
             </td>
-
             <!--deminsions-->
             <td>
               {{ QuoteData.width }} x {{ QuoteData.thickness }} x
@@ -80,21 +78,19 @@
               <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
                 <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
               </a>
-
             </td>
           </tr>
           <!--ELSE STATEMENT OF STATUS-->
           {% else %}
           <tr class="check_email">
-            <th scope="row">
+            <!--Title-->
+            <td scope="row">
               {{ QuoteData.title}}
-            </th>
+            </td>
             <!--Speces-->
             <td>
-
               {{ QuoteData.species }}
             </td>
-
             <!--deminsions-->
             <td>
               {{ QuoteData.width }} x {{ QuoteData.thickness }} x
@@ -109,7 +105,6 @@
               <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
                 <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
               </a>
-
             </td>
           </tr>
 
@@ -119,8 +114,5 @@
         </tbody>
       </table>
     </div>
-
-    <!--Original table-->
-
-    <!--End of medium/ Large screen view-->
   </div>
+</div>

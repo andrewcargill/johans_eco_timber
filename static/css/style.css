@@ -1,9 +1,15 @@
+
+body, html {
+    height: 100%;
+}
+
+/*Sets adobe fonts for the website*/
+
 h1 {
     font-family: apparat, sans-serif;
     font-weight: 800;
     font-style: normal;
     text-transform: capitalize;
-    /* text-transform: uppercase; */
     letter-spacing: 0.1em;
     font-size: 4em;
 }
@@ -27,6 +33,7 @@ h5, h4, h3, .btn {
     font-style: normal;
 }
 
+/*Johan Signature font*/
 .signature {
     font-family: baka-too, sans-serif;
     font-weight: 400;
@@ -34,7 +41,7 @@ h5, h4, h3, .btn {
     font-size: x-large;
 }
 
-/*Compensates the navigation being fixed*/
+/*Compensates for navigation being fixed*/
 .nav-spacer {
     height: 62px;
 }
@@ -43,10 +50,12 @@ h5, h4, h3, .btn {
     height: 55px;
 }
 
+/*Bold text for Admin Navigation*/
 .admin-nav {
     font-weight: 700;
 }
 
+/*Styling of user status*/
 #mobile-status {
     padding-left: 15px;
     text-align: left;
@@ -61,6 +70,8 @@ h5, h4, h3, .btn {
     height: 30vh;
 }
 
+/*Enquiry List View*/
+
 .pointer {
     cursor: pointer;
   }
@@ -72,10 +83,6 @@ h5, h4, h3, .btn {
     background-color: lightyellow;
 }
 
-.submitted:hover {
-    background-color: yellow;
-}
-
 .check_email {
     background-color: lightgreen;
 }
@@ -84,6 +91,7 @@ h5, h4, h3, .btn {
     color: red;
 }
 
+/*General Website styling*/
 .hero-image {
     max-height: 70vh;
 }
@@ -102,7 +110,6 @@ h5, h4, h3, .btn {
     max-width: 500px;
 }
 
-/*Align buttons to bottom of container*/
 .button-bottom {
     position: absolute;
     top: 90%;
@@ -110,18 +117,12 @@ h5, h4, h3, .btn {
     transform: translate(-50%, -50%);
 }
 
-body, html {
-    height: 100%;
-}
-
-/*swedish flag*/
 .swedish-flag {
     width: auto;
     height: 20px;
     margin-right: 4px;
 }
 
-/* Place text in the middle of the image */
 .hero-text {
   text-align: center;
   position: absolute;
@@ -135,7 +136,6 @@ body, html {
     object-fit: cover;
     width: 100vw;
     height: 50vh;
-    
 }
 
 .highlight_image {
@@ -150,12 +150,10 @@ body, html {
     height: 25vh;
 }
 
-/*applies margin on content when viewed via mobile*/
+/*adjusts margin on content when viewed via mobile*/
 .text-margin {
     margin-bottom: 20px;
 }
-
-/*Header images*/
 
 .enquiry-header {
     object-fit: cover;
@@ -178,7 +176,6 @@ body, html {
     margin-top: 30px;
 }
 
-/*Page Footer*/
 .page-footer {
     margin-top: 5vh;
 }
@@ -188,7 +185,6 @@ body, html {
     min-height: 50vh;
 }
 
-/*about page*/
 .single-card {
     width: 95%;
 }
@@ -199,14 +195,12 @@ body, html {
     height: 100%;
 }
 
-/*Enquiry text header*/
 .text-header {
     padding-top: 25px;
     padding-bottom: 5px;
 }
 
 /*form template*/
-
 .form-container-outer {
     padding-top: 3vh;
     padding-bottom: 3vh;
@@ -215,7 +209,6 @@ body, html {
 
 .form-container {
     width: 80%; 
-
 }
 
 .form-spacer {
@@ -223,14 +216,19 @@ body, html {
 }
 
 /*sign up form styling*/
-
 .sign-up-error {
     color: red;
     font-size: smaller;
 }
 
+/*Font size of list_view*/
+@media (max-width: 768px) { 
+    tr, th, td, .btn {
+        font-size: small;
+    }
+}
 
-
+/*adjustments for mobile*/
 @media (max-width: 576px) { 
     .form-container {
         width: 95%; 
@@ -251,6 +249,10 @@ body, html {
     }
 
     p {
+        font-size: smaller;
+    }
+
+    tr, th, td, .btn {
         font-size: smaller;
     }
 }

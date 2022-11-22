@@ -1,19 +1,20 @@
 <div class="d-block d-sm-none">
-    
+
     <!--research table-->
-    
+
     <div class="table-responsive">
         <table class="table" style="width: 100%">
-
+            <!--Table Headers-->
             <thead>
                 <tr>
                     <th scope="col">
-                        </i> Title
+                        Title
                     </th>
-                    <th scope="col"> Species</th>
-
+                    <th scope="col"> Species
+                    </th>
+                    <th scope="col"> Species
+                    </th>
                     <th scope="col">
-                        </i>
                         Status
                     </th>
                     <th scope="col"><i class="fa-solid fa-trash"></i></th>
@@ -26,6 +27,7 @@
                 <!--IF STATEMENT OF STATUS START-->
                 {% if QuoteData.status == 0 %}
                 <tr class="pointer clickable-row" onclick="location.href='{% url 'quote_update' QuoteData.id %}' ">
+                    <!--title-->
                     <th scope="row">
                         {{ QuoteData.title}}
                     </th>
@@ -34,6 +36,11 @@
 
                         {{ QuoteData.species }}
                     </td>
+                    <!--deminsions-->
+            <td>
+                {{ QuoteData.width }} x {{ QuoteData.thickness }} x
+                {{QuoteData.length }}
+              </td>
                     <td>
                         <a href="{% url 'quote_detail' QuoteData.id %}" class="post-link">
                             <button type="button" class="btn btn-outline-info">Submit Enquiry</button>
@@ -43,21 +50,25 @@
                         <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
                             <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
                         </a>
-
                     </td>
                 </tr>
 
                 <!--ELIF STATEMENT OF STATUS-->
                 {% elif QuoteData.status == 1 %}
                 <tr class="submitted">
-                    <th scope="row">
+                    <!--title-->
+                    <td scope="row">
                         {{ QuoteData.title}}
-                    </th>
+                    </td>
                     <!--Speces-->
                     <td>
-
                         {{ QuoteData.species }}
                     </td>
+                    <!--deminsions-->
+            <td>
+                {{ QuoteData.width }} x {{ QuoteData.thickness }} x
+                {{QuoteData.length }}
+              </td>
                     <!--status-->
                     <td>Enquiry Received</td>
                     <!--delete-->
@@ -65,20 +76,24 @@
                         <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
                             <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
                         </a>
-
                     </td>
                 </tr>
                 <!--ELSE STATEMENT OF STATUS-->
                 {% else %}
                 <tr class="check_email">
-                    <th scope="row">
+                    <!--title-->
+                    <td scope="row">
                         {{ QuoteData.title}}
-                    </th>
-                    <!--Speces-->
+                    </td>
+                    <!--Species-->
                     <td>
-
                         {{ QuoteData.species }}
                     </td>
+                    <!--dimensions-->
+            <td>
+                {{ QuoteData.width }} x {{ QuoteData.thickness }} x
+                {{QuoteData.length }}
+              </td>
                     <!--status-->
                     <td>Response Emailed: {{ QuoteData.submitted_date }}</td>
                     <!--delete-->
@@ -86,17 +101,13 @@
                         <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
                             <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
                         </a>
-
                     </td>
                 </tr>
-
                 {% endif %}
                 <!--End For-->
                 {% endfor %}
             </tbody>
         </table>
     </div>
-
-
     <!--End of mobile screen view-->
 </div>
