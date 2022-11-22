@@ -9,7 +9,6 @@
     <title>Sustainable Timber Co.</title>
     <!--Favicon-->
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
-
     <!-- CSS  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -23,7 +22,26 @@
 <body>
     <!--Navigation-->
     <nav class="fixed-top navbar-nav-scroll navbar navbar-expand-lg navbar-light bg-light">
-        <img class="swedish-flag" src="{% static 'images/swedishflag.png' %}" alt="Swedish Flag">
+        <!--if screen size is md or bigger show swedish flag only-->
+        <div class="d-lg-none d-xl-none">
+            <!--User status for mobile / or if not logged in then Swedish Flag-->
+            <div class="status-mobile bg-light text-muted">
+                {% if user.is_authenticated %}
+                <i class="bi bi-person-circle"></i> {{ user.username|capfirst }}
+                {% elif messages %}
+                {% for message in messages %}
+                {{message}}
+
+                {% endfor %}
+                {% else %}
+                <img class="swedish-flag" src="{% static 'images/swedishflag.png' %}" alt="Swedish Flag">
+                {% endif %}
+            </div>
+        </div>
+        <div class="d-none d-lg-block d-xl-block"><img class="swedish-flag" src="{% static 'images/swedishflag.png' %}"
+                alt="Swedish Flag">
+        </div>
+
         <a class="navbar-brand" href="{% url 'home' %}">Sustainable Timber Co.</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,29 +60,27 @@
                     <a class="nav-link active" aria-current="page" href="{% url 'forest' %}">Our Forest</a>
                 </li>
                 {% if user.is_authenticated %}
-                    {% if user.username == 'admin' %}
-                    <li>
-                        <a class="nav-link admin-nav active" href="{% url 'admin:index' %}">*Admin Control Panel*</a>
-                    </li>
-                    <li>
-                        <a class="nav-link active" href="{% url 'account_logout' %}">Sign Out</a>
-                    </li>
-                    {% else %}
-                    <li>
-                        <a class="nav-link active" href="{% url 'quote_list' %}">Enquiries</a>
-                    </li>
-                    <li>
-                        <a class="nav-link active" href="{% url 'new_enquiry' %}">New Enquiry</a>
-                    </li>
-                    <li>
-                        <a class="nav-link active" href="{% url 'account_logout' %}">Sign Out</a>
-                    </li>
-                    {% endif%}
+                {% if user.username == 'admin' %}
+                <li>
+                    <a class="nav-link admin-nav active" href="{% url 'admin:index' %}">*Admin Control Panel*</a>
+                </li>
+                <li>
+                    <a class="nav-link active" href="{% url 'account_logout' %}">Sign Out</a>
+                </li>
                 {% else %}
                 <li>
-                    <a class="nav-link active" href="{% url 'about_enquiry_system' %}">Custom Timber
-                    </a>
-                    </a>
+                    <a class="nav-link active" href="{% url 'quote_list' %}">Enquiries</a>
+                </li>
+                <li>
+                    <a class="nav-link active" href="{% url 'new_enquiry' %}">New Enquiry</a>
+                </li>
+                <li>
+                    <a class="nav-link active" href="{% url 'account_logout' %}">Sign Out</a>
+                </li>
+                {% endif%}
+                {% else %}
+                <li>
+                    <a class="nav-link active" href="{% url 'about_enquiry_system' %}">Custom Timber</a>
                 </li>
                 <li>
                     <a class="nav-link active" href="{% url 'account_login' %}">Login</a>
@@ -74,15 +90,15 @@
                 </li>
                 {% endif %}
             </ul>
+
             <!--User Login Status for desktop and large-->
             <div class="d-sm-none d-none d-lg-block bg-light text-muted">
-                
                 {% if user.is_authenticated %}
-                    {% if user.username == 'admin' %}
-                        <p class="status-large-display"><i class="bi bi-person-circle"></i> {{ user.username|capfirst }}</p>
-                    {% else %}
-                        <p class="status-large-display"><i class="bi bi-person-circle"></i>  {{ user.username|capfirst }}</p>
-                    {% endif%}
+                {% if user.username == 'admin' %}
+                <p class="status-large-display"><i class="bi bi-person-circle"></i> {{ user.username|capfirst }}</p>
+                {% else %}
+                <p class="status-large-display"><i class="bi bi-person-circle"></i> {{ user.username|capfirst }}</p>
+                {% endif%}
                 {% else %}
 
                 {% if messages %}
@@ -96,26 +112,11 @@
             </div>
         </div>
     </nav>
-    <!--User Login Status for tablet and mobile-->
-    <div class="d-none d-md-block d-sm-block d-block d-lg-none" id="mobile-status">
-        <div class="nav-spacer2"></div>
-        <div class="bg-light text-muted">
-            {% if user.is_authenticated %}
-            <p><i class="bi bi-person-circle"></i> {{ user.username|capfirst }}</p>
-            {% else %}
 
-            {% if messages %}
-            {% for message in messages %}
-
-            <p>{{message}}</p>
-
-            {% endfor %}
-            {% endif %}
-            {% endif %}
-        </div>
-    </div>
-    <!--Spacing for fixed navigation on larger viewing devices-->
+    <!--Spacing to adjust for fixed navigation on larger viewing devices-->
     <div class="d-sm-none d-none d-lg-block nav-spacer"></div>
+
+    <!--Content-->
     {% block content %}{% endblock content %}
 
     <!--Footer-->

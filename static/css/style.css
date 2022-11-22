@@ -56,10 +56,8 @@ h5, h4, h3, .btn {
 }
 
 /*Styling of user status*/
-#mobile-status {
-    padding-left: 15px;
-    text-align: left;
-    font-size: smaller;
+.status-mobile {
+    font-size: small;
 }
 
 .status-large-display{

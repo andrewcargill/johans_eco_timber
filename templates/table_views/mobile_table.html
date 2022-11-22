@@ -24,7 +24,7 @@
                 <!--FOR STATEMENT-->
                 {% for QuoteData in quote_list %}
 
-                <!--IF STATEMENT OF STATUS START-->
+                <!--IF STATEMENT OF STATUS START (Not submitted)-->
                 {% if QuoteData.status == 0 %}
                 <tr class="pointer clickable-row" onclick="location.href='{% url 'quote_update' QuoteData.id %}' ">
                     <!--title-->
@@ -53,7 +53,7 @@
                     </td>
                 </tr>
 
-                <!--ELIF STATEMENT OF STATUS-->
+                <!--ELIF STATEMENT OF STATUS (Submitted)-->
                 {% elif QuoteData.status == 1 %}
                 <tr class="submitted">
                     <!--title-->
@@ -78,7 +78,7 @@
                         </a>
                     </td>
                 </tr>
-                <!--ELSE STATEMENT OF STATUS-->
+                <!--ELSE STATEMENT OF STATUS (Emailed sent to user)-->
                 {% else %}
                 <tr class="check_email">
                     <!--title-->
