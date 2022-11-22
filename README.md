@@ -178,6 +178,11 @@ Below is an example of how I turned an epic into User Stories.
 - Personal experience and personal service
 
 ### Future Features
+- Email response system for Admin
+- Contact form on main website (access without login)
+- Online shop (So that company can advertise timber they have for sale)
+- Online chat
+- Enquiry form could evolve into online chat/video booking system
 
 ## Testing
 
@@ -254,7 +259,7 @@ Below is an example of how I turned an epic into User Stories.
 |Admin view|Admin changes status to emailed - Updates list view|Pass|
 
 ### Automated Testing
-
+To date no Automated testing has been carried out.
 ## Bugs
 
 ### Solved
@@ -277,31 +282,62 @@ I spent 3 hours working with Rebecca (Tutor) to help me get the site live.
 
 
 ### Unsolved
+- Styling of Sign-up page
+- Placement of login status for mobile views
+- Data picker only allows user to select future dates
 
-#### Styling of Sign up
-
-I just ran out of time!
-
-#### Selecting deadline date
-
-There should be an error if a user selects a date which is in the past. I looked into solving this but I felt I just didn't have the time to do it. 
-
-
-#### Another
-
-Xxx
 
 ## Deployment
 
 ### Deploying to Heroku
+
 ### Database setup
+
 ### Cloudinary
 
 ## Credits and Acknowledgements
 
 ### Credits
+|||
+|---|---|
+|Images|[freepik](https://www.freepik.com/free-photos-vectors/carpenter-carpentry-woodworking)|
 
 ### Acknowledgements
+
+|Description|Link|
+|----|----|
+|Working with Admin urls|[stackoverflow](https://stackoverflow.com/questions/44130643/django-admin-urls)|
+|Adding user ID to database|[stackoverflow](https://stackoverflow.com/questions/9269945/how-do-i-pass-the-current-user-id-as-a-hidden-field-in-a-django-form )|
+||[Django](https://docs.djangoproject.com/en/4.1/ref/forms/fields/)|
+||[airbrake](https://blog.airbrake.io/blog/http-errors/301-moved-permanently)|
+||[testdriven.io](https://testdriven.io/blog/django-static-files/)|
+|Researching displaying data from database|[Django widgets](https://docs.djangoproject.com/en/4.1/ref/forms/widgets/)|
+||[Djanog - built in fields](https://docs.djangoproject.com/en/4.1/ref/forms/fields/#built-in-fields)|
+||[mrasimzahid - Datepickers](https://mrasimzahid.medium.com/how-to-implement-django-datepicker-calender-in-forms-date-field-9e23479b5db)|
+||[medium.com](https://medium.com/swlh/how-to-style-your-django-forms-7e8463aae4fa)|
+|Using Materialize on forms|[stackoverflow](https://stackoverflow.com/questions/70977918/trying-to-link-my-html-form-to-a-view-function-in-django)|
+||[manual v template forms](https://stackoverflow.com/questions/16868300/when-to-use-django-forms-vs-manual-forms)|
+||[user - objects](https://docs.djangoproject.com/en/4.1/topics/auth/default/#user-objects)|
+|First and last name registration|[stackoverflow](https://stackoverflow.com/questions/9023493/adding-first-name-and-last-name-to-django-registration)|
+|Capitalize fields|[stackoverflow](https://stackoverflow.com/questions/14268342/make-the-first-letter-uppercase-inside-a-django-template)|
+|Python - Formating long strings|[stackoverflow](https://stackoverflow.com/questions/54058849/define-a-triple-quoted-f-string-with-newline-containing-substrings-inside-a-func)|
+|User - register and login fields|[simpleisbetterthancomplex](https://realpython.com/django-redirects/)|
+||[Realpython.com](https://realpython.com/django-redirects/)|
+|Creating favicons in photoshop|[websitebuilderinsider](https://www.websitebuilderinsider.com/can-you-create-an-ico-file-in-photoshop/)|
+|Django forms|[djangoproject](https://docs.djangoproject.com/en/4.1/topics/forms/modelforms/#modelform)|
+||[stackoverflow](https://stackoverflow.com/questions/21819310/django-what-are-the-advantages-of-django-forms-usage?noredirect=1&lq=1)|
+||[Django project](https://docs.djangoproject.com/fr/2.2/topics/forms/)|
+|Removing databases from Django|[stackoverflow](https://stackoverflow.com/questions/8597322/how-to-remove-models-from-django)|
+|Styling|[bootstrap](https://getbootstrap.com/docs/5.0/components/collapse/)|
+|Bootstrap tables|[bootstrap](https://bootstrap-table.com/docs/extensions/mobile/)|
+||[stackoverflow](https://stackoverflow.com/questions/42533989/bootstrap-table-mobile-responsive)|
+|Editing enquiries|[developer.mozilla](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms#generic_editing_views)|
+|Messages - user feedback/confirmation|[djangoproject](https://docs.djangoproject.com/en/4.1/ref/contrib/messages/)|
+||[stackoverflow](https://stackoverflow.com/questions/42793431/django-createview-success-message-not-shown)|
+|Table rows - links & styling|[solodev](https://www.solodev.com/blog/web-design/how-to-use-javascript-to-make-bootstrap-rows-clickable.stml)|
+||[stackoverflow](https://stackoverflow.com/questions/15341285/how-do-i-call-a-django-function-on-button-click)|
+|Crispy forms (I did not user this in the end ptoject)|[stackoverflow](https://stackoverflow.com/questions/13098954/use-crispy-form-with-modelform)|
+|Hero Image|[w3schools.com](https://www.w3schools.com/howto/howto_css_hero_image.asp)|
 
 
 
