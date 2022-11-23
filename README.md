@@ -12,6 +12,8 @@ Johan is part of the team. Solving a problem for his customers. What better way 
 
 ![alt text](readme_media/hero_image.jpg)
 
+***
+
 ## Contents
 ### [Design Thinking](#design-thinking-1)
 - [Video Proposal](#video-proposal)
@@ -46,7 +48,7 @@ Johan is part of the team. Solving a problem for his customers. What better way 
 - [Credits](#credits)
 - [Acknowledgements](#acknowledgements)
 
-
+***
 
 ## Design Thinking
 
@@ -93,7 +95,7 @@ After trying this in production I came across the problem of tieing together the
 
 Below is the database model I switched to using for the project.
 
-![Wireframes](readme_media/project_planning2.jpg)
+![Wireframes](readme_media/database_schema.jpg)
 
 ### How the database works
 ||What happens|Reaction|
@@ -122,17 +124,21 @@ These are the important messages that a potential customers will need. Simple. A
 
 Once this core message has been conveyed the next detail they will see is Johan's signature. This is key to building the users trust. We asking the user to make the effort to sign up and fill in a form. For them to do this they will need to trust the site and trust that the man behind the site is the one that can help them.
 
+The flow of the website is all around the user being 3 clicks away from the Enquiry System. Every jounrey the user takes will lead them to Enquiry System.
+
+***
+
 ## Agile
+
+![User Story](readme_media/userstory.jpg)
 
 ### User Stories & Agile
 
-I generated over 100 user stories in the development of this project. I made use of the 'project' feature within GitHub to manage the ordering and completion. 
-
 [Link to the Github Project used in this project](https://github.com/users/andrewcargill/projects/7)
 
-User Stories were very useful during development as they allowed me to closely track progress. I discovered that using tick-boxes for each 'task' really helped monitor the completion of a user story.
+I generated over 100 user stories in the development of this project. I made use of the 'project' feature within GitHub to manage the ordering and completion. 
 
-![User Story](readme_media/userstory.jpg)
+User Stories were very useful during development as they allowed me to closely track progress. I discovered that using tick-boxes for each 'task' really helped monitor the completion of a user story.
 
 ### Story Points & Sprints
 
@@ -162,13 +168,14 @@ Below is an example of how I turned an epic into User Stories.
 ||[Navigation fixed to top of screen](https://github.com/andrewcargill/johans_eco_timber/issues/70)    |
 ||[Favicon](https://github.com/andrewcargill/johans_eco_timber/issues/33)    |
 
+***
+
 ## Features
 
 ### Existing Features
 
-#### Navigation
-
 ![Navigation](readme_media/navigation.jpg)
+#### Navigation
 
 - Responsive design
 - Displays custom menu for logged in user
@@ -176,18 +183,18 @@ Below is an example of how I turned an epic into User Stories.
 - Displays status of user login - logged out
 
 
-
+![Website](readme_media/website.jpg)
 #### Website
 
-![Website](readme_media/website.jpg)
+
 
 - Responsive design
 - Simple information
 - Clearly displaying 'Johan' to build customer trust
 
-#### Enquiry System
 
 ![Enquiry System](readme_media/enquiry_system.jpg)
+#### Enquiry System
 
 - Responsive design
 - User can create an enquiry
@@ -197,12 +204,10 @@ Below is an example of how I turned an epic into User Stories.
 - Admin can update the status to 'emailed'. This will reflect in users view
 
 
-
+![Johan](readme_media/johan.jpg)
 #### Johan at the centre
 
-![Johan](readme_media/johan.jpg)
-
-- Personal experience and personal service
+- This is used though-out the website as a way of promoting a personal experience and personal service to the user.
 
 ### Future Features
 - Email response system for Admin
@@ -211,13 +216,15 @@ Below is an example of how I turned an epic into User Stories.
 - Online chat
 - Enquiry form could evolve into online chat/video booking system
 
+***
+
 ## Testing
-
-
 
 ### Code testing
 
 All python code was checked with Pycodestyle & [Code Institute Python Checker](https://pep8ci.herokuapp.com/)
+
+HTML and CSS code has passed validation checks.
 
 Lighthouse report - Index.html
 ![Index lighthouse](readme_media/index_testing.png)
@@ -226,9 +233,6 @@ Lighthouse report - About.html
 ![about lighhouse](readme_media/about_testing.png)
 - the main problems reference the CSS files not being local
 (I was advised by a tutor to keep the CSS files as CDN)
-
-
-
 
 ### Manual Testing 
 
@@ -304,44 +308,68 @@ Lighthouse report - About.html
 
 ### Automated Testing
 To date no Automated testing has been carried out.
+
+***
+
 ## Bugs
 
 ### Solved
 
 #### Bootstrap & Materialize
 
-I had zero experience on these and as both were used in the walkthroughs I thought they were equals. I went with Materialise. This backfired when I was trying to work out forms as I was informed by a tutor that Materialise was seen as very dated and that I would experience problems with Django should I choice to continue working with it. 
+I had zero experience of either of these going into the project and as both were used in the walkthroughs I thought they were equals. I had chosen to go with Materialize. This backfired when I was trying to format the form, and I was then informed by a tutor that Materialize was seen as very dated and that I could experience problems with Django should I choice to continue working with it. 
 
-As this project involves many elements I found that I didn’t really have the time to focus and learn the true powers of Bootstrap. For this project it is used on a basic level.
+As this project involves many elements I found that I didn’t really have the time to focus and learn the true powers of Bootstrap. But I think the finished site is fine, given my level of knowledge and experience with Bootstrap.
 
 #### Power of Agile
 
-I needed to change direction on the enquiry system implementation. My original plan was to allow the user to create an enquiry, add a number of items to the enquiry and then submit the enquiry. At the stage where I had the database models installed and was trying to solve the problem of including items within the enquiry I realised that this was maybe a little ambitious for this project. 
+I needed to change direction on the enquiry system implementation. My original plan was to allow the user to create an enquiry, add a number of items to that enquiry and then submit the enquiry. At the stage where I had the database models installed and was trying to solve the problem of including items within the enquiry I realised that this was maybe a little ambitious for this project.
 
-I decided to simplify the idea into one database and enable the user to create an enquiry and then submit the enquiry. The system would allow the user to create and submit any number of enquires. 
+I decided to simplify the idea into one database which would enable the user to create an enquiry and then submit the enquiry. The system would allow the user to create and submit any number of enquires. 
 
 #### Deployment
 
-I spent 3 hours working with Rebecca (Tutor) to help me get the site live. 
+I spent a few hours working with Rebecca (Tutor) to help me get the site live. I had placed the 'static' files in the wrong directory and also had a problem with Cloudinary collecting the static files. 
+
+#### Placement of the user status
+Originally I had the user status shown under the navigation. I spent many hours trying to find a solution that would work for both desktop and mobile views. The solution I developed shows the Status on the right hand side for desktop views and then moves the status to the left on mobile views. I think it's a brilliant and creative solution to the problem.
 
 
 ### Unsolved
-- Styling of Sign-up page
-- Placement of login status for mobile views
 - Data picker only allows user to select future dates
+- UTC - Standard time - I have not tested for time adjustments for locations other than Sweden. The website is intended for swedish users, so I do not think this is a major problem at this stage.
+- 500 error - At the moment if a user is not logged in and tries to access a 'restricted' page they will get a 500 error. This should be fixed by adding a redirect.
 
+
+***
 
 ## Deployment
 
-### Deploying to Heroku
+### Deploying to Heroku & ElephantSQL & Cloudinary
+- Create a Cloudinary account
+- Create an account in Heroku
+- Create an app in Heroku
+- Give app a name and select region
+- Create n account and database in ElephantSQL
 
 ### Database setup
+- In your Heroku App goto 'settings'
+- click on 'Reveal Config Vars'
+- Add SECRET_KEY and add a value
+- Add CLOUDINARY_URL and past in the url from your Cloudinary account
+- add DATABASE_URL and past in the url from ElephantSQL
+- Click on 'Deploy'
+- Link up the repository via github
+- Manually deploy
 
-### Cloudinary
+***
 
 ## Credits and Acknowledgements
 
 ### Credits
+
+This project was created and programmed by myself.
+
 |||
 |---|---|
 |Images|[freepik](https://www.freepik.com/free-photos-vectors/carpenter-carpentry-woodworking)|

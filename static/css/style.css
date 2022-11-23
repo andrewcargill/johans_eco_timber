@@ -27,7 +27,7 @@ p, ul {
     background-color: brown;
 }
 
-h5, h4, h3, .btn {
+h2, h5, h4, h3, .btn {
     font-family: rival-sans,sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -221,6 +221,14 @@ h5, h4, h3, .btn {
 
 /*Font size of list_view*/
 @media (max-width: 768px) { 
+    .hero-text {
+        width: 80%;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
     tr, th, td, .btn {
         font-size: small;
     }
@@ -235,7 +243,7 @@ h5, h4, h3, .btn {
     .hero-text {
         text-align: center;
         position: relative;
-        top: -110px;
+        top: -200px;
         left: 50%;
         transform: translate(-50%, -50%);
         color: white;
@@ -244,6 +252,10 @@ h5, h4, h3, .btn {
 
     h1 {
         font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2rem;
     }
 
     p {
