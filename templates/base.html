@@ -17,7 +17,7 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet">
-    <!-- <script src="https://kit.fontawesome.com/8c4e13a9be.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/8c4e13a9be.js" crossorigin="anonymous"></script>
     <!--Adobe Fonts-->
     <link rel="stylesheet" href="https://use.typekit.net/wxq8onm.css">
 </head>
@@ -25,9 +25,10 @@
 <body>
     <!--Navigation-->
     <nav class="fixed-top navbar-nav-scroll navbar navbar-expand-lg navbar-light bg-light">
-        <!--if screen size is md or bigger show swedish flag only-->
+        <!--Left side of navigation-->
+        <!--if screen size is md or bigger then show swedish flag only-->
         <div class="d-lg-none d-xl-none">
-            <!--User status for mobile / or if not logged in then Swedish Flag-->
+            <!--If screen is sm or xs - show Swedish Flag or User Status-->
             <div class="status-mobile bg-light text-muted">
                 {% if user.is_authenticated %}
                 <i class="bi bi-person-circle"></i> {{ user.username|capfirst }}
@@ -93,8 +94,8 @@
                 </li>
                 {% endif %}
             </ul>
-
-            <!--User Login Status for desktop and large-->
+            <!--Right side of navigation - For lg & xl screen sizes -->
+            <!--Blank or show User Login Status if logged in-->
             <div class="d-sm-none d-none d-lg-block bg-light text-muted">
                 {% if user.is_authenticated %}
                 {% if user.username == 'admin' %}
@@ -116,8 +117,8 @@
         </div>
     </nav>
 
-    <!--Spacing to adjust for fixed navigation on larger viewing devices-->
-    <div class="d-sm-none d-none d-lg-block nav-spacer"></div>
+    <!--Spacing to adjust for fixed navigation-->
+    <div class="nav-spacer"></div>
 
     <!--Content-->
     {% block content %}{% endblock content %}

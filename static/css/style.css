@@ -70,6 +70,10 @@ h2, h5, h4, h3, .btn {
 
 /*Enquiry List View*/
 
+.col-display-width {
+    min-width: 111px;
+}
+
 .pointer {
     cursor: pointer;
   }
@@ -232,6 +236,10 @@ h2, h5, h4, h3, .btn {
     tr, th, td, .btn {
         font-size: small;
     }
+
+    .col-display-width {
+        min-width: 101px;
+    }
 }
 
 /*adjustments for mobile*/
@@ -264,5 +272,9 @@ h2, h5, h4, h3, .btn {
 
     tr, th, td, .btn {
         font-size: smaller;
+    }
+
+    .col-display-width {
+        min-width: 111px;
     }
 }

@@ -12,7 +12,7 @@
                     </th>
                     <th scope="col"> Species
                     </th>
-                    <th scope="col"> Species
+                    <th scope="col"> Spec
                     </th>
                     <th scope="col">
                         Status
@@ -28,7 +28,7 @@
                 {% if QuoteData.status == 0 %}
                 <tr class="pointer clickable-row" onclick="location.href='{% url 'quote_update' QuoteData.id %}' ">
                     <!--title-->
-                    <th scope="row">
+                    <th scope="row" class="col-display-width">
                         {{ QuoteData.title}}
                     </th>
                     <!--Species-->
@@ -37,10 +37,10 @@
                         {{ QuoteData.species }}
                     </td>
                     <!--deminsions-->
-            <td>
-                {{ QuoteData.width }} x {{ QuoteData.thickness }} x
-                {{QuoteData.length }}
-              </td>
+                    <td class="col-display-width">
+                        {{ QuoteData.width }} x {{ QuoteData.thickness }} x
+                        {{QuoteData.length }}
+                    </td>
                     <td>
                         <a href="{% url 'quote_detail' QuoteData.id %}" class="post-link">
                             <button type="button" class="btn btn-outline-info">Submit Enquiry</button>
@@ -57,7 +57,7 @@
                 {% elif QuoteData.status == 1 %}
                 <tr class="submitted">
                     <!--title-->
-                    <td scope="row">
+                    <td scope="row" class="col-display-width">
                         {{ QuoteData.title}}
                     </td>
                     <!--Speces-->
@@ -65,12 +65,12 @@
                         {{ QuoteData.species }}
                     </td>
                     <!--deminsions-->
-            <td>
-                {{ QuoteData.width }} x {{ QuoteData.thickness }} x
-                {{QuoteData.length }}
-              </td>
+                    <td class="col-display-width">
+                        {{ QuoteData.width }} x {{ QuoteData.thickness }} x
+                        {{QuoteData.length }}
+                    </td>
                     <!--status-->
-                    <td>Enquiry Received</td>
+                    <td>Enquiry Received: {{ QuoteData.submitted_date }}</td>
                     <!--delete-->
                     <td>
                         <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
@@ -82,7 +82,7 @@
                 {% else %}
                 <tr class="check_email">
                     <!--title-->
-                    <td scope="row">
+                    <td scope="row" class="col-display-width">
                         {{ QuoteData.title}}
                     </td>
                     <!--Species-->
@@ -90,10 +90,10 @@
                         {{ QuoteData.species }}
                     </td>
                     <!--dimensions-->
-            <td>
-                {{ QuoteData.width }} x {{ QuoteData.thickness }} x
-                {{QuoteData.length }}
-              </td>
+                    <td class="col-display-width">
+                        {{ QuoteData.width }} x {{ QuoteData.thickness }} x
+                        {{QuoteData.length }}
+                    </td>
                     <!--status-->
                     <td>Response Emailed: {{ QuoteData.submitted_date }}</td>
                     <!--delete-->
