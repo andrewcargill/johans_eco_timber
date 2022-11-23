@@ -174,7 +174,8 @@ Below is an example of how I turned an epic into User Stories.
 
 ### Existing Features
 
-![Navigation](readme_media/navigation.jpg)
+![Navigation](readme_media/desktop_navigation.jpg)
+![Navigation](readme_media/mobile_navigation.jpg)
 #### Navigation
 
 - Responsive design
@@ -203,6 +204,7 @@ Below is an example of how I turned an epic into User Stories.
 - User can delete an enquiry
 - Admin can update the status to 'emailed'. This will reflect in users view
 
+![Johan](readme_media/enquiries_view.jpg)
 
 ![Johan](readme_media/johan.jpg)
 #### Johan at the centre
