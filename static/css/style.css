@@ -203,11 +203,11 @@ h2, h5, h4, h3, .btn {
 }
 
 /*form template*/
+
 .form-container-outer {
     padding-top: 3vh;
     padding-bottom: 3vh;
 }
-
 
 .form-container {
     width: 80%; 
@@ -220,6 +220,11 @@ h2, h5, h4, h3, .btn {
 /*sign up form styling*/
 .sign-up-error {
     color: red;
+    font-size: smaller;
+}
+
+/*text sizing of user-feedback messages*/
+#message {
     font-size: smaller;
 }
 
@@ -242,8 +247,13 @@ h2, h5, h4, h3, .btn {
     }
 }
 
+
+
 /*adjustments for mobile*/
 @media (max-width: 576px) { 
+    /* Alert Messages */
+    
+
     .form-container {
         width: 95%; 
     }
