@@ -1,7 +1,8 @@
 from django.test import TestCase
 
-class TestDjango(TestCase):
-    
-    def test1(self):
-        self.assertEqual(1, 1)
+class TestViews(TestCase):
 
+    def test_home_page(self):
+        response = self.client.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'index.html')
