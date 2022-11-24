@@ -4,11 +4,11 @@
 
 It's time to really celebrate and support businesses that have the environment at the heart of their products. Sustainable Timber Co. is owned and run by Johan Johansson, a highly creative person with a small forest and sawmill.
 
-For Johan the nature is important and every tree has a story. Based in the north of Swedish, his method of forestry ensures that the nature remains unharmed and that every tree removed is removed for a good reason. As a result Johan only removes a small number of trees each year and the price of those trees must be of a premium. 
+For Johan the nature is important and every tree has a story. Based in the north of Swedish, his method of forestry ensures that the nature remains unharmed and that every tree removed is removed for a good reason.  
 
 Johan is able to custom mill the trees to exactly what his customers require. Customers like instrument builders, furniture makers and timber-frame house renovators. 
 
-Johan is part of the team. Solving a problem for his customers. What better way to do this than a custom built online enquiry system that allows users to specifically detail what they need and when they need it. Giving Johan the information he needs to really offer his customers a unique and premium experience.  
+Johan is part of their team. Solving a problem for his customers. What better way to do this than a custom built online enquiry system that allows users to specifically detail what they need and when they need it. Giving Johan the information he needs to really offer his customers a unique and premium service.  
 
 ![alt text](readme_media/hero_image.jpg)
 
@@ -58,10 +58,11 @@ I created a proposal video. This would be presented to owners or investors.
 [![Watch the video](readme_media/video_thumbnail.png)](https://youtu.be/HH_DNE370Mw)
 
 ### The company
-This is based on a real-life company in the North of Sweden. For these small sawmills it is currently hard for them to connect with customers, without having a custom made website and backend. Often enquires and communications are done via Facebook or some-kind of primitive local online market place. 
+This is based on a real-life company in the North of Sweden. For small timber producers it is currently hard for them to connect with customers, without having a custom made website and backend. Commonly enquires and communications are done via Facebook or some-kind of primitive local online market place.
+
 
 ### Knowing the customer
-I spoke with a number of people that worked with wood. Daniel and Niklas stood out as the kind of people that would use a custom milled timber company. 
+I spoke with a number of people that worked with wood. Daniel and Niklas stood out as the kind of people that would use a custom milled timber company.
 
 There results are below, with keywords highlighted in red text.
 
@@ -70,7 +71,8 @@ There results are below, with keywords highlighted in red text.
 ![Interview 2](readme_media/interview2.png)
 
 ### Persona 
-The projects - Persona
+The projects - Persona - These a fun professional people with a job to do. They ideally do not want to have to run-around trying to find wood for their next projects. They want the service to be slick, trust-worthy and reliable. 
+
 ![persona image](readme_media/research_persona.png)
 
 ### Brainstorm
@@ -83,6 +85,10 @@ Brain Storm 2 - Focusing in on viable ideas
 ![brainstorm 2](readme_media/brain_storm2.png)
 
 ### Wireframes
+The website design was important. It needed to be silent in a way - The design shouldn't distract from what the customers were there to do. I wanted to make the experience intuitive for the users.  
+
+It wasn't until after interviewing potential customers that I realized that Johan was the key to this website. Initially I was thinking of framing the website as a face-less company. It was a powerful breakthrough when I discovered that Johan's face and signature were how users could gain confidence in the brand and build the trust required to sign up and use the enquiry system.
+
 Below is an example of my original wireframes for this project. You can see that the final website evolved from these first concepts of how the website would look.
 ![Wireframes](readme_media/thumbnails1.jpg)
 
@@ -91,7 +97,9 @@ Below is an example of my original wireframes for this project. You can see that
 My original plan was to use two databases. One containing quotes and the other containing items that would sit within quotes. Allowing the user to request a number of items within a single quote.
 ![Wireframes](readme_media/project_planning1.jpg)
 
-After trying this in production I came across the problem of tieing together the quote ID to the Items database. This felt a little too advanced for this project as so I simplified the idea to one database. The user could still make multiple enquires, but it would be contained in one database. This felt more realistic given my skill level and the time allocated for the project.
+After trying this in production I came across the problem of tieing together the quote ID to the Items database. After exploring various fixes it appeared that the solution would have made the user experience a little clumsy and that maybe this was a little too advanced for this project. 
+
+My solution was to create a single database solution. The user could still make multiple enquires, but it would be contained in one database. This felt more realistic given my skill level and the project requirements.
 
 Below is the database model I switched to using for the project.
 
@@ -112,19 +120,19 @@ Below is the database model I switched to using for the project.
 
 
 ### Design
-The website is designed to give the user the experience they expect from a website. The website design should not challenge the user in any way - They shouldn't visit the site and be 'impressed by the design' - the site design should go un-noticed - something running in the background - it shouldn't enter their mind. 
+The website is designed to give the user the experience they expect from a website. They shouldn't visit the site and be 'impressed by the design' - the site design should go un-noticed - something running in the background - The design shouldn't enter their minds. 
 
 I designed the homepage so the user will take in these key elements
 - The swedish flag ( the location of the company )
-- image of trees ( the hero image )
+- Image of trees ( the hero image )
 - 'nature first' ( the message of the company )
 - 'custom timber' ( what the company offers )
 
 These are the important messages that a potential customers will need. Simple. At home. Not intimidating. 
 
-Once this core message has been conveyed the next detail they will see is Johan's signature. This is key to building the users trust. We asking the user to make the effort to sign up and fill in a form. For them to do this they will need to trust the site and trust that the man behind the site is the one that can help them.
+Once this core message has been conveyed the next detail they will see is Johan's signature. This is key to building the users trust. I am asking the user to make the effort to sign up and fill in a form. For them to do this they will need to trust the site and trust that the man behind the site is the one that can help them.
 
-The flow of the website is all around the user being 3 clicks away from the Enquiry System. Every jounrey the user takes will lead them to Enquiry System.
+The flow of the website is all around the user being 3 clicks away from the Enquiry System. Every route the user takes will lead them to Enquiry System.
 
 ***
 
@@ -136,7 +144,7 @@ The flow of the website is all around the user being 3 clicks away from the Enqu
 
 [Link to the Github Project used in this project](https://github.com/users/andrewcargill/projects/7)
 
-I generated over 100 user stories in the development of this project. I made use of the 'project' feature within GitHub to manage the ordering and completion. 
+I generated close to 100 user stories in the development of this project. I made use of the 'project' feature within GitHub to manage the ordering and completion. 
 
 User Stories were very useful during development as they allowed me to closely track progress. I discovered that using tick-boxes for each 'task' really helped monitor the completion of a user story.
 
@@ -309,7 +317,9 @@ Lighthouse report - About.html
 |Admin view|Admin changes status to emailed - Updates list view|Pass|
 
 ### Automated Testing
-To date no Automated testing has been carried out.
+Some basic testing has been carried out on forms and views. Further and more indepth testing is required in all areas including models.
+
+![about lighhouse](readme_media/automated_testing.jpg)
 
 ***
 
@@ -317,31 +327,31 @@ To date no Automated testing has been carried out.
 
 ### Solved
 
-#### Bootstrap & Materialize
+- Bootstrap & Materialize
+    
+    I had zero experience of either of these going into the project and as both were used in the walk-throughs I thought they were equals. I had chosen to go with Materialize. This backfired when I was trying to format the form, and I was then informed by a tutor that Materialize was seen as very dated and that I could experience problems with Django should I choice to continue working with it. 
+    
+    As this project involves many elements I found that I didn’t really have the time to focus and learn the true powers of Bootstrap. But I think the finished site is fine, given my level of knowledge and experience with Bootstrap.
 
-I had zero experience of either of these going into the project and as both were used in the walkthroughs I thought they were equals. I had chosen to go with Materialize. This backfired when I was trying to format the form, and I was then informed by a tutor that Materialize was seen as very dated and that I could experience problems with Django should I choice to continue working with it. 
+- Power of Agile
 
-As this project involves many elements I found that I didn’t really have the time to focus and learn the true powers of Bootstrap. But I think the finished site is fine, given my level of knowledge and experience with Bootstrap.
+    I needed to change direction on the enquiry system implementation. My original plan was to allow the user to create an enquiry, add a number of items to that enquiry and then submit the enquiry. At the stage where I had the database models installed and was trying to solve the problem of including items within the enquiry I realized that this was maybe a little ambitious for this project.
 
-#### Power of Agile
+    I decided to simplify the idea into one database which would enable the user to create an enquiry and then submit the enquiry. The system would allow the user to create and submit any number of enquires. 
 
-I needed to change direction on the enquiry system implementation. My original plan was to allow the user to create an enquiry, add a number of items to that enquiry and then submit the enquiry. At the stage where I had the database models installed and was trying to solve the problem of including items within the enquiry I realised that this was maybe a little ambitious for this project.
+-   Deployment
 
-I decided to simplify the idea into one database which would enable the user to create an enquiry and then submit the enquiry. The system would allow the user to create and submit any number of enquires. 
+    I spent a few hours working with Rebecca (Tutor) to help me get the site live. I had placed the 'static' files in the wrong directory and also had a problem with Cloudinary collecting the static files. 
 
-#### Deployment
+-   Displaying the users status
 
-I spent a few hours working with Rebecca (Tutor) to help me get the site live. I had placed the 'static' files in the wrong directory and also had a problem with Cloudinary collecting the static files. 
-
-#### Placement of the user status
-Originally I had the user status shown under the navigation. I spent many hours trying to find a solution that would work for both desktop and mobile views. The solution I developed shows the Status on the right hand side for desktop views and then moves the status to the left on mobile views. I think it's a brilliant and creative solution to the problem.
+    Originally I had the user status shown under the navigation. I spent many hours trying to find a solution that would work for both desktop and mobile views. The solution I developed shows the Status on the right hand side for desktop views and then moves the status to the left on mobile views. I think it's a brilliant and creative solution to the problem.
 
 
 ### Unsolved
 - Data picker only allows user to select future dates
 - UTC - Standard time - I have not tested for time adjustments for locations other than Sweden. The website is intended for swedish users, so I do not think this is a major problem at this stage.
 - 500 error - At the moment if a user is not logged in and tries to access a 'restricted' page they will get a 500 error. This should be fixed by adding a redirect.
-
 
 ***
 
@@ -372,9 +382,8 @@ Originally I had the user status shown under the navigation. I spent many hours 
 
 This project was created and programmed by myself.
 
-|||
-|---|---|
-|Images|[freepik](https://www.freepik.com/free-photos-vectors/carpenter-carpentry-woodworking)|
+
+Images used on the site are from [freepik](https://www.freepik.com/free-photos-vectors/carpenter-carpentry-woodworking)
 
 ### Acknowledgements
 
