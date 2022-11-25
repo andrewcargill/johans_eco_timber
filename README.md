@@ -8,7 +8,7 @@ For Johan the nature is important and every tree has a story. Based in the north
 
 Johan is able to custom mill the trees to exactly what his customers require. Customers like instrument builders, furniture makers and timber-frame house renovators. 
 
-Johan is part of their team. Solving a problem for his customers. What better way to do this than a custom built online enquiry system that allows users to specifically detail what they need and when they need it. Giving Johan the information he needs to really offer his customers a unique and premium service.  
+Johan is part of their team, solving a problem for his customers. What better way to do this than a custom built online enquiry system that allows users to specifically detail what they need and when they need it. The website gives Johan the information he needs to really offer his customers a unique and premium service.  
 
 ![alt text](readme_media/hero_image.jpg)
 
@@ -22,7 +22,9 @@ Johan is part of their team. Solving a problem for his customers. What better wa
 - [Persona](#persona)
 - [Brainstorm](#brainstorm)
 - [Wireframes](#wireframes)
-- [Planning & Design](#planning--design)
+- [Planning & Data Schema](#planning--data-schema)
+- [How the database works](#how-the-database-works)
+- [Design](#design)
 ### [Agile](#agile-1)
 - [User Stories and Agile](#user-stories--agile)
 - [Story points and Sprints](#story-points--sprints)
@@ -329,15 +331,15 @@ Some basic testing has been carried out on forms and views. Further and more ind
 
 - Bootstrap & Materialize
     
-    I had zero experience of either of these going into the project and as both were used in the walk-throughs I thought they were equals. I had chosen to go with Materialize. This backfired when I was trying to format the form, and I was then informed by a tutor that Materialize was seen as very dated and that I could experience problems with Django should I choice to continue working with it. 
+    I had zero experience of either of these going into the project and as both were used in the walk-throughs I thought they were equals. I had chosen to go with Materialize. This backfired when I was trying to format the form, and I was then informed by a tutor that Materialize was seen as very dated and that I could experience problems with Django should I choose to continue working with it. 
     
-    As this project involves many elements I found that I didn’t really have the time to focus and learn the true powers of Bootstrap. But I think the finished site is fine, given my level of knowledge and experience with Bootstrap.
+    Switching to Bootstrap did mean a change in how I approached my design. As this project involved learning many elements I found that I didn’t really have the time to focus and learn the true powers of Bootstrap. I think the finished site is fine, given my level of knowledge and experience with Bootstrap.
 
 - Power of Agile
 
-    I needed to change direction on the enquiry system implementation. My original plan was to allow the user to create an enquiry, add a number of items to that enquiry and then submit the enquiry. At the stage where I had the database models installed and was trying to solve the problem of including items within the enquiry I realized that this was maybe a little ambitious for this project.
+    I needed to change direction on the enquiry system implementation. My original plan was to allow the user to create an enquiry, add a number of items to that enquiry and then submit the enquiry. At the stage where I had the two database models installed and was trying to solve the problem of including items within the enquiry I realized that this was maybe a little ambitious for this project.
 
-    I decided to simplify the idea into one database which would enable the user to create an enquiry and then submit the enquiry. The system would allow the user to create and submit any number of enquires. 
+    I consulted tutors for technical advice and spoke with other tutors and mentors via Slack and decided to simplify the idea into one database which would enable the user to create an enquiry and then submit the enquiry and see when the enquiry had been responded to via Admin. The system would allow the user to create and submit any number of enquires. 
 
 -   Deployment
 
@@ -345,7 +347,7 @@ Some basic testing has been carried out on forms and views. Further and more ind
 
 -   Displaying the users status
 
-    Originally I had the user status shown under the navigation. I spent many hours trying to find a solution that would work for both desktop and mobile views. The solution I developed shows the Status on the right hand side for desktop views and then moves the status to the left on mobile views. I think it's a brilliant and creative solution to the problem.
+    Originally I had the user status shown under the navigation. I spent many hours trying to find a creative solution that would work for both desktop and mobile views. The solution I developed shows the Status on the right hand side for desktop views and then moves the status to the left on mobile views. I think it's a brilliant and ideal solution.
 
 
 ### Unsolved
