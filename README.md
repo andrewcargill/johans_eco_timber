@@ -227,6 +227,7 @@ Below is an example of how I turned an epic into User Stories.
 - Online shop (So that company can advertise timber they have for sale)
 - Online chat
 - Enquiry form could evolve into online chat/video booking system
+- Refinement of styling for mobile devices
 
 ***
 
@@ -245,6 +246,9 @@ Lighthouse report - About.html
 ![about lighhouse](readme_media/about_testing.png)
 - the main problems reference the CSS files not being local
 (I was advised by a tutor to keep the CSS files as CDN)
+
+CSS Code Validation - No Errors
+![about lighhouse](readme_media/css_validation.png)
 
 ### Manual Testing 
 
@@ -354,6 +358,8 @@ Some basic testing has been carried out on forms and views. Further and more ind
 - Data picker only allows user to select future dates
 - UTC - Standard time - I have not tested for time adjustments for locations other than Sweden. The website is intended for swedish users, so I do not think this is a major problem at this stage.
 - 500 error - At the moment if a user is not logged in and tries to access a 'restricted' page they will get a 500 error. This should be fixed by adding a redirect.
+- Footer should fix to the bottom of view for low content pages.
+- Further styling required for footer section for full responsive design.
 
 ***
 
