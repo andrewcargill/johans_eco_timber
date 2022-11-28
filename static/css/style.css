@@ -3,7 +3,7 @@ body, html {
     height: 100%;
 }
 
-/*Sets adobe fonts for the website*/
+/*Sets adobe fonts*/
 
 h1 {
     font-family: apparat, sans-serif;
@@ -33,7 +33,7 @@ h2, h5, h4, h3, .btn {
     font-style: normal;
 }
 
-/*Johan Signature font*/
+/*Johan's Signature font*/
 .signature {
     font-family: baka-too, sans-serif;
     font-weight: 400;
@@ -228,7 +228,6 @@ h2, h5, h4, h3, .btn {
     font-size: smaller;
 }
 
-/*Font size of list_view*/
 @media (max-width: 768px) { 
     .hero-text {
         width: 80%;
@@ -247,13 +246,7 @@ h2, h5, h4, h3, .btn {
     }
 }
 
-
-
-/*adjustments for mobile*/
 @media (max-width: 576px) { 
-    /* Alert Messages */
-    
-
     .form-container {
         width: 95%; 
     }
