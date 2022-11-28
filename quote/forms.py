@@ -9,8 +9,7 @@ class QuoteForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(QuoteForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper(self)
-        # NOT SURE ABOUT THIS
-        # You can dynamically adjust your layout
+
         self.helper.layout.append(Submit('save', 'save'))
         self.helper.add_input(Submit('submit', 'Submit'))
 

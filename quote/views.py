@@ -5,9 +5,9 @@ from django.views.generic import ListView
 from .models import QuoteData
 from django.contrib.auth.models import User
 from .forms import QuoteForm
-from django.core.mail import send_mail
-from django.http import HttpResponseRedirect
-from django.forms import TextInput
+# from django.core.mail import send_mail
+# from django.http import HttpResponseRedirect
+# from django.forms import TextInput
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin

@@ -1,9 +1,9 @@
 <div class="d-block d-sm-none">
 
     <!--research table-->
-
     <div class="table-responsive">
         <table class="table" style="width: 100%">
+
             <!--Table Headers-->
             <thead>
                 <tr>
@@ -21,21 +21,24 @@
                 </tr>
             </thead>
             <tbody>
+
                 <!--FOR STATEMENT-->
                 {% for QuoteData in quote_list %}
 
                 <!--IF STATEMENT OF STATUS START (Not submitted)-->
                 {% if QuoteData.status == 0 %}
                 <tr class="pointer clickable-row" onclick="location.href='{% url 'quote_update' QuoteData.id %}' ">
+                    
                     <!--title-->
                     <th scope="row" class="col-display-width">
                         {{ QuoteData.title}}
                     </th>
+                    
                     <!--Species-->
                     <td>
-
                         {{ QuoteData.species }}
                     </td>
+
                     <!--deminsions-->
                     <td class="col-display-width">
                         {{ QuoteData.width }} x {{ QuoteData.thickness }} x
@@ -56,21 +59,26 @@
                 <!--ELIF STATEMENT OF STATUS (Submitted)-->
                 {% elif QuoteData.status == 1 %}
                 <tr class="submitted">
+                    
                     <!--title-->
                     <td scope="row" class="col-display-width">
                         {{ QuoteData.title}}
                     </td>
+                    
                     <!--Speces-->
                     <td>
                         {{ QuoteData.species }}
                     </td>
+                    
                     <!--deminsions-->
                     <td class="col-display-width">
                         {{ QuoteData.width }} x {{ QuoteData.thickness }} x
                         {{QuoteData.length }}
                     </td>
+                    
                     <!--status-->
                     <td>Enquiry Received: {{ QuoteData.submitted_date }}</td>
+                    
                     <!--delete-->
                     <td>
                         <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
@@ -81,21 +89,26 @@
                 <!--ELSE STATEMENT OF STATUS (Emailed sent to user)-->
                 {% else %}
                 <tr class="check_email">
+                    
                     <!--title-->
                     <td scope="row" class="col-display-width">
                         {{ QuoteData.title}}
                     </td>
+                    
                     <!--Species-->
                     <td>
                         {{ QuoteData.species }}
                     </td>
+                    
                     <!--dimensions-->
                     <td class="col-display-width">
                         {{ QuoteData.width }} x {{ QuoteData.thickness }} x
                         {{QuoteData.length }}
                     </td>
+                    
                     <!--status-->
                     <td>Response Emailed: {{ QuoteData.submitted_date }}</td>
+                    
                     <!--delete-->
                     <td>
                         <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
@@ -104,10 +117,8 @@
                     </td>
                 </tr>
                 {% endif %}
-                <!--End For-->
                 {% endfor %}
             </tbody>
         </table>
     </div>
-    <!--End of mobile screen view-->
 </div>

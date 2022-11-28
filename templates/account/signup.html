@@ -5,6 +5,7 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 {% block content %}
 {% load static %}
+
 <!--Header Title-->
 <div class="container border  bg-dark text-white border-dark">
   <div class="container lighten-4">
@@ -19,80 +20,63 @@
   </div>
 </div>
 
-
 <!--Content-->
 <div class="container border border-dark ">
   <div class="row justify-content-center">
     <!--Content-->
     <div class="form-container d-flex flex-column">
       <div class="p-2 text-center low-content">
+
         <!--Login code-->
-
-
         <h4>{% trans "Sign Up" %}</h4>
         <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign
             in</a>.{% endblocktrans %}
         </p>
-
         <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-
-
 
           {% csrf_token %}
 
           {% for field in form %}
           <div class="row">
             <div class="col md-auto"></div>
-            <div class="col md-2 text-right"><p>{{ field.label_tag }}</p></div>
-            <div class="sign-up-input col md-2 text-left"><p>{{ field }}</p></div>
+            <div class="col md-2 text-right">
+              <p>{{ field.label_tag }}</p>
+            </div>
+            <div class="sign-up-input col md-2 text-left">
+              <p>{{ field }}</p>
+            </div>
             <div class="col md-auto"></div>
           </div>
-          
 
           {% if field.help_text %}
           <small style="color: grey">{{ field.help_text }}</small>
           {% endif %}
 
-          
-            {% for error in field.errors %}
-            <div class="row">
-              <div class="col md-auto"></div>
-              <div class="col md-2 text-right"><p></p></div>
-              <div class="sign-up-error col md-2 text-left"><p>{{ error }}</p></div>
-              <div class="col md-auto"></div>
+          {% for error in field.errors %}
+          <div class="row">
+            <div class="col md-auto"></div>
+            <div class="col md-2 text-right"></div>
+            <div class="sign-up-error col md-2 text-left">
+              <p>{{ error }}</p>
             </div>
-            
-            
-              {% endfor %}
-             
-              
-              
-         
+            <div class="col md-auto"></div>
+          </div>
+
+          {% endfor %}
+
           {% endfor %}
           <div class="row">
             <div class="col md-auto"></div>
             <div class="col md-2 text-right"></div>
-            <div class="col md-2 text-left"><p><button class="btn btn-success" type="submit">Sign up</button></p></p></div>
+            <div class="col md-2 text-left">
+              <p><button class="btn btn-success" type="submit">Sign up</button></p>
+            </div>
             <div class="col md-auto"></div>
           </div>
-          
-
         </form>
-        
-
-        
       </div>
     </div>
   </div>
 </div>
-
-<!-- <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit" class="btn btn-success">{% trans "Sign Up" %} &raquo;</button>
-</form> -->
 
 {% endblock %}

@@ -20,26 +20,31 @@
 <!--Information Container-->
 <div class="container border border-dark ">
     <div class="row  justify-content-center">
+
         <!--Page main content-->
         <div class="form-container">
             <div class="text-header">
                 <h4>Details</h4>
                 <table class="table">
+
                     <!--Enquiry Title-->
                     <tr>
                         <th scope="col">Enquiry Title</th>
                         <td>{{ quote.title }}</td>
                     </tr>
+
                     <!--Deadline-->
                     <tr>
                         <th scope="col">Deadline/ Required By</th>
                         <td>{{ quote.deadline }}</td>
                     </tr>
+
                     <!--Username-->
                     <tr>
                         <th>Your Username</th>
                         <td>{{ user.username|capfirst }}</td>
                     </tr>
+
                     <!--Email-->
                     <tr>
                         <th>Your Email</th>
@@ -48,38 +53,45 @@
                 </table>
                 <h3>Summary</h3>
                 <table class="table">
+
                     <!--Dimensions-->
                     <tr>
                         <th scope="col">Dimensions (L/W/D)</th>
                         <td>{{ quote.length }}cm x {{ quote.width }}cm x {{ quote.thickness }}cm</td>
                     </tr>
+
                     <!--Grade & Species-->
                     <tr>
                         <th>Species and Grade</th>
                         <td>{{ quote.species }} (Grade {{ quote.grade }})</td>
                     </tr>
+
                     <!--Quantity-->
                     <tr>
                         <th>Quantity</th>
                         <td>{{ quote.quantity }}</td>
                     </tr>
+
                     <!--Quarter Sawm-->
                     <tr>
                         <th>Quarter-Sawn</th>
                         <td>{{ quote.quarter_sawn }}</td>
                     </tr>
+
                     <!--Comments-->
                     <tr>
                         <th>Comments</th>
                         <td>{{ quote.comments }}</td>
                     </tr>
                 </table>
+                
                     <!--Submit-->
                 <div>
                     <form method="post">
                         {% csrf_token %}
                         <button class="btn btn-success btn-block" type="submit">Submit</button>
                     </form>
+
                     <!--Cancel-->
                     <div>
                         <br>
