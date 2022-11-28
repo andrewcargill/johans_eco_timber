@@ -266,7 +266,7 @@ CSS Code Validation - No Errors
 ||Link test|Pass|
 |Forest|Responsive Design - Mobile > Large|Pass|
 ||Link test|Pass|
-|Customer Timber|Responsive Design - Mobile > Large|Pass|
+|Custom Timber|Responsive Design - Mobile > Large|Pass|
 ||Link test|Pass|
 |Login|Log in with Username & Password|Pass|
 ||Login with incorrect details (help text)|Pass|

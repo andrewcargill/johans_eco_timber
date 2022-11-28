@@ -24,12 +24,12 @@
         <!--Page main content-->
         <div class="form-container">
             <div class="text-header">
-                <h4>Details</h4>
+                <h4>Enquiry Details</h4>
                 <table class="table">
-
+    
                     <!--Enquiry Title-->
                     <tr>
-                        <th scope="col">Enquiry Title</th>
+                        <th scope="row">Enquiry Title</th>
                         <td>{{ quote.title }}</td>
                     </tr>
 
@@ -50,13 +50,10 @@
                         <th>Your Email</th>
                         <td>{{ user.email }}</td>
                     </tr>
-                </table>
-                <h4>Summary</h4>
-                <table class="table">
 
                     <!--Dimensions-->
                     <tr>
-                        <th scope="col">Dimensions (L/W/D)</th>
+                        <th scope="row">Dimensions (L/W/D)</th>
                         <td>{{ quote.length }}cm x {{ quote.width }}cm x {{ quote.thickness }}cm</td>
                     </tr>
 
@@ -80,7 +77,7 @@
                     <!--Comments-->
                     <tr>
                         <th>Comments</th>
-                        <td class="comments-width">{{ quote.comments }}</td>
+                        <td>{{ quote.comments }}</td>
                     </tr>
                 </table>
                 
