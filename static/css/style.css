@@ -228,6 +228,11 @@ h2, h5, h4, h3, .btn {
     font-size: smaller;
 }
 
+/*Submit Form Comments Styling*/
+.comments-width {
+    max-width: 12rem;
+}
+
 @media (max-width: 768px) { 
     .hero-text {
         width: 80%;
@@ -243,6 +248,11 @@ h2, h5, h4, h3, .btn {
 
     .col-display-width {
         min-width: 101px;
+    }
+
+    /*Submit Form Comments Styling*/
+    .comments-width {
+        max-width: 6rem;
     }
 }
 
