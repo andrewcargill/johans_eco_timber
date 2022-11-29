@@ -49,7 +49,7 @@
                             <button type="button" class="btn btn-outline-info">Submit Enquiry</button>
                         </a>
                     </td>
-                    <td>
+                    <td id="list-view-delete-button">
                         <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
                             <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
                         </a>
@@ -80,7 +80,7 @@
                     <td>Enquiry Received: {{ QuoteData.submitted_date }}</td>
                     
                     <!--delete-->
-                    <td>
+                    <td id="list-view-delete-button">
                         <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
                             <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
                         </a>
@@ -110,7 +110,7 @@
                     <td>Response Emailed: {{ QuoteData.submitted_date }}</td>
                     
                     <!--delete-->
-                    <td>
+                    <td id="list-view-delete-button">
                         <a href="{% url 'quote_delete' QuoteData.id %}" class="post-link">
                             <i id="active-delete" class="bi bi-x-square-fill delete_button"></i>
                         </a>

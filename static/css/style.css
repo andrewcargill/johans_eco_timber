@@ -287,6 +287,10 @@ h2, h5, h4, h3, .btn {
         font-size: smaller;
     }
 
+    #list-view-delete-button {
+        font-size: 15px;
+    }
+
     .col-display-width {
         min-width: 51px;
     }

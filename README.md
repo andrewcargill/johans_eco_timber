@@ -261,7 +261,7 @@ CSS Code Validation - No Errors
 |  | True Sustainable Forestry Link      |Pass |
 ||How I can help... Link|Pass|
 ||Take only the trees... Link|Pass|
-||That creatuve... link|Pass|
+||That creative... link|Pass|
 |About|Responsive design - Mobile > Large|Pass|
 ||Link test|Pass|
 |Forest|Responsive Design - Mobile > Large|Pass|
@@ -279,7 +279,7 @@ CSS Code Validation - No Errors
 |Enquiry (list view)|Responsive Design - Mobile > Large|Pass|
 ||New enquiry button loads new enquiry form|Pass|
 ||Sign out button loads sign out confirmation view|Pass|
-||(Unsubmitted) Delete button loads delete confirmation view|Pass|
+||(Un-submitted) Delete button loads delete confirmation view|Pass|
 ||(Submitted) Delete button loads delete confirmation view|Pass|
 ||(Email sent) Delete button loads delete confirmation view|Pass|
 ||Scrolling for many items|Pass|
@@ -287,13 +287,13 @@ CSS Code Validation - No Errors
 ||Completed form - submit button - saves and loads list view|Pass|
 ||Uncompleted form - submit button - help text shown|Pass|
 ||Cancel button - User returned to list view|Pass|
-||Datepicker - Loads when clicked|Pass|
+||Date picker - Loads when clicked|Pass|
 ||Number fields - Only except numbers|Pass|
 ||Comment field allows for large string|Pass|
 |Submit form view|Responsive Design - Mobile > Large|Pass|
 ||Displayed details match the record being submitted|Pass|
 ||Submit button - changes status of enquiry and loads list view|Pass|
-||Cancel button - Enquiry remains unsubmitted - loads list view|Pass|
+||Cancel button - Enquiry remains un-submitted - loads list view|Pass|
 |Delete view|Responsive Design - Mobile > Large|Pass|
 ||Delete button - Loads list view and removes the enquiry|Pass|
 ||Cancel button - Loads list view and enquiry remains in list|Pass|
@@ -323,7 +323,7 @@ CSS Code Validation - No Errors
 |Admin view|Admin changes status to emailed - Updates list view|Pass|
 
 ### Automated Testing
-Some basic testing has been carried out on forms and views. Further and more indepth testing is required in all areas including models.
+Some basic testing has been carried out on forms and views. Further and more in depth testing is required in all areas including models.
 
 ![about lighhouse](readme_media/automated_testing.jpg)
 
@@ -427,7 +427,7 @@ Images used on the site are from [freepik](https://www.freepik.com/free-photos-v
 ||[stackoverflow](https://stackoverflow.com/questions/42793431/django-createview-success-message-not-shown)|
 |Table rows - links & styling|[solodev](https://www.solodev.com/blog/web-design/how-to-use-javascript-to-make-bootstrap-rows-clickable.stml)|
 ||[stackoverflow](https://stackoverflow.com/questions/15341285/how-do-i-call-a-django-function-on-button-click)|
-|Crispy forms (I did not user this in the end ptoject)|[stackoverflow](https://stackoverflow.com/questions/13098954/use-crispy-form-with-modelform)|
+|Crispy forms (I did not user this in the end project)|[stackoverflow](https://stackoverflow.com/questions/13098954/use-crispy-form-with-modelform)|
 |Hero Image|[w3schools.com](https://www.w3schools.com/howto/howto_css_hero_image.asp)|
 
 
