@@ -424,6 +424,9 @@ Some basic testing has been carried out on forms and views. Further and more in 
 
 This project was created and programmed by myself.
 
+Bootstrap styling and formatting are used across this site. 
+
+The navigation and page containers are modified from Bootstrap examples.
 
 Images used on the site are from [freepik](https://www.freepik.com/free-photos-vectors/carpenter-carpentry-woodworking)
 
