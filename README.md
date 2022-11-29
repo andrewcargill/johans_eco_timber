@@ -325,7 +325,15 @@ CSS Code Validation - No Errors
 ||Admin logged in - Log out links to accounts/logout/|Pass|
 |Admin view|Admin changes status to emailed - Updates list view|Pass|
 
-### User Testing
+### Javascript Testing
+
+I only used Bootstrap Javascript for this project on the navigation. The testing is below.
+
+|Test|Description|Outcome|
+|---|---|---|
+|Animation of mobile navigation|When clicking on the 'hamburger' the menu should open up|Works fine without faults|
+
+### User Experience Testing (3 clicks from the enquiry system)
 |Users type|Method|Enquiry System link|
 |---|---|---|
 |I want to find out about the company|Home > Navigation > About link|Button - 'create a log in'|
