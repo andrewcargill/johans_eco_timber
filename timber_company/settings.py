@@ -2,6 +2,7 @@ from pathlib import Path
 import os
 import dj_database_url
 
+
 if os.path.isfile("env.py"):
    import env
 
@@ -15,6 +16,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 DEBUG = False
+
 
 ALLOWED_HOSTS = ['timbercompany.herokuapp.com', 'localhost']
 
@@ -66,7 +68,6 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
-                # Media context processor
                 'django.template.context_processors.media',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -77,7 +78,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'timber_company.wsgi.application'
 
 
-#Testing Database
+# Testing Database (Left in code for future testing)
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -86,7 +87,7 @@ WSGI_APPLICATION = 'timber_company.wsgi.application'
 # }
 
 
-#Main Database
+# Main Database
 DATABASES = {
    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
