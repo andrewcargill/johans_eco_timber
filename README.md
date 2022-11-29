@@ -10,6 +10,7 @@ Johan is able to custom mill the trees to exactly what his customers require. Cu
 
 Johan is part of their team, solving a problem for his customers. What better way to do this than a custom built online enquiry system that allows users to specifically detail what they need and when they need it. The website gives Johan the information he needs to really offer his customers a unique and premium service.  
 
+
 ![alt text](readme_media/hero_image.jpg)
 
 ***
@@ -210,6 +211,12 @@ Below is an example of how I turned an epic into User Stories.
 ![Enquiry System](readme_media/enquiry_system.jpg)
 #### Enquiry System
 
+Any user can create a login for the site. Once logged in they can complete an enquiry form. Once saved the user can then choose to edit or delete the enquiry they have created. The user clicks a button to submit the enquiry to Johan. A user can make a limitless number of project enquires.
+
+Johan, as the site owner and admin, can view all enquires via the admin login. He reads the enquiry and emails the user. Once completed he updates the 'status' of the enquiry to 'emailed'.
+
+The user will see this status change in their view. The enquiry will state the date and time that Johan emailed the response to the enquiry.
+
 - Responsive design
 - User can create an enquiry
 - User can edit an enquiry
@@ -226,10 +233,15 @@ Below is an example of how I turned an epic into User Stories.
 
 ### Future Features
 - Email response system for Admin
+    - This could be an extra database linked to the existing database
+    - Or a separate email system
 - Contact form on main website (access without login)
+    - The danger of this is that Johan would get half-enquires via this system.
 - Online shop (So that company can advertise timber they have for sale)
 - Online chat
+    - A user could book a time to chat online or specific times could be advertised when Johan will be online
 - Enquiry form could evolve into online chat/video booking system
+    - An integration of the above ideas
 - Refinement of styling for mobile devices
 
 ***
