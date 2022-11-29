@@ -60,7 +60,7 @@ I created a proposal video. This would be presented to owners or investors.
 [![Watch the video](readme_media/video_thumbnail.png)](https://youtu.be/HH_DNE370Mw)
 
 ### The company
-This is based on a real-life company in the North of Sweden. For small timber producers it is currently hard for them to connect with customers, without having a custom made website and backend. Commonly enquires and communications are done via Facebook or some-kind of primitive local online market place.
+This is based on a real-life company in the North of Sweden. For small timber producers it is currently hard for them to connect with customers. Commonly enquires and communications are done via Facebook or some-kind of primitive local online market place.
 
 
 ### Knowing the customer
@@ -73,7 +73,7 @@ There results are below, with keywords highlighted in red text.
 ![Interview 2](readme_media/interview2.png)
 
 ### Persona 
-The projects - Persona - These a fun professional people with a job to do. They ideally do not want to have to run-around trying to find wood for their next projects. They want the service to be slick, trust-worthy and reliable. 
+The projects - Persona - Fun professional people with a job to do. They ideally do not want to have to run-around trying to find wood for their next projects. They want the service to be slick, trust-worthy and reliable. 
 
 ![persona image](readme_media/research_persona.png)
 
@@ -119,6 +119,7 @@ Below is the database model I switched to using for the project.
 |4|User submits form|Status is changed to 'Submitted'|
 |||Submitted date/time is automatically updated|
 |5|Admin (superuser) changes status to 'quote emailed'|Submitted date/time is automatically updated|
+|||When user views their account they see a message that an email has been sent to them|
 
 
 ### Design
@@ -192,6 +193,7 @@ Below is an example of how I turned an epic into User Stories.
 - Displays custom menu for logged in user
 - Display custom menu for Admin (Superuser)
 - Displays status of user login - logged out
+- Active navigation buttons to reflect current page
 
 
 ![Website](readme_media/website.jpg)
@@ -202,6 +204,7 @@ Below is an example of how I turned an epic into User Stories.
 - Responsive design
 - Simple information
 - Clearly displaying 'Johan' to build customer trust
+- Custom 404 and 500 pages that ask the user to try again
 
 
 ![Enquiry System](readme_media/enquiry_system.jpg)
@@ -322,6 +325,18 @@ CSS Code Validation - No Errors
 ||Admin logged in - Log out links to accounts/logout/|Pass|
 |Admin view|Admin changes status to emailed - Updates list view|Pass|
 
+### User Testing
+|Users type|Method|Enquiry System link|
+|---|---|---|
+|I want to find out about the company|Home > Navigation > About link|Button - 'create a log in'|
+|I want to log into my account|Home > Nav > Login link| User is in system|
+|I want to know where the company is based|Home > Footer|If user is located in the area they should click on 'about' or 'our forest'|
+|I want to know about the forest|Home > Nav > Our Forest > | Button - 'Enquire about custom timber'|
+|I want to know how the company can help me|Home > 'How I can help' section on landing page > Link to 'about enquiry system'|Link to 'create login'|
+
+
+
+
 ### Automated Testing
 Some basic testing has been carried out on forms and views. Further and more in depth testing is required in all areas including models.
 
@@ -357,7 +372,6 @@ Some basic testing has been carried out on forms and views. Further and more in 
 ### Unsolved
 - Data picker only allows user to select future dates
 - UTC - Standard time - I have not tested for time adjustments for locations other than Sweden. The website is intended for swedish users, so I do not think this is a major problem at this stage.
-- 500 error - At the moment if a user is not logged in and tries to access a 'restricted' page they will get a 500 error. This should be fixed by adding a redirect.
 - Footer should fix to the bottom of view for low content pages.
 - Further styling required for footer section for full responsive design.
 
